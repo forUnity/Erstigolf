@@ -52,7 +52,8 @@ public class PlayerCar : MonoBehaviour
     {
         UpdateUnderground();
 
-        float motor = maxMotorTorque * Input.GetAxis("Vertical");
+        float motor = maxMotorTorque;// * Input.GetAxis("Vertical");
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) motor = 0f;
         float steering;
         if (!steeringWheel)
         {
