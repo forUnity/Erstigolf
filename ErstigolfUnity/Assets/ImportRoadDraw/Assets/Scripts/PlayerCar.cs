@@ -7,7 +7,7 @@ public class PlayerCar : MonoBehaviour
     [SerializeField] private CarPlayerSteeringWheel steeringWheel;
     [Space]
     [SerializeField] private float driftFriction = 1.5f;
-    [SerializeField] private float normalFriction = 0.2f;
+    //unused? [SerializeField] private float normalFriction = 0.2f;
     public List<AxleInfo> axleInfos; // the information about each individual axle
     public List<GroundFriction> groundFrictions;
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
@@ -58,11 +58,12 @@ public class PlayerCar : MonoBehaviour
         if (!steeringWheel)
         {
             steering = maxSteeringAngle * Input.GetAxis("Horizontal");
-            if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) steering = 0f;
-        } else
+        } 
+        else
         {
             steering = steeringWheel.steeringWheelAxis * maxSteeringAngle;
         }
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) steering = 0f;
             
         foreach (AxleInfo axleInfo in axleInfos) {
             if (axleInfo.steering) {
@@ -112,6 +113,7 @@ public class PlayerCar : MonoBehaviour
 
         GetComponent<Rigidbody>().drag = groundFrictions[currentGround].drag;
     }
+
     public void SetDrift(bool drift) {
         float sidewaysFriction;
         if (drift) sidewaysFriction = driftFriction;
@@ -189,8 +191,10 @@ public class PlayerCar : MonoBehaviour
 public class AxleInfo {
     public WheelCollider leftWheel;
     public WheelCollider rightWheel;
-    public bool motor; // is this wheel attached to motor?
-    public bool steering; // does this wheel apply steer angle?
+    [Tooltip("is this wheel attached to motor?")]
+    public bool motor;
+    [Tooltip("does this wheel apply steer angle?")]
+    public bool steering;
 }
 
 [System.Serializable]
