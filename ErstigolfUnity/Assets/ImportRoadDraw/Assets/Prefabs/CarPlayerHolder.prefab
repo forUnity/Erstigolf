@@ -902,7 +902,7 @@ Transform:
   - {fileID: 7537076923066050032}
   - {fileID: 7537076923063306620}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7537076922095817894
 GameObject:
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0.0005286031, y: 12.89, z: -7.46}
+  m_TrackedObjectOffset: {x: 0, y: 8, z: -10}
   m_LookaheadTime: 0.167
   m_LookaheadSmoothing: 4.8
   m_LookaheadIgnoreY: 0
@@ -1389,7 +1389,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steeringWheel: {fileID: 2648543895379326516}
   driftFriction: 1.5
-  normalFriction: 0.2
   axleInfos:
   - leftWheel: {fileID: 3491616355974396600}
     rightWheel: {fileID: 3488948488800057772}
@@ -1475,8 +1474,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537076923066050039}
-  m_LocalRotation: {x: 0.33435535, y: -0.00001539909, z: 0.0000054631905, w: 0.9424471}
-  m_LocalPosition: {x: 0.00061035156, y: 15.171415, z: -10.270615}
+  m_LocalRotation: {x: 0.20343512, y: 4.2842995e-16, z: -2.2886494e-16, w: 0.9790884}
+  m_LocalPosition: {x: 0, y: 9.442073, z: -13.320374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
