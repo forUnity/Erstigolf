@@ -26,6 +26,7 @@ public class UiManager : MonoBehaviour
             if (newCount <= 0)
             {
                 Destroy(OrderersToCount[ordererName].gameObject);
+                OrderersToCount.Remove(ordererName);
             } 
             else
             {
