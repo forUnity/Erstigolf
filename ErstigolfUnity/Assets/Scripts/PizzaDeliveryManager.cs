@@ -18,8 +18,6 @@ public class PizzaDeliveryManager : MonoBehaviour
     [SerializeField] private List<PizzaTarget> pizzaTargets;
     [SerializeField] private int maxConcurrentDeliveryCount = 3;
 
-   [HideInInspector] [SerializeField] private List<PizzaTarget> currentTargets;
-
     [SerializeField] private float orderCooldownTime = 3f;
     [SerializeField] private float lastCooldownTime = 0;
     private void Update()
@@ -38,12 +36,12 @@ public class PizzaDeliveryManager : MonoBehaviour
         int target = Random.Range(0, pizzaTargets.Count);
         pizzaTargets[target].RequirePizza();
     }
+
     public void DeliveredPizza()
     {
         currentOrderCount--;
         IncreaseScore();
     }
-
 
     int score = 0;
     public void IncreaseScore()

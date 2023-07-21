@@ -11,24 +11,28 @@ public class UiManager : MonoBehaviour
         OrderersToCount = new Dictionary<string, UiOrder>();
         if (!instance)
             instance = this;
-        else Destroy(gameObject);
+        else 
+            Destroy(gameObject);
     }
 
     [SerializeField] private Transform OrderHolderT;
     [SerializeField] private GameObject OrderUIPrefab;
-    private Dictionary<string,UiOrder> OrderersToCount;
+    private Dictionary<string, UiOrder> OrderersToCount;
+
     public void UpdateOrders(string ordererName, int newCount)
     {
-        if(OrderersToCount.ContainsKey(ordererName))
+        if (OrderersToCount.ContainsKey(ordererName))
         {
-            if(newCount <= 0)
+            if (newCount <= 0)
             {
                 Destroy(OrderersToCount[ordererName].gameObject);
-            } else
+            } 
+            else
             {
                 OrderersToCount[ordererName].UpdateInfo(ordererName, newCount);
             }
-        } else
+        } 
+        else
         {
             if (newCount <= 0) return;
             UiOrder uiElement = Instantiate(OrderUIPrefab, OrderHolderT).GetComponent<UiOrder>();

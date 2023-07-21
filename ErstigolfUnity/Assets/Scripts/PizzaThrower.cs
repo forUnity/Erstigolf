@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PizzaThrower : MonoBehaviour
 {
-    // maybe asign with PizzaDeliveryManager
+    // TODO: assign with PizzaMaker or sth like that
     public GameObject pizza;
 
     [SerializeField] private float scalePeriod = 1;

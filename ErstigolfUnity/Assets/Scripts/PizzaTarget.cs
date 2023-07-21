@@ -13,7 +13,10 @@ public class PizzaTarget : MonoBehaviour
             _requirePizzaCount = value;
             requirePizzaIndicator(_requirePizzaCount > 0);
             UiManager.instance.UpdateOrders(Name, _requirePizzaCount);
-        } }
+        } 
+    
+    }
+
     public void RequirePizza()
     {
         requirePizzaCount++;
@@ -26,7 +29,6 @@ public class PizzaTarget : MonoBehaviour
 
     public string Name = "LehrstuhlX";
 
-    [SerializeField] private string pizzaTag = "Pizza";
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent(out Pizza pizza))
