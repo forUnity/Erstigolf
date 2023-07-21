@@ -33,8 +33,11 @@ public class PizzaTarget : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Pizza pizza))
         {
-            requirePizzaCount--;
-            PizzaDeliveryManager.instance.DeliveredPizza();
+            if (requirePizzaCount > 0)
+            {
+                requirePizzaCount--;
+                PizzaDeliveryManager.instance.DeliveredPizza();
+            }
             pizza.Delivered();
         }
     }
