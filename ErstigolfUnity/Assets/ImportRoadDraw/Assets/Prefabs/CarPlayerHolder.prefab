@@ -1316,7 +1316,6 @@ GameObject:
   - component: {fileID: 7537076923063306623}
   - component: {fileID: 7537076923063306622}
   - component: {fileID: 4958832147505571172}
-  - component: {fileID: 2648543895379326516}
   m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Player
@@ -1387,7 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbbf2e349eb7264c9f4564cc3abc765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steeringWheel: {fileID: 2648543895379326516}
+  steeringWheel: {fileID: 4958832147505571172}
   driftFriction: 1.5
   axleInfos:
   - leftWheel: {fileID: 3491616355974396600}
@@ -1408,27 +1407,11 @@ MonoBehaviour:
     sidewaysFriction: 2
     drag: 0.2
   maxMotorTorque: 1300
-  maxSteeringAngle: 30
+  maxSteeringAngle: 15
   centerOfMass: {fileID: 4216708617918130017}
   health: 0.5
   healingSpeed: 0.1
 --- !u!114 &4958832147505571172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7537076923063306621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dbe2943a30d17a4f8ac0ae675d7d6eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeAxisPerSecond: 100
-  snapBackperSecond: 100
-  steeringWheelGfxT: {fileID: 3488928508032684989}
-  maxRotationDeg: 180
---- !u!114 &2648543895379326516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1474,8 +1457,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537076923066050039}
-  m_LocalRotation: {x: 0.20343512, y: 4.2842995e-16, z: -2.2886494e-16, w: 0.9790884}
-  m_LocalPosition: {x: 0, y: 9.442073, z: -13.320374}
+  m_LocalRotation: {x: 0.20343515, y: 0.000000020914777, z: -0.000000004345676, w: 0.9790884}
+  m_LocalPosition: {x: 0, y: 9.442073, z: -13.320366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
