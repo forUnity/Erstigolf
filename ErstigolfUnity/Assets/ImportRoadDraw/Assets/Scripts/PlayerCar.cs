@@ -48,9 +48,22 @@ public class PlayerCar : MonoBehaviour
         visualWheel.transform.rotation = rotation;
     }
 
+    float upsidedownDuration;
+
+
     public void FixedUpdate()
     {
         UpdateUnderground();
+
+        if (transform.up.y < 0){
+            upsidedownDuration += Time.deltaTime;
+        }
+        else {
+            upsidedownDuration = 0f;
+        }
+        if (upsidedownDuration >= 3f){
+            transform.LookAt(transform.position + transform.forward, Vector3.up);
+        }
 
         float motor = maxMotorTorque;// * Input.GetAxis("Vertical");
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) motor = -maxMotorTorque;
