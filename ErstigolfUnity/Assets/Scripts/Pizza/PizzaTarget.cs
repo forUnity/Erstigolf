@@ -35,10 +35,19 @@ public class PizzaTarget : MonoBehaviour
         {
             if (requirePizzaCount > 0)
             {
-                requirePizzaCount--;
-                PizzaDeliveryManager.instance.DeliveredPizza();
+                bool correctType = true; // TODO : add pizza type and check
+                if (correctType){
+                    requirePizzaCount--;
+                    PizzaDeliveryManager.instance.DeliveredPizza();
+                    pizza.Delivered();
+                }
+                else {
+                    pizza.WrongDelivery();
+                }
             }
-            pizza.Delivered();
+            else {
+                pizza.UnwantedDelivery();
+            }
         }
     }
 
