@@ -1002,6 +1002,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarPlayerHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 7537076923063306622, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: groundFrictions.Array.data[1].forwardFriction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537076923063306622, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: groundFrictions.Array.data[1].sidewaysFriction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 9.442072
