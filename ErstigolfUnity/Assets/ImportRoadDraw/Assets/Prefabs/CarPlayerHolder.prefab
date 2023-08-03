@@ -1403,9 +1403,9 @@ MonoBehaviour:
     sidewaysFriction: 1
     drag: 0.02
   - name: Grass
-    forwardFriction: 2
-    sidewaysFriction: 2
-    drag: 0.2
+    forwardFriction: 6
+    sidewaysFriction: 6
+    drag: 0.8
   maxMotorTorque: 1300
   maxSteeringAngle: 15
   centerOfMass: {fileID: 4216708617918130017}
