@@ -60,7 +60,6 @@ public class PizzaDeliveryManager : MonoBehaviour
         
         availableTargets.Add(target);
         currentOrderCount--;
-        lastCooldownTime = Time.time;
     }
 
     public void TimeOut(PizzaTarget target){
