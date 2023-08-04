@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 using TMPro;
 public class UiManager : MonoBehaviour
 {
@@ -14,6 +14,7 @@ public class UiManager : MonoBehaviour
             instance = this;
         else 
             Destroy(gameObject);
+        gameTimeRemain = gameDuration;
     }
 
     [SerializeField] Transform OrderHolderT;
@@ -25,6 +26,7 @@ public class UiManager : MonoBehaviour
         foreach(PizzaTarget t in OrderersToCount.Keys){
             OrderersToCount[t].SetTime(t.scoreRatio);
         }
+        HandleTime();
     }
 
     public void UpdateOrders(PizzaTarget orderer, PizzaType type)
@@ -64,6 +66,18 @@ public class UiManager : MonoBehaviour
             }
         }
         return arr;
+    }
+
+    [SerializeField] float gameDuration = 600;
+    [SerializeField] TextMeshProUGUI timeText;
+    float gameTimeRemain;
+
+    private void HandleTime(){
+        gameTimeRemain -= Time.deltaTime;
+        if (gameTimeRemain <= 0){
+            SceneManager.LoadSceneAsync(2);
+        }
+        timeText.text = (Mathf.CeilToInt(gameTimeRemain)).ToString();
     }
 
     [SerializeField] private TextMeshProUGUI scoreTm;

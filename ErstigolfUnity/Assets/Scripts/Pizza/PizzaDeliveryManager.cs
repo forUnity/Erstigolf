@@ -28,6 +28,7 @@ public class PizzaDeliveryManager : MonoBehaviour
     private void Start() {
         availableTargets = new List<PizzaTarget>(pizzaTargets);
         lastCooldownTime = -orderCooldownTime + 3f;
+        score = 0;
     }
 
     private void Update()
@@ -67,7 +68,7 @@ public class PizzaDeliveryManager : MonoBehaviour
         AlertSystem.Message("Zu langsam für " + target.Name);
     }
 
-    int score = 0;
+    public int score {get; private set;}
     public void IncreaseScore(int amount)
     {
         score += amount;
