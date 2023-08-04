@@ -1003,6 +1003,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarPlayerHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.442072
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.20343518
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000014985757
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000000031137437
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1758,9 +1774,18 @@ MonoBehaviour:
   - {fileID: 1760357385}
   - {fileID: 2102849522}
   pizzaTypes:
-  - {fileID: 11400000, guid: 2ae5b8f24ee2ea541b99d276a27f7601, type: 2}
-  - {fileID: 11400000, guid: 1163107521a6ff0489aed065c3433956, type: 2}
+  - {fileID: 11400000, guid: f6fbfa0152699674cb29045ff8cb9653, type: 2}
+  - {fileID: 11400000, guid: 00232dd7e3fcf784bb9719d9791935cb, type: 2}
+  - {fileID: 11400000, guid: e9f78f6d33d6073459648e45ce75f8ce, type: 2}
   - {fileID: 11400000, guid: af180f1ae12fb0145ac23addca732757, type: 2}
+  - {fileID: 11400000, guid: fc096ebc12b6ac44bafb419be1d0ae4a, type: 2}
+  - {fileID: 11400000, guid: 2c7fffb981e35c84cac8a69cc576e471, type: 2}
+  - {fileID: 11400000, guid: 319ce3fdade5a8b41acb2101d02c75b0, type: 2}
+  - {fileID: 11400000, guid: 1163107521a6ff0489aed065c3433956, type: 2}
+  - {fileID: 11400000, guid: 8143f3faa7018704aa8d6fa80517cb68, type: 2}
+  - {fileID: 11400000, guid: 2ae5b8f24ee2ea541b99d276a27f7601, type: 2}
+  - {fileID: 11400000, guid: 7cc9029019fa71f45bf422678ae688b6, type: 2}
+  - {fileID: 11400000, guid: 6783b22e81d0d684292bb9e29f5206e5, type: 2}
   maxConcurrentDeliveryCount: 3
   orderCooldownTime: 4
 --- !u!1 &1284512176
