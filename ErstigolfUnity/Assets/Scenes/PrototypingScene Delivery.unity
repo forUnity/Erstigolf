@@ -465,7 +465,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -120.76, y: -219.68}
-  m_SizeDelta: {x: 499.4347, y: 219.6797}
+  m_SizeDelta: {x: 568.11, y: 219.6797}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &317841782
 MonoBehaviour:
@@ -487,11 +487,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AD for steering
+  m_text: 'Left, Right for steering
 
-    1,2,3 for Loding Pizza
+    ABCDE... for putting ingredients
 
-    RETURN for aim+fire'
+    RETURN
+    for aim+fire'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

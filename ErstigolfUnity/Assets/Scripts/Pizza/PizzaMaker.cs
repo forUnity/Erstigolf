@@ -8,12 +8,30 @@ public class PizzaMaker : MonoBehaviour
     [SerializeField] private Transform spawn;
     [SerializeField] private PizzaThrower thrower;
 
-    [SerializeField] PizzaType[] types;
-    // TODO : inputs
-    [SerializeField] KeyCode[] inputKeys;
-
     Pizza currentPizza;
     List<PizzaIngredient> currentIngredients = new List<PizzaIngredient>();
+
+    private void Awake()
+    {
+        AssignInputs();
+    }
+
+    KeyCode[] inputKeys;
+    private void AssignInputs()
+    {
+        List<KeyCode> availableKeyCodes = new List<KeyCode>();
+        for (int i = (int)KeyCode.A; i <= (int)KeyCode.Z; i++)
+        {
+            availableKeyCodes.Add((KeyCode)i);
+        }
+        inputKeys = new KeyCode[(int)PizzaIngredient.last];
+        for (int i = 0; i < inputKeys.Length; i++)
+        {
+            int k = Random.Range(0, availableKeyCodes.Count);
+            inputKeys[i] = (KeyCode)(availableKeyCodes[k]);
+            availableKeyCodes.RemoveAt(k);
+        }
+    }
 
     private void Update()
     {

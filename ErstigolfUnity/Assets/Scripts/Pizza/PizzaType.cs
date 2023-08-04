@@ -58,4 +58,5 @@ public enum PizzaIngredient
     salami,
     salat,
     tomatos,
+    last, // this is for counting and should last, with the first item being 0
 }

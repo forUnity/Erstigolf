@@ -66,7 +66,7 @@ public class PlayerCar : MonoBehaviour
         }
 
         float motor = maxMotorTorque;// * Input.GetAxis("Vertical");
-        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) motor = -maxMotorTorque;
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) motor = -maxMotorTorque;
         float steering;
         if (!steeringWheel)
         {
@@ -76,7 +76,7 @@ public class PlayerCar : MonoBehaviour
         {
             steering = steeringWheel.steeringWheelAxis * maxSteeringAngle;
         }
-        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) steering = 0f;
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) steering = 0f;
             
         foreach (AxleInfo axleInfo in axleInfos) {
             if (axleInfo.steering) {
