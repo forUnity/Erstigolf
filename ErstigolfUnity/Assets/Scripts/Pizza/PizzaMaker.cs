@@ -9,38 +9,43 @@ public class PizzaMaker : MonoBehaviour
     [SerializeField] private PizzaThrower thrower;
 
     [SerializeField] PizzaType[] types;
+    // TODO : inputs
+    [SerializeField] KeyCode[] inputKeys;
+
+    Pizza currentPizza;
+    List<PizzaIngredient> currentIngredients = new List<PizzaIngredient>();
 
     private void Update()
     {
-        // TODO : Input
         if (!thrower.Loaded)
         {
-            HandlePizzaMake();
+            LoadPizza();
+        }
+        else {
+            PutIngredients();
         }
     }
 
-    private void HandlePizzaMake()
+    private void LoadPizza()
     {
-        int type = 0;
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            type = 0;
+        currentPizza = null;
+        currentIngredients = new List<PizzaIngredient>();
+        GameObject p = Instantiate(pizzaPrefab, spawn.position, spawn.rotation, spawn);
+        thrower.LoadPizza(p);
+        currentPizza = p.GetComponent<Pizza>();
+    }
+
+    private void PutIngredients()
+    {
+        for (int i = 0; i < inputKeys.Length; i++){
+            if (Input.GetKeyDown(inputKeys[i])) {
+                currentIngredients.Add((PizzaIngredient)i);
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            type = 1;
+        UiManager.instance.UpdateLoadedIngredients(currentIngredients.ToArray());
+        if (currentPizza != null){
+            currentPizza.ingredients = currentIngredients.ToArray();
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            type = 2;
-        }
-        else
-        {
-            return;
-        }
-        Pizza p = Instantiate(pizzaPrefab, spawn.position, spawn.rotation, spawn).GetComponent<Pizza>();
-        p.type = types[type];
-        thrower.LoadPizza(p.gameObject);
     }
 
     private void OnDrawGizmos() {

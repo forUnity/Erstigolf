@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pizza : MonoBehaviour
 {
-    public PizzaType type;
+    public PizzaIngredient[] ingredients;
     [SerializeField] private GameObject deliverParticles;
     public void Delivered ()
     {

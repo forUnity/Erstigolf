@@ -34,7 +34,7 @@ public class PizzaTarget : MonoBehaviour
         {
             if (RequiredPizza != null)
             {
-                bool correctType = RequiredPizza.Match(pizza.type); // TODO : add pizza type and check
+                bool correctType = RequiredPizza.Match(pizza.ingredients); // TODO : add pizza type and check
                 if (correctType){
                     RequiredPizza = null;
                     PizzaDeliveryManager.instance.DeliveredPizza(this);

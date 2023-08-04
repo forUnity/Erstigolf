@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 using TMPro;
 public class UiManager : MonoBehaviour
@@ -65,4 +66,19 @@ public class UiManager : MonoBehaviour
         scoreTm.text = score.ToString();
     }
 
+    [SerializeField] GameObject icon;
+    [SerializeField] Transform iconHolder;
+    List<Image> currentIcons = new List<Image>();
+    public void UpdateLoadedIngredients(PizzaIngredient[] ingredients){
+        while (currentIcons.Count < ingredients.Length){
+            currentIcons.Add(Instantiate(icon, iconHolder).GetComponent<Image>());
+        }
+        for (int i = 0; i < currentIcons.Count; i++){
+            bool visible = i < ingredients.Length;
+            currentIcons[i].enabled = visible;
+            if (visible){
+                currentIcons[i].sprite = icons[(int)ingredients[i]];
+            }
+        }
+    }
  }

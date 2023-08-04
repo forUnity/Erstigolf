@@ -9,8 +9,12 @@ public class PizzaType : ScriptableObject
     const int maxIngredientCount = 4;
     public PizzaIngredient[] ingredients;
 
-    public bool Match(PizzaType other){
-        return ingredients == other.ingredients;
+    public bool Match(PizzaIngredient[] other){
+        if (other.Length != ingredients.Length) return false;
+        for (int i = 0; i < ingredients.Length; i++){
+            if (other[i] != ingredients[i]) return false;
+        }
+        return true;
     }
 
     public int[] GetIconsIndices(){
