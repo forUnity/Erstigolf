@@ -27,6 +27,7 @@ public class PizzaDeliveryManager : MonoBehaviour
 
     private void Start() {
         availableTargets = new List<PizzaTarget>(pizzaTargets);
+        lastCooldownTime = -orderCooldownTime + 3f;
     }
 
     private void Update()
@@ -48,18 +49,28 @@ public class PizzaDeliveryManager : MonoBehaviour
         availableTargets.RemoveAt(target);
     }
 
-    public void DeliveredPizza(PizzaTarget target)
+    public void DeliveredPizza(PizzaTarget target, int points)
     {
+        OnTargetDeactivate(target);
+        IncreaseScore(points);
+    }
+
+    private void OnTargetDeactivate(PizzaTarget target){
+        
         availableTargets.Add(target);
         currentOrderCount--;
         lastCooldownTime = Time.time;
-        IncreaseScore();
+    }
+
+    public void TimeOut(PizzaTarget target){
+        OnTargetDeactivate(target);
+        AlertSystem.Message("Zu langsam für " + target.Name);
     }
 
     int score = 0;
-    public void IncreaseScore()
+    public void IncreaseScore(int amount)
     {
-        score++;
+        score += amount;
         UiManager.instance.UpdateScore(score);
     }
 

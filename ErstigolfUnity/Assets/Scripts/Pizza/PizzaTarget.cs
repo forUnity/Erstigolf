@@ -12,18 +12,33 @@ public class PizzaTarget : MonoBehaviour
         set {
             _requiredPizza = value;
             requirePizzaIndicator(_requiredPizza != null);
-            UiManager.instance.UpdateOrders(Name, _requiredPizza);
+            UiManager.instance.UpdateOrders(this, _requiredPizza);
         } 
     }
 
     public void RequirePizza(PizzaType type)
     {
         RequiredPizza = type;
+        timeRemain = maxPatience;
     }
 
     private void Start()
     {
         RequiredPizza = null;
+    }
+
+    [SerializeField] float maxPatience = 100;
+    float timeRemain;
+    public float scoreRatio => timeRemain/maxPatience;
+
+    private void Update() {
+        if (RequiredPizza){
+            timeRemain -= Time.deltaTime;
+            if (timeRemain <= 0){
+                PizzaDeliveryManager.instance.TimeOut(this);
+                RequiredPizza = null;
+            }
+        }
     }
 
     public string Name = "LehrstuhlX";
@@ -36,8 +51,10 @@ public class PizzaTarget : MonoBehaviour
             {
                 bool correctType = RequiredPizza.Match(pizza.ingredients); // TODO : add pizza type and check
                 if (correctType){
+                    float timeMultiplier = 1 + scoreRatio;
+                    int val = (int)(RequiredPizza.Value * timeMultiplier);
+                    PizzaDeliveryManager.instance.DeliveredPizza(this, val);
                     RequiredPizza = null;
-                    PizzaDeliveryManager.instance.DeliveredPizza(this);
                     pizza.Delivered();
                 }
                 else {

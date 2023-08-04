@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PizzaType : ScriptableObject
 {
+    public int Value => ingredients.Length * 100;
     const int maxIngredientCount = 4;
     public PizzaIngredient[] ingredients;
 

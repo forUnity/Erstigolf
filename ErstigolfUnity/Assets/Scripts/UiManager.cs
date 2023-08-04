@@ -9,7 +9,7 @@ public class UiManager : MonoBehaviour
     public static UiManager instance;
     private void Awake()
     {
-        OrderersToCount = new Dictionary<string, UiOrder>();
+        OrderersToCount = new Dictionary<PizzaTarget, UiOrder>();
         if (!instance)
             instance = this;
         else 
@@ -19,20 +19,26 @@ public class UiManager : MonoBehaviour
     [SerializeField] Transform OrderHolderT;
     [SerializeField] GameObject OrderUIPrefab;
     [SerializeField] Sprite[] icons;
-    private Dictionary<string, UiOrder> OrderersToCount;
+    private Dictionary<PizzaTarget, UiOrder> OrderersToCount;
 
-    public void UpdateOrders(string ordererName, PizzaType type)
+    private void Update() {
+        foreach(PizzaTarget t in OrderersToCount.Keys){
+            OrderersToCount[t].SetTime(t.scoreRatio);
+        }
+    }
+
+    public void UpdateOrders(PizzaTarget orderer, PizzaType type)
     {
-        if (OrderersToCount.ContainsKey(ordererName))
+        if (OrderersToCount.ContainsKey(orderer))
         {
             if (type == null)
             {
-                Destroy(OrderersToCount[ordererName].gameObject);
-                OrderersToCount.Remove(ordererName);
+                Destroy(OrderersToCount[orderer].gameObject);
+                OrderersToCount.Remove(orderer);
             } 
             else
             {
-                OrderersToCount[ordererName].UpdateInfo(ordererName, type.name, GetIcons(type));
+                OrderersToCount[orderer].UpdateInfo(orderer.Name, type.name, GetIcons(type));
             }
         } 
         else
@@ -40,8 +46,8 @@ public class UiManager : MonoBehaviour
             if (type == null) return;
             UiOrder uiElement = Instantiate(OrderUIPrefab, OrderHolderT).GetComponent<UiOrder>();
             uiElement.gameObject.SetActive(true);
-            OrderersToCount.Add(ordererName, uiElement);
-            UpdateOrders(ordererName, type);
+            OrderersToCount.Add(orderer, uiElement);
+            UpdateOrders(orderer, type);
         }
     }
 

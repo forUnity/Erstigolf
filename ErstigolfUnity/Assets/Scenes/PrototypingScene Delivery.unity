@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5c2a2d652fa0b40a632ec9b686d9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPatience: 100
   Name: SWA Lehrstuhl
   tempGfx: {fileID: 214916578}
 --- !u!1 &95413778
@@ -1005,19 +1006,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.442072
+      value: 9.442073
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20343518
+      value: 0.20343515
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000014985757
+      value: 0.000000020914777
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000031137437
+      value: -0.000000004345676
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1525,6 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5c2a2d652fa0b40a632ec9b686d9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPatience: 100
   Name: "Hauptgeb\xE4ude"
   tempGfx: {fileID: 805173677}
 --- !u!4 &805851917
@@ -1787,7 +1789,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7cc9029019fa71f45bf422678ae688b6, type: 2}
   - {fileID: 11400000, guid: 6783b22e81d0d684292bb9e29f5206e5, type: 2}
   maxConcurrentDeliveryCount: 3
-  orderCooldownTime: 4
+  orderCooldownTime: 30
 --- !u!1 &1284512176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5c2a2d652fa0b40a632ec9b686d9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPatience: 100
   Name: Haus K
   tempGfx: {fileID: 571430463}
 --- !u!1 &1812286572
@@ -3386,5 +3389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5c2a2d652fa0b40a632ec9b686d9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPatience: 100
   Name: 154B
   tempGfx: {fileID: 1442733887}
