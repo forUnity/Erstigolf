@@ -723,6 +723,10 @@ MonoBehaviour:
   pizzaPrefab: {fileID: 4973443650436729901, guid: 3153cffea6bce1740a62d9bf500ad902, type: 3}
   spawn: {fileID: 692120406910657914}
   thrower: {fileID: 507713559882155830}
+  types:
+  - {fileID: 11400000, guid: 2ae5b8f24ee2ea541b99d276a27f7601, type: 2}
+  - {fileID: 11400000, guid: 1163107521a6ff0489aed065c3433956, type: 2}
+  - {fileID: 11400000, guid: af180f1ae12fb0145ac23addca732757, type: 2}
 --- !u!1 &5918110852113972423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,8 +1461,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537076923066050039}
-  m_LocalRotation: {x: 0.20343515, y: 0.000000020914777, z: -0.000000004345676, w: 0.9790884}
-  m_LocalPosition: {x: 0, y: 9.442073, z: -13.320366}
+  m_LocalRotation: {x: 0.20343518, y: -0.000000014985757, z: 0.0000000031137437, w: 0.9790884}
+  m_LocalPosition: {x: 0, y: 9.442072, z: -13.320366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

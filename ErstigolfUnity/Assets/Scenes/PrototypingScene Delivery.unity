@@ -464,7 +464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -219.68}
+  m_AnchoredPosition: {x: 0, y: -256}
   m_SizeDelta: {x: 499.4347, y: 219.6797}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &317841782
@@ -489,7 +489,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AD for steering
 
-    T for Loding Pizza
+    1,2,3 for Loding Pizza
 
     RETURN for aim+fire'
   m_isRightToLeft: 0
@@ -1001,30 +1001,6 @@ PrefabInstance:
     - target: {fileID: 6803748061216203864, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_Name
       value: CarPlayerHolder
-      objectReference: {fileID: 0}
-    - target: {fileID: 7537076923063306622, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
-      propertyPath: groundFrictions.Array.data[1].forwardFriction
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7537076923063306622, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
-      propertyPath: groundFrictions.Array.data[1].sidewaysFriction
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.442072
-      objectReference: {fileID: 0}
-    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.20343518
-      objectReference: {fileID: 0}
-    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.000000014985757
-      objectReference: {fileID: 0}
-    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0000000031137437
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1606,6 +1582,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OrderHolderT: {fileID: 1519044265}
   OrderUIPrefab: {fileID: 4167918763943758228, guid: d2a1bc1b5a142b44aa3310c0537336d1, type: 3}
+  icons:
+  - {fileID: 21300000, guid: fc15fec5aea6a4e7c8d3af67916b7889, type: 3}
+  - {fileID: 21300000, guid: af9dcf356be2749228f23fff1cc8b7fb, type: 3}
+  - {fileID: 21300000, guid: bfbf8b6c3b15547df885053bd2807cdd, type: 3}
+  - {fileID: 21300000, guid: 3ba5a88a0508a488a85c30169a8e18de, type: 3}
+  - {fileID: 21300000, guid: eec0facfca0a442239269e367daaad9c, type: 3}
+  - {fileID: 21300000, guid: 0e3588bd6507d4164b8cf749ed372de5, type: 3}
+  - {fileID: 21300000, guid: 23de36d9c9c854d4dbb503079e846575, type: 3}
+  - {fileID: 21300000, guid: 4bbf93270b9124286876611d9950e2fd, type: 3}
+  - {fileID: 21300000, guid: 90e2b60b2e48d40ad91f58045677f955, type: 3}
+  - {fileID: 21300000, guid: 28b180278493e4d0ea58f28a1c0ba01f, type: 3}
+  - {fileID: 21300000, guid: a2e86a433aa8b49018db7c80923744bd, type: 3}
+  - {fileID: 21300000, guid: c2d9e80be85564073abdc0cc14bfe297, type: 3}
+  - {fileID: 21300000, guid: 3e87be51823d846949ed08c33c74b463, type: 3}
+  - {fileID: 21300000, guid: bb7faf4c850ef48cdb33c2bd17737619, type: 3}
   scoreTm: {fileID: 2042825832}
 --- !u!114 &1020421097
 MonoBehaviour:
@@ -1762,9 +1753,12 @@ MonoBehaviour:
   - {fileID: 63708324}
   - {fileID: 1760357385}
   - {fileID: 2102849522}
+  pizzaTypes:
+  - {fileID: 11400000, guid: 2ae5b8f24ee2ea541b99d276a27f7601, type: 2}
+  - {fileID: 11400000, guid: 1163107521a6ff0489aed065c3433956, type: 2}
+  - {fileID: 11400000, guid: af180f1ae12fb0145ac23addca732757, type: 2}
   maxConcurrentDeliveryCount: 3
   orderCooldownTime: 4
-  lastCooldownTime: 0
 --- !u!1 &1284512176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,9 +2533,9 @@ RectTransform:
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.42943752, y: 0.3064445}
+  m_AnchorMax: {x: 0.5243542, y: 0.3064445}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -162.9478, y: 0.5076}
+  m_SizeDelta: {x: -0.000061035, y: -69.4755}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1519044266
 MonoBehaviour:

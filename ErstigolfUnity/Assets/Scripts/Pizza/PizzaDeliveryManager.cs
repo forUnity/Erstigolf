@@ -15,11 +15,20 @@ public class PizzaDeliveryManager : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] private List<PizzaTarget> pizzaTargets;
-    [SerializeField] private int maxConcurrentDeliveryCount = 3;
+    [SerializeField] PizzaTarget[] pizzaTargets;
+    [SerializeField] PizzaType[] pizzaTypes;
+    [SerializeField] int maxConcurrentDeliveryCount = 3;
 
-    [SerializeField] private float orderCooldownTime = 3f;
-    [SerializeField] private float lastCooldownTime = 0;
+    [SerializeField] float orderCooldownTime = 3f;
+    float lastCooldownTime = 0;
+
+    // only deliver one pizza per location to avoid overstressing of pizzamaker
+    List<PizzaTarget> availableTargets;
+
+    private void Start() {
+        availableTargets = new List<PizzaTarget>(pizzaTargets);
+    }
+
     private void Update()
     {
         if(currentOrderCount < maxConcurrentDeliveryCount && lastCooldownTime + orderCooldownTime < Time.time)
@@ -33,13 +42,17 @@ public class PizzaDeliveryManager : MonoBehaviour
     {
         lastCooldownTime = Time.time;
         currentOrderCount++;
-        int target = Random.Range(0, pizzaTargets.Count);
-        pizzaTargets[target].RequirePizza();
+        int target = Random.Range(0, availableTargets.Count);
+        int type = Random.Range(0, pizzaTypes.Length);
+        availableTargets[target].RequirePizza(pizzaTypes[type]);
+        availableTargets.RemoveAt(target);
     }
 
-    public void DeliveredPizza()
+    public void DeliveredPizza(PizzaTarget target)
     {
+        availableTargets.Add(target);
         currentOrderCount--;
+        lastCooldownTime = Time.time;
         IncreaseScore();
     }
 

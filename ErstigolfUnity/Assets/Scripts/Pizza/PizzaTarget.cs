@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class PizzaTarget : MonoBehaviour
 {
-    int _requirePizzaCount = 0;
-    int requirePizzaCount {
+    PizzaType _requiredPizza = null;
+    PizzaType RequiredPizza {
         get { 
-            return _requirePizzaCount;
+            return _requiredPizza;
         } 
         set {
-            _requirePizzaCount = value;
-            requirePizzaIndicator(_requirePizzaCount > 0);
-            UiManager.instance.UpdateOrders(Name, _requirePizzaCount);
+            _requiredPizza = value;
+            requirePizzaIndicator(_requiredPizza != null);
+            UiManager.instance.UpdateOrders(Name, _requiredPizza);
         } 
-    
     }
 
-    public void RequirePizza()
+    public void RequirePizza(PizzaType type)
     {
-        requirePizzaCount++;
+        RequiredPizza = type;
     }
 
     private void Start()
     {
-        requirePizzaCount = 0;
+        RequiredPizza = null;
     }
 
     public string Name = "LehrstuhlX";
@@ -33,12 +32,12 @@ public class PizzaTarget : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Pizza pizza))
         {
-            if (requirePizzaCount > 0)
+            if (RequiredPizza != null)
             {
-                bool correctType = true; // TODO : add pizza type and check
+                bool correctType = RequiredPizza.Match(pizza.type); // TODO : add pizza type and check
                 if (correctType){
-                    requirePizzaCount--;
-                    PizzaDeliveryManager.instance.DeliveredPizza();
+                    RequiredPizza = null;
+                    PizzaDeliveryManager.instance.DeliveredPizza(this);
                     pizza.Delivered();
                 }
                 else {
