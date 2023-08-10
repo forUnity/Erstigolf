@@ -35,7 +35,7 @@ public class PizzaDeliveryManager : MonoBehaviour
     private void Update()
     {
         if (currentOrderCount == 0){
-            lastCooldownTime = Time.time -orderCooldownTime + emptyOrderTime;
+            lastCooldownTime = Mathf.Min(Time.time -orderCooldownTime + emptyOrderTime, lastCooldownTime);
         }
         if(currentOrderCount < maxConcurrentDeliveryCount && lastCooldownTime + orderCooldownTime < Time.time)
         {
