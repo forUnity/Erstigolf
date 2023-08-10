@@ -1167,9 +1167,9 @@ MonoBehaviour:
   m_LookaheadTime: 0.167
   m_LookaheadSmoothing: 4.8
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 3
+  m_YDamping: 3
+  m_ZDamping: 3
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
@@ -1407,10 +1407,12 @@ MonoBehaviour:
     sidewaysFriction: 6
     drag: 0.8
   maxMotorTorque: 1300
+  brakeTorque: 5200
   maxSteeringAngle: 15
   centerOfMass: {fileID: 4216708617918130017}
   health: 0.5
   healingSpeed: 0.1
+  stabilizationForce: 1500
 --- !u!114 &4958832147505571172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1457,8 +1459,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537076923066050039}
-  m_LocalRotation: {x: 0.20343517, y: 0.000000038917744, z: -0.000000008086337, w: 0.9790884}
-  m_LocalPosition: {x: 0, y: 9.442072, z: -13.320366}
+  m_LocalRotation: {x: 0.20343514, y: 0.000000024684043, z: -0.000000005128854, w: 0.9790884}
+  m_LocalPosition: {x: 0, y: 9.442072, z: -13.320374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

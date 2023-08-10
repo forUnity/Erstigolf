@@ -11,6 +11,7 @@ public class PlayerCar : MonoBehaviour
     public List<AxleInfo> axleInfos; // the information about each individual axle
     public List<GroundFriction> groundFrictions;
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
+    public float brakeTorque;
     public float maxSteeringAngle; // maximum steer angle the wheel can have
 
     public Transform centerOfMass;
@@ -50,7 +51,7 @@ public class PlayerCar : MonoBehaviour
 
     float upsidedownDuration;
 
-
+    [SerializeField] float stabilizationForce = 1500;
     public void FixedUpdate()
     {
         UpdateUnderground();
@@ -66,7 +67,6 @@ public class PlayerCar : MonoBehaviour
         }
 
         float motor = maxMotorTorque;// * Input.GetAxis("Vertical");
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) motor = -maxMotorTorque;
         float steering;
         if (!steeringWheel)
         {
@@ -76,8 +76,16 @@ public class PlayerCar : MonoBehaviour
         {
             steering = steeringWheel.steeringWheelAxis * maxSteeringAngle;
         }
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) steering = 0f;
-            
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)){
+            if (axleInfos[0].leftWheel.rpm > 0){
+                motor = -brakeTorque;
+            }
+            else {
+                motor = -maxMotorTorque;
+            }
+            steering = 0f;
+        }
+
         foreach (AxleInfo axleInfo in axleInfos) {
             if (axleInfo.steering) {
                 axleInfo.leftWheel.steerAngle = steering;
@@ -95,8 +103,8 @@ public class PlayerCar : MonoBehaviour
         isJumping = Mathf.Abs(GetComponent<Rigidbody>().velocity.y) > 0.1f;
 
         // add downforce to stabilize the car
-        if (!isJumping) GetComponent<Rigidbody>().AddForce(-transform.up * 700 * GetComponent<Rigidbody>().velocity.magnitude);
-        else GetComponent<Rigidbody>().AddForce(transform.up * 700);
+        if (!isJumping) GetComponent<Rigidbody>().AddForce(-transform.up * stabilizationForce * GetComponent<Rigidbody>().velocity.magnitude);
+        else GetComponent<Rigidbody>().AddForce(transform.up * stabilizationForce);
 
         SetDrift( Input.GetKey(KeyCode.LeftShift));
 
