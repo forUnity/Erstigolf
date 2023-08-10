@@ -49,7 +49,7 @@ public class PizzaTarget : MonoBehaviour
         {
             if (RequiredPizza != null)
             {
-                bool correctType = RequiredPizza.Match(pizza.ingredients); // TODO : add pizza type and check
+                bool correctType = RequiredPizza.Match(pizza.ingredients);
                 if (correctType){
                     float timeMultiplier = 1 + scoreRatio;
                     int val = (int)(RequiredPizza.Value * timeMultiplier);
