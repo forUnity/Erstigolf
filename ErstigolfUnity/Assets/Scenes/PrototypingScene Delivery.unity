@@ -1091,7 +1091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.442073
+      value: 9.442074
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1103,15 +1103,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20343512
+      value: 0.2034351
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 4.2842995e-16
+      value: 0.000000047308685
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -2.2886494e-16
+      value: -0.000000009829803
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2104,6 +2104,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7cc9029019fa71f45bf422678ae688b6, type: 2}
   - {fileID: 11400000, guid: 6783b22e81d0d684292bb9e29f5206e5, type: 2}
   maxConcurrentDeliveryCount: 3
+  emptyOrderTime: 3
   orderCooldownTime: 30
 --- !u!1 &1254232768
 GameObject:

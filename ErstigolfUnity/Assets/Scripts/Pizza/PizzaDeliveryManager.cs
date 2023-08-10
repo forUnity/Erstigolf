@@ -17,8 +17,10 @@ public class PizzaDeliveryManager : MonoBehaviour
 
     [SerializeField] PizzaTarget[] pizzaTargets;
     [SerializeField] PizzaType[] pizzaTypes;
-    [SerializeField] int maxConcurrentDeliveryCount = 3;
-
+    [SerializeField] int maxConcurrentDeliveryCount;
+    [Tooltip("The time for a new order, when there is no current order")]
+    [SerializeField] float emptyOrderTime;
+    [Tooltip("The time for getting a new Order, when there already is an active Order")]
     [SerializeField] float orderCooldownTime = 3f;
     float lastCooldownTime = 0;
 
@@ -27,12 +29,14 @@ public class PizzaDeliveryManager : MonoBehaviour
 
     private void Start() {
         availableTargets = new List<PizzaTarget>(pizzaTargets);
-        lastCooldownTime = -orderCooldownTime + 3f;
         score = 0;
     }
 
     private void Update()
     {
+        if (currentOrderCount == 0){
+            lastCooldownTime = Time.time -orderCooldownTime + emptyOrderTime;
+        }
         if(currentOrderCount < maxConcurrentDeliveryCount && lastCooldownTime + orderCooldownTime < Time.time)
         {
             AddPizza();
