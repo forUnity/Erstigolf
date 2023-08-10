@@ -1089,9 +1089,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarPlayerHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 7537076922760453771, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: m_XDamping
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537076922760453771, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: m_YDamping
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537076922760453771, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: m_ZDamping
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.44207
+      value: 9.442071
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1107,11 +1119,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000014589556
+      value: -0.000000027030673
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000030314196
+      value: 0.0000000056164366
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
