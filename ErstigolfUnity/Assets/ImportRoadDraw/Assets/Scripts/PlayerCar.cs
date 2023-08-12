@@ -24,6 +24,14 @@ public class PlayerCar : MonoBehaviour
     public float health = 0.5f;
     public float healingSpeed = 0.1f;
 
+    Vector3 startPosition;
+    Quaternion startRotation;
+
+    private void Awake() {
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+    }
+
     public void Start()
     {
         GetComponent<Rigidbody>().centerOfMass = centerOfMass.localPosition;
@@ -64,6 +72,10 @@ public class PlayerCar : MonoBehaviour
         }
         if (upsidedownDuration >= 3f){
             transform.LookAt(transform.position + transform.forward, Vector3.up);
+        }
+        if (transform.position.y < -100){
+            transform.position = startPosition;
+            transform.rotation = startRotation;
         }
 
         float motor = maxMotorTorque;// * Input.GetAxis("Vertical");
