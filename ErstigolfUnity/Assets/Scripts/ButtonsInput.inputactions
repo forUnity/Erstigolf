@@ -51,9 +51,27 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Blue_Release",
+                    "type": "Button",
+                    "id": "1588adf3-e9d6-4550-a27f-7790c3269d58",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Green",
                     "type": "Button",
                     "id": "a7979ffb-89a6-47fc-9bfa-902a13f62c24",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Green-Release",
+                    "type": "Button",
+                    "id": "35567f03-5175-4709-9d84-fd51ed66a333",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -69,9 +87,27 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "White_Release",
+                    "type": "Button",
+                    "id": "ecde083f-9d4f-4d0b-8a62-7db4d94e156c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Yellow",
                     "type": "Button",
                     "id": "0de40ad6-8755-4e97-a432-15287fbfdfa7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Yellow_Release",
+                    "type": "Button",
+                    "id": "0db4fc1f-abd7-42f6-a3fd-ace5b99fd523",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -164,6 +200,178 @@
                     "processors": "",
                     "groups": "",
                     "action": "Black_Release",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9805660f-d683-447c-bea6-badbe5c1cdea",
+                    "path": "<Keyboard>/x",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Blue_Release",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34cbe871-e828-4442-b4f1-2ad85be07e45",
+                    "path": "<Keyboard>/s",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Green-Release",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "54595542-7c71-4b1f-bb0d-e3f5fc1c1657",
+                    "path": "<Keyboard>/o",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "White_Release",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f328f98-77e2-428c-8c5a-a99d8eaac9c7",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Yellow_Release",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Pizza",
+            "id": "338ec742-5c99-47be-8c70-1ddfdafffae6",
+            "actions": [
+                {
+                    "name": "Ing1",
+                    "type": "Button",
+                    "id": "40e59fcd-de12-46a1-ad2b-578c40bac3b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ing2",
+                    "type": "Button",
+                    "id": "93b3b8a6-b6bc-4a01-9c21-f832d1007601",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ing3",
+                    "type": "Button",
+                    "id": "36a08275-ca8c-4cbf-b5b0-59bfd8f57d8c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ing4",
+                    "type": "Button",
+                    "id": "8c98acd5-fbde-4785-ace1-59c80a5c0b3b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ing5",
+                    "type": "Button",
+                    "id": "650a49fa-8b23-4248-8e4b-e45dd27666da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ing6",
+                    "type": "Button",
+                    "id": "3ce3b623-2e63-4ea4-94db-b0f33a47a4b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3563665b-0797-4edf-8a70-d6133a9b5742",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ing1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aeac112d-41be-4560-b4db-5ed2cc864e6a",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ing2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "49f17676-f822-4b94-b9db-479b0d5c507c",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ing3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb3afd54-a6e3-4dcc-807a-d4762ade01c6",
+                    "path": "<Keyboard>/comma",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ing4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f1208323-e813-4222-a7a1-d698b8b14b26",
+                    "path": "<Keyboard>/period",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ing5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99387452-c2f0-44aa-9991-2ada9c0a820a",
+                    "path": "<Keyboard>/slash",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ing6",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

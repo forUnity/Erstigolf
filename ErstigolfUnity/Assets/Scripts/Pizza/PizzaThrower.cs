@@ -19,7 +19,7 @@ public class PizzaThrower : MonoBehaviour
     private ButtonsInput inputs;
     private void Awake() {
         inputs = new ButtonsInput();
-        inputs.Car.White.performed += x => OnEnter();
+        inputs.Car.Green.performed += x => OnEnter();
     }
 
     private void OnEnable() {
@@ -33,6 +33,7 @@ public class PizzaThrower : MonoBehaviour
     private void Update()
     {
         SetArrow();
+        UiManager.instance.UpdateLoadedPizza(pizzas.ToArray());
     }
 
     private void SetArrow()
@@ -56,8 +57,7 @@ public class PizzaThrower : MonoBehaviour
         switch (currentState) 
         {
         case AimState.idle:
-            // TODO: player feedback
-            Debug.LogWarning("no pizza loaded");
+            AlertSystem.Message("Keine Pizza Geladen");
             break;
         case AimState.ready:
             currentState = AimState.leftRight;
@@ -73,20 +73,22 @@ public class PizzaThrower : MonoBehaviour
         }
     }
 
-    Transform pizza;
+    Queue<Transform> pizzas = new Queue<Transform>();
+    Transform nextPizza => pizzas.TryDequeue(out Transform result) ? result : null;
     
-    public bool Loaded => pizza;
+    public bool Loaded => pizzas.TryPeek(out Transform x);
 
     public void LoadPizza(GameObject p) 
     {
         if (p.TryGetComponent(out Collider c)) c.enabled = false;
         if (p.TryGetComponent(out Rigidbody rb)) rb.isKinematic = true;
-        pizza = p.transform;
+        pizzas.Enqueue(p.transform);
         currentState = AimState.ready;
     }
 
     private void LaunchPizza() 
     {
+        Transform pizza = nextPizza;
         pizza.position = shootTransform.position;
         pizza.rotation = shootTransform.rotation;
 
@@ -106,8 +108,7 @@ public class PizzaThrower : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         Rigidbody carRB = rotor.parent.GetComponentInParent<Rigidbody>();
         if (carRB) rb.velocity += carRB.velocity;
-        pizza = null;
-        currentState = AimState.idle;
+        currentState = Loaded ? AimState.ready : AimState.idle;
     }
 
     private enum AimState

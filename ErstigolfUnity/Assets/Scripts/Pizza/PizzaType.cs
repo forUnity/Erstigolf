@@ -7,10 +7,10 @@ using UnityEngine;
 public class PizzaType : ScriptableObject
 {
     public int Value => ingredients.Length * 100;
-    const int maxIngredientCount = 4;
-    public PizzaIngredient[] ingredients;
+    public const int ingredientCount = 6;
+    public bool[] ingredients;
 
-    public bool Match(PizzaIngredient[] other){
+    public bool Match(bool[] other){
         if (other.Length != ingredients.Length) return false;
         for (int i = 0; i < ingredients.Length; i++){
             if (other[i] != ingredients[i]) return false;
@@ -19,10 +19,10 @@ public class PizzaType : ScriptableObject
     }
 
     public int[] GetIconsIndices(){
-        int[] arr = new int[maxIngredientCount];
+        int[] arr = new int[ingredientCount];
         for (int i = 0; i < arr.Length; i++){
             if (i < ingredients.Length){
-                arr[i] = (int)(ingredients[i]);
+                arr[i] = ingredients[i] ? i : -1;
             }
             else {
                 arr[i] = -1;
@@ -32,13 +32,12 @@ public class PizzaType : ScriptableObject
     }
 
     private void OnValidate() {
-        if (ingredients.Length > maxIngredientCount){
-            ingredients = new PizzaIngredient[]{
-                ingredients[0],
-                ingredients[1],
-                ingredients[2],
-                ingredients[3],
-            };
+        if (ingredients.Length != ingredientCount){
+            bool[] newIngredients = new bool[ingredientCount];
+            for (int i = 0; i < Mathf.Min(ingredientCount, ingredients.Length); i++){
+                newIngredients[i] = ingredients[i];   
+            }
+            ingredients = newIngredients;
         }
     }
 }

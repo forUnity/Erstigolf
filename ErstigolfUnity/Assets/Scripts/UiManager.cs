@@ -86,18 +86,26 @@ public class UiManager : MonoBehaviour
         scoreTm.text = score.ToString();
     }
 
-    [SerializeField] GameObject icon;
-    [SerializeField] Transform iconHolder;
-    List<Image> currentIcons = new List<Image>();
-    public void UpdateLoadedIngredients(PizzaIngredient[] ingredients){
-        while (currentIcons.Count < ingredients.Length){
-            currentIcons.Add(Instantiate(icon, iconHolder).GetComponent<Image>());
+    [SerializeField] GameObject panelPrefab;
+    [SerializeField] Transform panelHolder;
+    List<PizzaPanel> currentPanels = new List<PizzaPanel>();
+
+    public void UpdateLoadedPizza(Transform[] pizzas){
+        while (currentPanels.Count < pizzas.Length){
+            currentPanels.Add(Instantiate(panelPrefab, panelHolder).GetComponent<PizzaPanel>());
         }
-        for (int i = 0; i < currentIcons.Count; i++){
-            bool visible = i < ingredients.Length;
-            currentIcons[i].enabled = visible;
+        for (int i = 0; i < currentPanels.Count; i++){
+            bool visible = i < pizzas.Length;
+            currentPanels[i].gameObject.SetActive(visible);
             if (visible){
-                currentIcons[i].sprite = icons[(int)ingredients[i]];
+                if (pizzas[i].TryGetComponent(out Pizza pizza)){
+                    for (int s = 0; s < Mathf.Min(currentPanels[i].slots.Length, pizza.ingredients.Length); s++){
+                        if (pizza.ingredients[s]){
+                            currentPanels[i].slots[s].sprite = UiManager.instance.icons[s];
+                        }
+                        currentPanels[i].slots[s].enabled = pizza.ingredients[s];
+                    }
+                }
             }
         }
     }

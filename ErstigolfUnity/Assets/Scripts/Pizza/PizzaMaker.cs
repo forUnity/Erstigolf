@@ -8,62 +8,39 @@ public class PizzaMaker : MonoBehaviour
     [SerializeField] private Transform spawn;
     [SerializeField] private PizzaThrower thrower;
 
-    Pizza currentPizza;
-    List<PizzaIngredient> currentIngredients = new List<PizzaIngredient>();
+    private bool[] currentIngredients;
 
-    private void Awake()
-    {
-        AssignInputs();
+    private ButtonsInput inputs;
+    private void Awake() {
+        currentIngredients = new bool[PizzaType.ingredientCount];
+        inputs = new ButtonsInput();
+        inputs.Pizza.Ing1.performed += x => ToggleIngredient(0);
+        inputs.Pizza.Ing2.performed += x => ToggleIngredient(1);
+        inputs.Pizza.Ing3.performed += x => ToggleIngredient(2);
+        inputs.Pizza.Ing4.performed += x => ToggleIngredient(3);
+        inputs.Pizza.Ing5.performed += x => ToggleIngredient(4);
+        inputs.Pizza.Ing6.performed += x => ToggleIngredient(5);
+        inputs.Car.Yellow.performed += x => LoadPizza();
     }
 
-    KeyCode[] inputKeys;
-    private void AssignInputs()
-    {
-        List<KeyCode> availableKeyCodes = new List<KeyCode>();
-        for (int i = (int)KeyCode.A; i <= (int)KeyCode.Z; i++)
-        {
-            availableKeyCodes.Add((KeyCode)i);
-        }
-        inputKeys = new KeyCode[(int)PizzaIngredient.last];
-        for (int i = 0; i < inputKeys.Length; i++)
-        {
-            int k = Random.Range(0, availableKeyCodes.Count);
-            inputKeys[i] = (KeyCode)(availableKeyCodes[k]);
-            availableKeyCodes.RemoveAt(k);
-        }
+    private void OnEnable() {
+        inputs.Enable();
     }
 
-    private void Update()
-    {
-        if (!thrower.Loaded)
-        {
-            LoadPizza();
-        }
-        else {
-            PutIngredients();
-        }
+    private void OnDisable() {
+        inputs.Disable();
     }
 
+    private void ToggleIngredient(int index){
+        currentIngredients[index] = !currentIngredients[index];
+    }
+    
     private void LoadPizza()
     {
-        currentPizza = null;
-        currentIngredients = new List<PizzaIngredient>();
         GameObject p = Instantiate(pizzaPrefab, spawn.position, spawn.rotation, spawn);
         thrower.LoadPizza(p);
-        currentPizza = p.GetComponent<Pizza>();
-    }
-
-    private void PutIngredients()
-    {
-        for (int i = 0; i < inputKeys.Length; i++){
-            if (Input.GetKeyDown(inputKeys[i])) {
-                currentIngredients.Add((PizzaIngredient)i);
-            }
-        }
-        UiManager.instance.UpdateLoadedIngredients(currentIngredients.ToArray());
-        if (currentPizza != null){
-            currentPizza.ingredients = currentIngredients.ToArray();
-        }
+        p.GetComponent<Pizza>().ingredients = currentIngredients;
+        currentIngredients = new bool[PizzaType.ingredientCount];
     }
 
     private void OnDrawGizmos() {

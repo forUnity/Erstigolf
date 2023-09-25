@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0de5ae0b28c7af43b4e4476bc52e01b, type: 3}
   m_Name: Curry
   m_EditorClassIdentifier: 
-  ingredients: 030000000a00000005000000
+  ingredients: 000101010100

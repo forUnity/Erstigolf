@@ -35269,7 +35269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.442071
+      value: 9.44207
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35277,15 +35277,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20343511
+      value: 0.20343508
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000027030673
+      value: -0.000000014160526
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000056164366
+      value: 0.0000000029422753
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -57235,25 +57235,18 @@ MonoBehaviour:
   OrderHolderT: {fileID: 1519044265}
   OrderUIPrefab: {fileID: 4167918763943758228, guid: d2a1bc1b5a142b44aa3310c0537336d1, type: 3}
   icons:
-  - {fileID: 21300000, guid: fc15fec5aea6a4e7c8d3af67916b7889, type: 3}
-  - {fileID: 21300000, guid: af9dcf356be2749228f23fff1cc8b7fb, type: 3}
-  - {fileID: 21300000, guid: bfbf8b6c3b15547df885053bd2807cdd, type: 3}
   - {fileID: 21300000, guid: 3ba5a88a0508a488a85c30169a8e18de, type: 3}
-  - {fileID: 21300000, guid: eec0facfca0a442239269e367daaad9c, type: 3}
+  - {fileID: 21300000, guid: bb7faf4c850ef48cdb33c2bd17737619, type: 3}
+  - {fileID: 21300000, guid: c2d9e80be85564073abdc0cc14bfe297, type: 3}
+  - {fileID: 21300000, guid: bfbf8b6c3b15547df885053bd2807cdd, type: 3}
   - {fileID: 21300000, guid: 0e3588bd6507d4164b8cf749ed372de5, type: 3}
   - {fileID: 21300000, guid: 23de36d9c9c854d4dbb503079e846575, type: 3}
-  - {fileID: 21300000, guid: 4bbf93270b9124286876611d9950e2fd, type: 3}
-  - {fileID: 21300000, guid: 90e2b60b2e48d40ad91f58045677f955, type: 3}
-  - {fileID: 21300000, guid: 28b180278493e4d0ea58f28a1c0ba01f, type: 3}
-  - {fileID: 21300000, guid: a2e86a433aa8b49018db7c80923744bd, type: 3}
-  - {fileID: 21300000, guid: c2d9e80be85564073abdc0cc14bfe297, type: 3}
-  - {fileID: 21300000, guid: 3e87be51823d846949ed08c33c74b463, type: 3}
-  - {fileID: 21300000, guid: bb7faf4c850ef48cdb33c2bd17737619, type: 3}
+  - {fileID: 0}
   gameDuration: 600
   timeText: {fileID: 918940365}
   scoreTm: {fileID: 2042825832}
-  icon: {fileID: 2983701750859434525, guid: 807ce7342a27e3a46b19163a04e4b380, type: 3}
-  iconHolder: {fileID: 2034423676}
+  panelPrefab: {fileID: 8013629467697151390, guid: 367ba660c7f8be844ae4a73e57258816, type: 3}
+  panelHolder: {fileID: 2034423676}
 --- !u!114 &1020421097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84287,7 +84280,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5243542, y: 0.3064445}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.000061035, y: -69.4755}
+  m_SizeDelta: {x: 315.0119, y: -69.4755}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1519044266
 MonoBehaviour:
@@ -111175,10 +111168,10 @@ RectTransform:
   m_Father: {fileID: 1020421100}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.93500006, y: 0}
+  m_AnchorMin: {x: 0.8523335, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.2403564, y: 0}
-  m_SizeDelta: {x: -4.0004883, y: 1251.3618}
+  m_AnchoredPosition: {x: -50.654907, y: 0}
+  m_SizeDelta: {x: 50.8948, y: 1251.3618}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2034423677
 MonoBehaviour:
@@ -111201,7 +111194,7 @@ MonoBehaviour:
   m_Spacing: 15
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
