@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AlertSystem : MonoBehaviour
 {
     [SerializeField] GameObject alertBanner;
+    [SerializeField] AudioSource sound;
     [SerializeField] Text displayText;
     [SerializeField] float displayTime = 3f;
     private static AlertSystem instance;
@@ -24,6 +25,7 @@ public class AlertSystem : MonoBehaviour
                 displayText.text = msg;
                 timeRemain = displayTime;
                 alertBanner.SetActive(true);
+                sound.Play();
             }
             else {
                 alertBanner.SetActive(false);

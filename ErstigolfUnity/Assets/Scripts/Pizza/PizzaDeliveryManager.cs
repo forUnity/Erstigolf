@@ -17,6 +17,7 @@ public class PizzaDeliveryManager : MonoBehaviour
 
     [SerializeField] PizzaTarget[] pizzaTargets;
     [SerializeField] PizzaType[] pizzaTypes;
+    [SerializeField] AudioSource sound;
     [SerializeField] int maxConcurrentDeliveryCount;
     [Tooltip("The time for a new order, when there is no current order")]
     [SerializeField] float emptyOrderTime;
@@ -52,6 +53,7 @@ public class PizzaDeliveryManager : MonoBehaviour
         int type = Random.Range(0, pizzaTypes.Length);
         availableTargets[target].RequirePizza(pizzaTypes[type]);
         availableTargets.RemoveAt(target);
+        sound.Play();
     }
 
     public void DeliveredPizza(PizzaTarget target, int points)
