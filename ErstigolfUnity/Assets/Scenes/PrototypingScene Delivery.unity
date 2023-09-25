@@ -19151,7 +19151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -120.56, y: 0}
+  m_AnchoredPosition: {x: -120.76, y: -219.68}
   m_SizeDelta: {x: 568.11, y: 219.6797}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &317841782
@@ -35268,20 +35268,24 @@ PrefabInstance:
       value: CarPlayerHolder
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.442071
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.320374
+      value: -13.320366
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20343514
+      value: 0.20343511
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000024684043
+      value: -0.000000027030673
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000005128854
+      value: 0.0000000056164366
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52118,7 +52122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 542.2556, y: 0}
+  m_AnchoredPosition: {x: 542.2556, y: -124.52}
   m_SizeDelta: {x: 542.2556, y: 124.5234}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &918940365
@@ -111888,7 +111892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 271.1278, y: 0}
+  m_AnchoredPosition: {x: 271.1278, y: -124.52}
   m_SizeDelta: {x: 542.2556, y: 124.5234}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &2042924352
