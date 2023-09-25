@@ -16,15 +16,23 @@ public class PizzaThrower : MonoBehaviour
 
     private AimState currentState;
 
+    private ButtonsInput inputs;
+    private void Awake() {
+        inputs = new ButtonsInput();
+        inputs.Car.White.performed += x => OnEnter();
+    }
+
+    private void OnEnable() {
+        inputs.Enable();
+    }
+
+    private void OnDisable() {
+        inputs.Disable();
+    }
+
     private void Update()
     {
         SetArrow();
-
-        // TODO : Input
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            OnEnter();
-        }
     }
 
     private void SetArrow()
