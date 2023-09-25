@@ -14,4 +14,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScoreBoard.unity
     guid: 00f57158d84d5c44b8305019ec28213e
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: e5ca8ceaad610944e8a6e43d13366a1b, type: 2}

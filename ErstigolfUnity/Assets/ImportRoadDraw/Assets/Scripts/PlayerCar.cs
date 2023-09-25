@@ -118,7 +118,7 @@ public class PlayerCar : MonoBehaviour
         if (!isJumping) GetComponent<Rigidbody>().AddForce(-transform.up * stabilizationForce * GetComponent<Rigidbody>().velocity.magnitude);
         else GetComponent<Rigidbody>().AddForce(transform.up * stabilizationForce);
 
-        SetDrift( Input.GetKey(KeyCode.LeftShift));
+        SetDrift(false);
 
         health = Mathf.Clamp01(health + healingSpeed * Time.deltaTime);
         HealthBar.Instance?.SetRemainingHealth(health);

@@ -1,0 +1,34 @@
+{
+    "name": "ButtonsInput",
+    "maps": [
+        {
+            "name": "Car",
+            "id": "9e8a07ce-3286-460c-a922-673ee15cad78",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "58a75380-434a-4261-9303-1a98ad3f1f02",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cfbbb2c4-cdec-4705-b2ab-2e54183aba15",
+                    "path": "<Keyboard>/i",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
