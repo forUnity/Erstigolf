@@ -19,6 +19,7 @@ public class Portal : MonoBehaviour
         if (target && previewMesh) {
             Gizmos.color = Color.red;
             Gizmos.DrawMesh(previewMesh, target.position, target.rotation);
+            Gizmos.DrawLine(transform.position, target.position);
         }
     }
 }
