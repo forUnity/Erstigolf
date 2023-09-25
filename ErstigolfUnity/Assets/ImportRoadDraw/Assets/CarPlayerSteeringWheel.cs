@@ -8,20 +8,22 @@ public class CarPlayerSteeringWheel : MonoBehaviour
     public float steeringWheelAxis { get; private set; }
     [Header("Input")]
     private float axisMax = 1f;
-
+    [SerializeField] CarInput carInput;
     [SerializeField] private float changeAxisPerSecond = 0.5f;
     [SerializeField] private float snapBackperSecond = 0.7f;
     [Header("Visualize")]
     [SerializeField] private Transform steeringWheelGfxT;
     [SerializeField] private float maxRotationDeg;
     private float startRot;
+
     private void Start()
     {
         startRot = steeringWheelGfxT.eulerAngles.z;
     }
+    
     private void Update()
     {
-        float inputX = Input.GetAxis("Horizontal");
+        float inputX = carInput.steer;
         steeringWheelAxis += inputX * changeAxisPerSecond * Time.deltaTime;
         if (steeringWheelAxis > 0f && inputX <= 0f)
         {
@@ -46,7 +48,6 @@ public class CarPlayerSteeringWheel : MonoBehaviour
         }
         steeringWheelAxis = Mathf.Clamp(steeringWheelAxis, -axisMax, axisMax);
 
- 
         //visualize
         steeringWheelGfxT.rotation = Quaternion.Euler(steeringWheelGfxT.eulerAngles.x, steeringWheelGfxT.eulerAngles.y, startRot - steeringWheelAxis /* / axisMax */ * maxRotationDeg);
     }

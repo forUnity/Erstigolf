@@ -6,7 +6,7 @@
             "id": "9e8a07ce-3286-460c-a922-673ee15cad78",
             "actions": [
                 {
-                    "name": "Red",
+                    "name": "Red_Press",
                     "type": "Button",
                     "id": "58a75380-434a-4261-9303-1a98ad3f1f02",
                     "expectedControlType": "Button",
@@ -15,9 +15,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Black",
+                    "name": "Red_Release",
+                    "type": "Button",
+                    "id": "e7079715-ddeb-4d26-83f2-07475bd9fa78",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Black_Press",
                     "type": "Button",
                     "id": "3cfec8b9-c932-4644-abdf-c194aa26768f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Black_Release",
+                    "type": "Button",
+                    "id": "fd37b0c0-c7c7-47e1-a8f4-b3067770b237",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -68,7 +86,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "Red",
+                    "action": "Red_Press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -79,7 +97,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "Black",
+                    "action": "Black_Press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -124,6 +142,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Yellow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8b53e3a-4039-46af-843c-cde8626b9b1d",
+                    "path": "<Keyboard>/w",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Red_Release",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "068fad42-ff05-4d1f-b842-ec8d7602026a",
+                    "path": "<Keyboard>/i",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Black_Release",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -28,7 +28,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
             ""id"": ""9e8a07ce-3286-460c-a922-673ee15cad78"",
             ""actions"": [
                 {
-                    ""name"": ""Red"",
+                    ""name"": ""Red_Press"",
                     ""type"": ""Button"",
                     ""id"": ""58a75380-434a-4261-9303-1a98ad3f1f02"",
                     ""expectedControlType"": ""Button"",
@@ -37,9 +37,27 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Black"",
+                    ""name"": ""Red_Release"",
+                    ""type"": ""Button"",
+                    ""id"": ""e7079715-ddeb-4d26-83f2-07475bd9fa78"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Black_Press"",
                     ""type"": ""Button"",
                     ""id"": ""3cfec8b9-c932-4644-abdf-c194aa26768f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Black_Release"",
+                    ""type"": ""Button"",
+                    ""id"": ""fd37b0c0-c7c7-47e1-a8f4-b3067770b237"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -90,7 +108,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Red"",
+                    ""action"": ""Red_Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -101,7 +119,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Black"",
+                    ""action"": ""Black_Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -148,6 +166,28 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""action"": ""Yellow"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d8b53e3a-4039-46af-843c-cde8626b9b1d"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Red_Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""068fad42-ff05-4d1f-b842-ec8d7602026a"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Black_Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -156,8 +196,10 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
 }");
         // Car
         m_Car = asset.FindActionMap("Car", throwIfNotFound: true);
-        m_Car_Red = m_Car.FindAction("Red", throwIfNotFound: true);
-        m_Car_Black = m_Car.FindAction("Black", throwIfNotFound: true);
+        m_Car_Red_Press = m_Car.FindAction("Red_Press", throwIfNotFound: true);
+        m_Car_Red_Release = m_Car.FindAction("Red_Release", throwIfNotFound: true);
+        m_Car_Black_Press = m_Car.FindAction("Black_Press", throwIfNotFound: true);
+        m_Car_Black_Release = m_Car.FindAction("Black_Release", throwIfNotFound: true);
         m_Car_Blue = m_Car.FindAction("Blue", throwIfNotFound: true);
         m_Car_Green = m_Car.FindAction("Green", throwIfNotFound: true);
         m_Car_White = m_Car.FindAction("White", throwIfNotFound: true);
@@ -223,8 +265,10 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
     // Car
     private readonly InputActionMap m_Car;
     private List<ICarActions> m_CarActionsCallbackInterfaces = new List<ICarActions>();
-    private readonly InputAction m_Car_Red;
-    private readonly InputAction m_Car_Black;
+    private readonly InputAction m_Car_Red_Press;
+    private readonly InputAction m_Car_Red_Release;
+    private readonly InputAction m_Car_Black_Press;
+    private readonly InputAction m_Car_Black_Release;
     private readonly InputAction m_Car_Blue;
     private readonly InputAction m_Car_Green;
     private readonly InputAction m_Car_White;
@@ -233,8 +277,10 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
     {
         private @ButtonsInput m_Wrapper;
         public CarActions(@ButtonsInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Red => m_Wrapper.m_Car_Red;
-        public InputAction @Black => m_Wrapper.m_Car_Black;
+        public InputAction @Red_Press => m_Wrapper.m_Car_Red_Press;
+        public InputAction @Red_Release => m_Wrapper.m_Car_Red_Release;
+        public InputAction @Black_Press => m_Wrapper.m_Car_Black_Press;
+        public InputAction @Black_Release => m_Wrapper.m_Car_Black_Release;
         public InputAction @Blue => m_Wrapper.m_Car_Blue;
         public InputAction @Green => m_Wrapper.m_Car_Green;
         public InputAction @White => m_Wrapper.m_Car_White;
@@ -248,12 +294,18 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_CarActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_CarActionsCallbackInterfaces.Add(instance);
-            @Red.started += instance.OnRed;
-            @Red.performed += instance.OnRed;
-            @Red.canceled += instance.OnRed;
-            @Black.started += instance.OnBlack;
-            @Black.performed += instance.OnBlack;
-            @Black.canceled += instance.OnBlack;
+            @Red_Press.started += instance.OnRed_Press;
+            @Red_Press.performed += instance.OnRed_Press;
+            @Red_Press.canceled += instance.OnRed_Press;
+            @Red_Release.started += instance.OnRed_Release;
+            @Red_Release.performed += instance.OnRed_Release;
+            @Red_Release.canceled += instance.OnRed_Release;
+            @Black_Press.started += instance.OnBlack_Press;
+            @Black_Press.performed += instance.OnBlack_Press;
+            @Black_Press.canceled += instance.OnBlack_Press;
+            @Black_Release.started += instance.OnBlack_Release;
+            @Black_Release.performed += instance.OnBlack_Release;
+            @Black_Release.canceled += instance.OnBlack_Release;
             @Blue.started += instance.OnBlue;
             @Blue.performed += instance.OnBlue;
             @Blue.canceled += instance.OnBlue;
@@ -270,12 +322,18 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(ICarActions instance)
         {
-            @Red.started -= instance.OnRed;
-            @Red.performed -= instance.OnRed;
-            @Red.canceled -= instance.OnRed;
-            @Black.started -= instance.OnBlack;
-            @Black.performed -= instance.OnBlack;
-            @Black.canceled -= instance.OnBlack;
+            @Red_Press.started -= instance.OnRed_Press;
+            @Red_Press.performed -= instance.OnRed_Press;
+            @Red_Press.canceled -= instance.OnRed_Press;
+            @Red_Release.started -= instance.OnRed_Release;
+            @Red_Release.performed -= instance.OnRed_Release;
+            @Red_Release.canceled -= instance.OnRed_Release;
+            @Black_Press.started -= instance.OnBlack_Press;
+            @Black_Press.performed -= instance.OnBlack_Press;
+            @Black_Press.canceled -= instance.OnBlack_Press;
+            @Black_Release.started -= instance.OnBlack_Release;
+            @Black_Release.performed -= instance.OnBlack_Release;
+            @Black_Release.canceled -= instance.OnBlack_Release;
             @Blue.started -= instance.OnBlue;
             @Blue.performed -= instance.OnBlue;
             @Blue.canceled -= instance.OnBlue;
@@ -307,8 +365,10 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
     public CarActions @Car => new CarActions(this);
     public interface ICarActions
     {
-        void OnRed(InputAction.CallbackContext context);
-        void OnBlack(InputAction.CallbackContext context);
+        void OnRed_Press(InputAction.CallbackContext context);
+        void OnRed_Release(InputAction.CallbackContext context);
+        void OnBlack_Press(InputAction.CallbackContext context);
+        void OnBlack_Release(InputAction.CallbackContext context);
         void OnBlue(InputAction.CallbackContext context);
         void OnGreen(InputAction.CallbackContext context);
         void OnWhite(InputAction.CallbackContext context);

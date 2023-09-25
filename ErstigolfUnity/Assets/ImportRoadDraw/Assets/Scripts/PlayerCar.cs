@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCar : MonoBehaviour
 {
+    [SerializeField] CarInput carInput;
     [SerializeField] private CarPlayerSteeringWheel steeringWheel;
     [Space]
     [SerializeField] private float driftFriction = 1.5f;
@@ -78,17 +79,17 @@ public class PlayerCar : MonoBehaviour
             transform.rotation = startRotation;
         }
 
-        float motor = maxMotorTorque;// * Input.GetAxis("Vertical");
+        float motor = maxMotorTorque;
         float steering;
         if (!steeringWheel)
         {
-            steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+            steering = maxSteeringAngle * carInput.steer;
         } 
         else
         {
             steering = steeringWheel.steeringWheelAxis * maxSteeringAngle;
         }
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)){
+        if (carInput.left && carInput.right){
             if (axleInfos[0].leftWheel.rpm > 0){
                 motor = -brakeTorque;
             }

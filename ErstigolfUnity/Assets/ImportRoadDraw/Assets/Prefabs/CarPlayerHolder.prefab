@@ -1316,6 +1316,7 @@ GameObject:
   - component: {fileID: 7537076923063306623}
   - component: {fileID: 7537076923063306622}
   - component: {fileID: 4958832147505571172}
+  - component: {fileID: 966544448934754091}
   m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Player
@@ -1386,6 +1387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbbf2e349eb7264c9f4564cc3abc765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carInput: {fileID: 966544448934754091}
   steeringWheel: {fileID: 4958832147505571172}
   driftFriction: 1.5
   axleInfos:
@@ -1425,10 +1427,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbe2943a30d17a4f8ac0ae675d7d6eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carInput: {fileID: 966544448934754091}
   changeAxisPerSecond: 8
   snapBackperSecond: 25
   steeringWheelGfxT: {fileID: 3488928508032684989}
   maxRotationDeg: 180
+--- !u!114 &966544448934754091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7537076923063306621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9333836239c556649ae97dc64a748f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: 0
+  right: 0
 --- !u!1 &7537076923066050039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,8 +1476,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537076923066050039}
-  m_LocalRotation: {x: 0.20343514, y: 0.000000024684043, z: -0.000000005128854, w: 0.9790884}
-  m_LocalPosition: {x: 0, y: 9.442072, z: -13.320374}
+  m_LocalRotation: {x: 0.20343508, y: 0.0000000069402173, z: -0.000000001442039, w: 0.9790884}
+  m_LocalPosition: {x: 0, y: 9.442072, z: -13.320366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

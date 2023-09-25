@@ -35268,12 +35268,8 @@ PrefabInstance:
       value: CarPlayerHolder
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.44207
-      objectReference: {fileID: 0}
-    - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.320366
+      value: -13.320374
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -35281,11 +35277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000021985553
+      value: 0.000000024684043
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 7bd5caa994f160b4cbe2f16a8f943e2f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.5681736e-10
+      value: -0.000000005128854
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
