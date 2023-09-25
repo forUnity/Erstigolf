@@ -6,9 +6,54 @@
             "id": "9e8a07ce-3286-460c-a922-673ee15cad78",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Red",
                     "type": "Button",
                     "id": "58a75380-434a-4261-9303-1a98ad3f1f02",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Black",
+                    "type": "Button",
+                    "id": "3cfec8b9-c932-4644-abdf-c194aa26768f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Blue",
+                    "type": "Button",
+                    "id": "44a97298-9b0a-4162-a77e-72b39ebfef0a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Green",
+                    "type": "Button",
+                    "id": "a7979ffb-89a6-47fc-9bfa-902a13f62c24",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "White",
+                    "type": "Button",
+                    "id": "4e120b5a-f9a2-41da-b056-2b469348288d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Yellow",
+                    "type": "Button",
+                    "id": "0de40ad6-8755-4e97-a432-15287fbfdfa7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -19,11 +64,66 @@
                 {
                     "name": "",
                     "id": "cfbbb2c4-cdec-4705-b2ab-2e54183aba15",
-                    "path": "<Keyboard>/i",
+                    "path": "<Keyboard>/q",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Red",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1887089f-c32b-43f8-a544-6a2dee1cd9b4",
+                    "path": "<Keyboard>/u",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Black",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "203b01a1-ab99-480a-b9e2-5996b065768b",
+                    "path": "<Keyboard>/p",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Blue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc04cf4e-4502-42de-8b7a-ec394033eda5",
+                    "path": "<Keyboard>/a",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Green",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec6303a0-06f7-4ca8-9400-141ac12e5628",
+                    "path": "<Keyboard>/t",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "White",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3656bb38-69a4-42c1-9878-ced34fa89d32",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Yellow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
