@@ -41,6 +41,12 @@ public class ToolUniformGridGenerator : MonoBehaviour
     private bool Intersects(Vector3 pos) => Physics.CheckSphere(pos, checkSphereRad, checkLayerMask, QueryTriggerInteraction.Ignore);
 
     private void OnDrawGizmos() {
+
+        for (int i = 0; i < transform.childCount; i++){
+            Gizmos.DrawSphere(transform.GetChild(i).position, 0.1f);
+        }
+        if (gridMax == null || gridMin == null)
+            return;
         float xMin = gridMin.position.x;
         float xMax = gridMax.position.x;
         float zMin = gridMin.position.z;
@@ -58,9 +64,5 @@ public class ToolUniformGridGenerator : MonoBehaviour
         Gizmos.DrawLine(v1, v4);
         Gizmos.DrawLine(v1, v3);
         Gizmos.DrawLine(v2, v4);
-
-        for (int i = 0; i < transform.childCount; i++){
-            Gizmos.DrawSphere(transform.GetChild(i).position, 0.1f);
-        }
     }
 }
