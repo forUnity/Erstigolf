@@ -9,6 +9,7 @@ public class ToolUniformGridGenerator : MonoBehaviour
     public Transform gridMin;
     public Transform gridMax;
     public Color debugColor = Color.blue;
+    public int gizmosCount;
     public float PointAxisDistance = 1f;
     public float yPositionOffset;
     [Space]
@@ -20,6 +21,7 @@ public class ToolUniformGridGenerator : MonoBehaviour
     [ContextMenu("Generate")]
     public void Generate()
     {
+        Delete();
         float xMin = gridMin.position.x;
         float xMax = gridMax.position.x;
         float zMin = gridMin.position.z;
@@ -39,12 +41,24 @@ public class ToolUniformGridGenerator : MonoBehaviour
         Debug.Log("Done");
     }
 
+    [ContextMenu("Delete")]
+    private void Delete(){
+        for (int i = 0; i < transform.childCount; i++){
+            if (transform.GetChild(i) == gridMax || transform.GetChild(i) == gridMin){
+                continue;
+            }
+            if (transform.GetChild(i).name.Substring(0, 4) == "grid"){
+                DestroyImmediate(transform.GetChild(i--).gameObject);
+            }
+        }
+    }
+
     private bool Intersects(Vector3 pos) => Physics.CheckSphere(pos, checkSphereRad, checkLayerMask, QueryTriggerInteraction.Ignore);
 
     private void OnDrawGizmos() {
 
-        for (int i = 0; i < transform.childCount; i++){
-            Gizmos.DrawSphere(transform.GetChild(i).position, 0.1f);
+        for (int i = 0; i < Mathf.Min(transform.childCount, gizmosCount); i++){
+            Gizmos.DrawSphere(transform.GetChild(i).position, checkSphereRad);
         }
         if (gridMax == null || gridMin == null)
             return;
