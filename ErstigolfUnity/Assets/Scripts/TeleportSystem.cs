@@ -159,10 +159,15 @@ public class TeleportSystem : MonoBehaviour
         }
         float highTime = Time.time;
         while (highTime + travelTime > Time.time){
+            teleportTarget.forward = dir;
             teleportTarget.position = Vector3.Lerp(ascencionPoint, ascencionTarget, (Time.time - highTime)/travelTime);
             await System.Threading.Tasks.Task.Yield();
             if (!Application.isPlaying)
                 return;
+        }
+        if (teleportTarget.TryGetComponent(out Rigidbody rb)){
+            rb.velocity = Vector3.up * rb.velocity.y/2;
+            rb.angularVelocity = Vector3.zero;
         }
         float rate = 0;
         if (ps){
