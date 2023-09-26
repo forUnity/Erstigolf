@@ -8,6 +8,7 @@ public class ToolUniformGridGenerator : MonoBehaviour
     [Header("Use ContextMenu to Generate")]
     public Transform gridMin;
     public Transform gridMax;
+    public Color debugColor = Color.blue;
     public float PointAxisDistance = 1f;
     public float yPositionOffset;
     [Space]
@@ -57,7 +58,7 @@ public class ToolUniformGridGenerator : MonoBehaviour
         Vector3 v3 = new Vector3(xMax, y, zMax);
         Vector3 v4 = new Vector3(xMax, y, zMin);
 
-        Gizmos.color = Color.red;
+        Gizmos.color = debugColor;
         Gizmos.DrawLine(v1, v2);
         Gizmos.DrawLine(v3, v2);
         Gizmos.DrawLine(v3, v4);
