@@ -57,6 +57,7 @@ public class ToolUniformGridGenerator : MonoBehaviour
     private bool Intersects(Vector3 pos) => Physics.CheckSphere(pos, checkSphereRad, checkLayerMask, QueryTriggerInteraction.Ignore);
 
     private void OnDrawGizmos() {
+        Gizmos.color = debugColor;
         if (maxGizmosCount > 0){
             int p = Mathf.Max(transform.childCount/maxGizmosCount, 1);
             for (int i = 0; i < transform.childCount; i += p){
@@ -75,7 +76,6 @@ public class ToolUniformGridGenerator : MonoBehaviour
         Vector3 v3 = new Vector3(xMax, y, zMax);
         Vector3 v4 = new Vector3(xMax, y, zMin);
 
-        Gizmos.color = debugColor;
         Gizmos.DrawLine(v1, v2);
         Gizmos.DrawLine(v3, v2);
         Gizmos.DrawLine(v3, v4);
