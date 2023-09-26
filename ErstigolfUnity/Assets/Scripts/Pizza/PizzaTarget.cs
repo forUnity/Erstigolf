@@ -4,27 +4,14 @@ using UnityEngine;
 
 public class PizzaTarget : MonoBehaviour
 {
-    PizzaType _requiredPizza = null;
-    PizzaType RequiredPizza {
-        get { 
-            return _requiredPizza;
-        } 
-        set {
-            _requiredPizza = value;
-            requirePizzaIndicator(_requiredPizza != null);
-            UiManager.instance.UpdateOrders(this, _requiredPizza);
-        } 
-    }
+    private int reqCount;
+    PizzaType requiredPizza = null;
 
-    public void RequirePizza(PizzaType type)
+    public void RequirePizza(PizzaType type, int count)
     {
-        RequiredPizza = type;
+        requiredPizza = type;
         timeRemain = maxPatience;
-    }
-
-    private void Start()
-    {
-        RequiredPizza = null;
+        reqCount = count;
     }
 
     [SerializeField] float maxPatience = 100;
@@ -32,13 +19,15 @@ public class PizzaTarget : MonoBehaviour
     public float scoreRatio => timeRemain/maxPatience;
 
     private void Update() {
-        if (RequiredPizza){
+        if (requiredPizza){
             timeRemain -= Time.deltaTime;
             if (timeRemain <= 0){
                 PizzaDeliveryManager.instance.TimeOut(this);
-                RequiredPizza = null;
+                requiredPizza = null;
             }
         }
+        RequirePizzaIndicator(requiredPizza != null);
+        UiManager.instance.UpdateOrders(this, requiredPizza, reqCount);
     }
 
     public string Name = "LehrstuhlX";
@@ -47,14 +36,19 @@ public class PizzaTarget : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Pizza pizza))
         {
-            if (RequiredPizza != null)
+            if (requiredPizza != null)
             {
-                bool correctType = RequiredPizza.Match(pizza.ingredients);
+                bool correctType = requiredPizza.Match(pizza.ingredients);
                 if (correctType){
                     float timeMultiplier = 1 + scoreRatio;
-                    int val = (int)(RequiredPizza.Value * timeMultiplier);
-                    PizzaDeliveryManager.instance.DeliveredPizza(this, val);
-                    RequiredPizza = null;
+                    int val = (int)(requiredPizza.Value * timeMultiplier);
+                    reqCount--;
+                    PizzaDeliveryManager.instance.DeliveredPizza(val);
+                    if (reqCount <= 0)
+                    {
+                        requiredPizza = null;
+                        PizzaDeliveryManager.instance.DeliveredFinalPizza(this);
+                    }
                     pizza.Delivered();
                 }
                 else {
@@ -69,7 +63,7 @@ public class PizzaTarget : MonoBehaviour
 
     #region Gfx
     [SerializeField] private GameObject tempGfx;
-    private void requirePizzaIndicator(bool show)
+    private void RequirePizzaIndicator(bool show)
     {
         tempGfx.SetActive(show);
     }

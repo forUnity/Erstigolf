@@ -40,26 +40,29 @@ public class PizzaDeliveryManager : MonoBehaviour
         }
         if(currentOrderCount < maxConcurrentDeliveryCount && lastCooldownTime + orderCooldownTime < Time.time)
         {
-            AddPizza();
+            AddPizza(Random.Range(2, 6));
         }
     }
 
     int currentOrderCount = 0;
-    private void AddPizza()
+    private void AddPizza(int count)
     {
         lastCooldownTime = Time.time;
         currentOrderCount++;
         int target = Random.Range(0, availableTargets.Count);
         int type = Random.Range(0, pizzaTypes.Length);
-        availableTargets[target].RequirePizza(pizzaTypes[type]);
+        availableTargets[target].RequirePizza(pizzaTypes[type], count);
         availableTargets.RemoveAt(target);
         sound.Play();
     }
 
-    public void DeliveredPizza(PizzaTarget target, int points)
+    public void DeliveredPizza(int points)
     {
-        OnTargetDeactivate(target);
         IncreaseScore(points);
+    }
+
+    public void DeliveredFinalPizza(PizzaTarget target){
+        OnTargetDeactivate(target);
     }
 
     private void OnTargetDeactivate(PizzaTarget target){

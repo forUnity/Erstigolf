@@ -29,7 +29,7 @@ public class UiManager : MonoBehaviour
         HandleTime();
     }
 
-    public void UpdateOrders(PizzaTarget orderer, PizzaType type)
+    public void UpdateOrders(PizzaTarget orderer, PizzaType type, int count)
     {
         if (OrderersToCount.ContainsKey(orderer))
         {
@@ -40,7 +40,7 @@ public class UiManager : MonoBehaviour
             } 
             else
             {
-                OrderersToCount[orderer].UpdateInfo(orderer.Name, type.name, GetIcons(type));
+                OrderersToCount[orderer].UpdateInfo(orderer.Name, type.name, count, GetIcons(type));
             }
         } 
         else
@@ -49,7 +49,7 @@ public class UiManager : MonoBehaviour
             UiOrder uiElement = Instantiate(OrderUIPrefab, OrderHolderT).GetComponent<UiOrder>();
             uiElement.gameObject.SetActive(true);
             OrderersToCount.Add(orderer, uiElement);
-            UpdateOrders(orderer, type);
+            UpdateOrders(orderer, type, count);
         }
     }
 
