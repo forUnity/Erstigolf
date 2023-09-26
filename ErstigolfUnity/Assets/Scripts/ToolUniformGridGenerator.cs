@@ -9,7 +9,7 @@ public class ToolUniformGridGenerator : MonoBehaviour
     public Transform gridMin;
     public Transform gridMax;
     public Color debugColor = Color.blue;
-    [Range(0, 4000)]
+    [Range(0, 8000)]
     public int maxGizmosCount;
     public float PointAxisDistance = 1f;
     public float yPositionOffset;

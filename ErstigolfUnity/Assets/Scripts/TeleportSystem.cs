@@ -11,7 +11,7 @@ public class TeleportSystem : MonoBehaviour
         public Transform lowerCorner;
         public Transform upperCorner;
 
-        public List<Transform> TeleportPoints;//uniform grid of transforms with possible teleport arrival points -> no tping inside buildings
+        public Transform[] TeleportPoints;//uniform grid of transforms with possible teleport arrival points -> no tping inside buildings
  
         public Vector3 ClosestTeleportPoint(Vector2 facCoords)
         {
@@ -41,7 +41,7 @@ public class TeleportSystem : MonoBehaviour
         public float GetNewY(float yFac) => lowerCorner.position.z + WidthY * yFac;
 
     }
-    public List<TeleportRect> teleportAreas;
+    public TeleportRect[] teleportAreas;
 
     [Space]
     public Transform teleportTarget;
@@ -51,16 +51,27 @@ public class TeleportSystem : MonoBehaviour
     [ContextMenu("TeleportIncr")]
     public void TeleportIncr()
     {
-        TeleportTo((currentArea + 1) % teleportAreas.Count);
+        TeleportTo((currentArea + 1) % teleportAreas.Length);
     }
     [ContextMenu("TeleportDecr")]
     public void TeleportDecr()
     {
-        TeleportTo(currentArea > 0 ? currentArea - 1 : teleportAreas.Count-1);
+        TeleportTo(currentArea > 0 ? currentArea - 1 : teleportAreas.Length-1);
     }
     #endregion
 
-        
+    [ContextMenu("Take Points")]
+    private void TakePoints(){
+        foreach (TeleportRect r in teleportAreas){
+            Transform holder = r.lowerCorner.parent;
+            r.TeleportPoints = new Transform[holder.childCount - 2];
+            for (int i = 2; i < holder.childCount; i++){
+                r.TeleportPoints[i-2] = holder.GetChild(i);
+            }
+        }
+        Debug.Log("done");
+    }
+
     public void TeleportTo(int newArea)
     {
         TeleportRect from = teleportAreas[currentArea];
