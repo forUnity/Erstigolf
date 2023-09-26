@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
+using UnityEngine.UI;
+
 public class TeleportSystem : MonoBehaviour
 {
     [System.Serializable]
@@ -44,13 +45,26 @@ public class TeleportSystem : MonoBehaviour
 
     [Space]
     public Transform teleportTarget;
+    public float cooldown;
+    public float ascencionHeight;
+    public float ascencionTime;
+    public float travelTime;
+    public Image cooldownBar;
     public int currentArea;
+
+    private float nextTP;
 
     private ButtonsInput inputs;
     private void Awake() {
         inputs = new ButtonsInput();
         inputs.Car.Blue.performed += x => TryUp();
         inputs.Car.White.performed += x => TryDown();
+    }
+
+    private void Update() {
+        nextTP -= Time.deltaTime;
+        cooldownBar.fillAmount = 1-(nextTP/cooldown);
+        cooldownBar.color = cooldownBar.fillAmount >= 1 ? Color.green : Color.red;
     }
 
     private void OnEnable() {
@@ -62,12 +76,19 @@ public class TeleportSystem : MonoBehaviour
     }
 
     private void TryUp(){
-        // TODO : cooldown
+        if (nextTP > 0)
+        {   
+            AlertSystem.Message("Fliegen nicht bereit");
+            return;
+        }
         TeleportIncr();
     }
 
     private void TryDown(){
-        // TODO : cooldown
+        if (nextTP > 0){
+            AlertSystem.Message("Fliegen nicht bereit");
+            return;
+        }
         TeleportDecr();
     }
 
@@ -96,18 +117,40 @@ public class TeleportSystem : MonoBehaviour
         Debug.Log("done");
     }
 
-    public void TeleportTo(int newArea)
+    private void TeleportTo(int newArea)
     {
+        nextTP = cooldown;
+
         TeleportRect from = teleportAreas[currentArea];
         TeleportRect to = teleportAreas[newArea];
         float xFac = from.GetXFac(teleportTarget.position.x); 
         float yFac = from.GetYFac(teleportTarget.position.z);
 
-        //float newXPos = to.GetNewX(xFac);
-        //float newYPos = to.GetNewY(yFac);
-
-        teleportTarget.position = to.ClosestTeleportPoint(new Vector2(xFac, yFac));
-        //PlayerCar.teleportEffect() //cam black; tires
         currentArea = newArea;
+        Vector3 target = to.ClosestTeleportPoint(new Vector2(xFac, yFac));
+        MoveTarget(target);
+    }
+
+    private async void MoveTarget(Vector3 target){
+        Vector3 start = teleportTarget.position;
+        Vector3 dir = target - start;
+        dir.y = 0f;
+        Vector3 look = teleportTarget.forward;
+        Vector3 ascencionPoint = start;
+        Vector3 ascencionTarget = target;
+        ascencionPoint.y = ascencionHeight;
+        ascencionTarget.y = ascencionHeight;
+        float startTime = Time.time;
+        while (startTime + ascencionTime > Time.time){
+            float t = (Time.time - startTime)/ascencionTime;
+            teleportTarget.position = Vector3.Lerp(start, ascencionPoint, t);
+            teleportTarget.forward = Vector3.Slerp(look, dir, t);
+            await System.Threading.Tasks.Task.Yield();
+        }
+        float highTime = Time.time;
+        while (highTime + travelTime > Time.time){
+            teleportTarget.position = Vector3.Lerp(ascencionPoint, ascencionTarget, (Time.time - highTime)/travelTime);
+            await System.Threading.Tasks.Task.Yield();
+        }
     }
 }
