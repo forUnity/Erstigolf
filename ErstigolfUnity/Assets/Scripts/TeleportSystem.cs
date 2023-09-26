@@ -39,13 +39,37 @@ public class TeleportSystem : MonoBehaviour
 
         public float GetNewX(float xFac) => lowerCorner.position.x + WidthX * xFac;
         public float GetNewY(float yFac) => lowerCorner.position.z + WidthY * yFac;
-
     }
     public TeleportRect[] teleportAreas;
 
     [Space]
     public Transform teleportTarget;
     public int currentArea;
+
+    private ButtonsInput inputs;
+    private void Awake() {
+        inputs = new ButtonsInput();
+        inputs.Car.Blue.performed += x => TryUp();
+        inputs.Car.White.performed += x => TryDown();
+    }
+
+    private void OnEnable() {
+        inputs.Enable();
+    }
+
+    private void OnDisable() {
+        inputs.Disable();
+    }
+
+    private void TryUp(){
+        // TODO : cooldown
+        TeleportIncr();
+    }
+
+    private void TryDown(){
+        // TODO : cooldown
+        TeleportDecr();
+    }
 
     #region Input
     [ContextMenu("TeleportIncr")]
