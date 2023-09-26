@@ -9,7 +9,8 @@ public class ToolUniformGridGenerator : MonoBehaviour
     public Transform gridMin;
     public Transform gridMax;
     public Color debugColor = Color.blue;
-    public int gizmosCount;
+    [Range(0, 4000)]
+    public int maxGizmosCount;
     public float PointAxisDistance = 1f;
     public float yPositionOffset;
     [Space]
@@ -56,9 +57,11 @@ public class ToolUniformGridGenerator : MonoBehaviour
     private bool Intersects(Vector3 pos) => Physics.CheckSphere(pos, checkSphereRad, checkLayerMask, QueryTriggerInteraction.Ignore);
 
     private void OnDrawGizmos() {
-
-        for (int i = 0; i < Mathf.Min(transform.childCount, gizmosCount); i++){
-            Gizmos.DrawSphere(transform.GetChild(i).position, checkSphereRad);
+        if (maxGizmosCount > 0){
+            int p = Mathf.Max(transform.childCount/maxGizmosCount, 1);
+            for (int i = 0; i < transform.childCount; i += p){
+                Gizmos.DrawSphere(transform.GetChild(i).position, checkSphereRad);
+            }
         }
         if (gridMax == null || gridMin == null)
             return;
