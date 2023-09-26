@@ -150,8 +150,30 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""1b9d2079-320d-45fa-811b-410071897322"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Red_Press"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""1887089f-c32b-43f8-a544-6a2dee1cd9b4"",
                     ""path"": ""<Keyboard>/u"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Black_Press"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a9b8a3e0-8b12-4f20-b4c4-050377a633ad"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -172,8 +194,30 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""56f16002-ad0b-491d-b140-be7f922c885c"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Blue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""dc04cf4e-4502-42de-8b7a-ec394033eda5"",
                     ""path"": ""<Keyboard>/a"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Green"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2ad1ce0-efab-4b33-8ced-0254fc8396db"",
+                    ""path"": ""<Keyboard>/enter"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -186,6 +230,17 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""id"": ""ec6303a0-06f7-4ca8-9400-141ac12e5628"",
                     ""path"": ""<Keyboard>/t"",
                     ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""White"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b3b8bb0-c200-4c0b-9457-b6dfb98f03a0"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""White"",
@@ -216,9 +271,31 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""6e12e1aa-239f-412e-929d-493b5dde602c"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Red_Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""068fad42-ff05-4d1f-b842-ec8d7602026a"",
                     ""path"": ""<Keyboard>/i"",
                     ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Black_Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b672858d-92a9-4d3b-bffc-080fc784a497"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": ""Press(behavior=1)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Black_Release"",
@@ -270,134 +347,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""Pizza"",
-            ""id"": ""338ec742-5c99-47be-8c70-1ddfdafffae6"",
-            ""actions"": [
-                {
-                    ""name"": ""Ing1"",
-                    ""type"": ""Button"",
-                    ""id"": ""40e59fcd-de12-46a1-ad2b-578c40bac3b2"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing2"",
-                    ""type"": ""Button"",
-                    ""id"": ""93b3b8a6-b6bc-4a01-9c21-f832d1007601"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing3"",
-                    ""type"": ""Button"",
-                    ""id"": ""36a08275-ca8c-4cbf-b5b0-59bfd8f57d8c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing4"",
-                    ""type"": ""Button"",
-                    ""id"": ""8c98acd5-fbde-4785-ace1-59c80a5c0b3b"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing5"",
-                    ""type"": ""Button"",
-                    ""id"": ""650a49fa-8b23-4248-8e4b-e45dd27666da"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing6"",
-                    ""type"": ""Button"",
-                    ""id"": ""3ce3b623-2e63-4ea4-94db-b0f33a47a4b3"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""3563665b-0797-4edf-8a70-d6133a9b5742"",
-                    ""path"": ""<Keyboard>/b"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""aeac112d-41be-4560-b4db-5ed2cc864e6a"",
-                    ""path"": ""<Keyboard>/n"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""49f17676-f822-4b94-b9db-479b0d5c507c"",
-                    ""path"": ""<Keyboard>/m"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""fb3afd54-a6e3-4dcc-807a-d4762ade01c6"",
-                    ""path"": ""<Keyboard>/comma"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f1208323-e813-4222-a7a1-d698b8b14b26"",
-                    ""path"": ""<Keyboard>/period"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing5"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""99387452-c2f0-44aa-9991-2ada9c0a820a"",
-                    ""path"": ""<Keyboard>/slash"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing6"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": []
@@ -416,14 +365,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         m_Car_White_Release = m_Car.FindAction("White_Release", throwIfNotFound: true);
         m_Car_Yellow = m_Car.FindAction("Yellow", throwIfNotFound: true);
         m_Car_Yellow_Release = m_Car.FindAction("Yellow_Release", throwIfNotFound: true);
-        // Pizza
-        m_Pizza = asset.FindActionMap("Pizza", throwIfNotFound: true);
-        m_Pizza_Ing1 = m_Pizza.FindAction("Ing1", throwIfNotFound: true);
-        m_Pizza_Ing2 = m_Pizza.FindAction("Ing2", throwIfNotFound: true);
-        m_Pizza_Ing3 = m_Pizza.FindAction("Ing3", throwIfNotFound: true);
-        m_Pizza_Ing4 = m_Pizza.FindAction("Ing4", throwIfNotFound: true);
-        m_Pizza_Ing5 = m_Pizza.FindAction("Ing5", throwIfNotFound: true);
-        m_Pizza_Ing6 = m_Pizza.FindAction("Ing6", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -615,92 +556,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         }
     }
     public CarActions @Car => new CarActions(this);
-
-    // Pizza
-    private readonly InputActionMap m_Pizza;
-    private List<IPizzaActions> m_PizzaActionsCallbackInterfaces = new List<IPizzaActions>();
-    private readonly InputAction m_Pizza_Ing1;
-    private readonly InputAction m_Pizza_Ing2;
-    private readonly InputAction m_Pizza_Ing3;
-    private readonly InputAction m_Pizza_Ing4;
-    private readonly InputAction m_Pizza_Ing5;
-    private readonly InputAction m_Pizza_Ing6;
-    public struct PizzaActions
-    {
-        private @ButtonsInput m_Wrapper;
-        public PizzaActions(@ButtonsInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Ing1 => m_Wrapper.m_Pizza_Ing1;
-        public InputAction @Ing2 => m_Wrapper.m_Pizza_Ing2;
-        public InputAction @Ing3 => m_Wrapper.m_Pizza_Ing3;
-        public InputAction @Ing4 => m_Wrapper.m_Pizza_Ing4;
-        public InputAction @Ing5 => m_Wrapper.m_Pizza_Ing5;
-        public InputAction @Ing6 => m_Wrapper.m_Pizza_Ing6;
-        public InputActionMap Get() { return m_Wrapper.m_Pizza; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PizzaActions set) { return set.Get(); }
-        public void AddCallbacks(IPizzaActions instance)
-        {
-            if (instance == null || m_Wrapper.m_PizzaActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PizzaActionsCallbackInterfaces.Add(instance);
-            @Ing1.started += instance.OnIng1;
-            @Ing1.performed += instance.OnIng1;
-            @Ing1.canceled += instance.OnIng1;
-            @Ing2.started += instance.OnIng2;
-            @Ing2.performed += instance.OnIng2;
-            @Ing2.canceled += instance.OnIng2;
-            @Ing3.started += instance.OnIng3;
-            @Ing3.performed += instance.OnIng3;
-            @Ing3.canceled += instance.OnIng3;
-            @Ing4.started += instance.OnIng4;
-            @Ing4.performed += instance.OnIng4;
-            @Ing4.canceled += instance.OnIng4;
-            @Ing5.started += instance.OnIng5;
-            @Ing5.performed += instance.OnIng5;
-            @Ing5.canceled += instance.OnIng5;
-            @Ing6.started += instance.OnIng6;
-            @Ing6.performed += instance.OnIng6;
-            @Ing6.canceled += instance.OnIng6;
-        }
-
-        private void UnregisterCallbacks(IPizzaActions instance)
-        {
-            @Ing1.started -= instance.OnIng1;
-            @Ing1.performed -= instance.OnIng1;
-            @Ing1.canceled -= instance.OnIng1;
-            @Ing2.started -= instance.OnIng2;
-            @Ing2.performed -= instance.OnIng2;
-            @Ing2.canceled -= instance.OnIng2;
-            @Ing3.started -= instance.OnIng3;
-            @Ing3.performed -= instance.OnIng3;
-            @Ing3.canceled -= instance.OnIng3;
-            @Ing4.started -= instance.OnIng4;
-            @Ing4.performed -= instance.OnIng4;
-            @Ing4.canceled -= instance.OnIng4;
-            @Ing5.started -= instance.OnIng5;
-            @Ing5.performed -= instance.OnIng5;
-            @Ing5.canceled -= instance.OnIng5;
-            @Ing6.started -= instance.OnIng6;
-            @Ing6.performed -= instance.OnIng6;
-            @Ing6.canceled -= instance.OnIng6;
-        }
-
-        public void RemoveCallbacks(IPizzaActions instance)
-        {
-            if (m_Wrapper.m_PizzaActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IPizzaActions instance)
-        {
-            foreach (var item in m_Wrapper.m_PizzaActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_PizzaActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public PizzaActions @Pizza => new PizzaActions(this);
     public interface ICarActions
     {
         void OnRed_Press(InputAction.CallbackContext context);
@@ -715,14 +570,5 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         void OnWhite_Release(InputAction.CallbackContext context);
         void OnYellow(InputAction.CallbackContext context);
         void OnYellow_Release(InputAction.CallbackContext context);
-    }
-    public interface IPizzaActions
-    {
-        void OnIng1(InputAction.CallbackContext context);
-        void OnIng2(InputAction.CallbackContext context);
-        void OnIng3(InputAction.CallbackContext context);
-        void OnIng4(InputAction.CallbackContext context);
-        void OnIng5(InputAction.CallbackContext context);
-        void OnIng6(InputAction.CallbackContext context);
     }
 }
