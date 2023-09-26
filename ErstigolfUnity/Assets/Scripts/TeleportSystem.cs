@@ -45,6 +45,7 @@ public class TeleportSystem : MonoBehaviour
 
     [Space]
     public Transform teleportTarget;
+    public GameObject ps;
     public float cooldown;
     public float ascencionHeight;
     public float ascencionTime;
@@ -59,6 +60,10 @@ public class TeleportSystem : MonoBehaviour
         inputs = new ButtonsInput();
         inputs.Car.Blue.performed += x => TryUp();
         inputs.Car.White.performed += x => TryDown();
+
+        if (ps){
+            ps.SetActive(false);
+        }
     }
 
     private void Update() {
@@ -132,6 +137,9 @@ public class TeleportSystem : MonoBehaviour
     }
 
     private async void MoveTarget(Vector3 target){
+        if (ps){
+            ps.SetActive(true);
+        }
         Vector3 start = teleportTarget.position;
         Vector3 dir = target - start;
         dir.y = 0f;
@@ -146,11 +154,35 @@ public class TeleportSystem : MonoBehaviour
             teleportTarget.position = Vector3.Lerp(start, ascencionPoint, t);
             teleportTarget.forward = Vector3.Slerp(look, dir, t);
             await System.Threading.Tasks.Task.Yield();
+            if (!Application.isPlaying)
+                return;
         }
         float highTime = Time.time;
         while (highTime + travelTime > Time.time){
             teleportTarget.position = Vector3.Lerp(ascencionPoint, ascencionTarget, (Time.time - highTime)/travelTime);
             await System.Threading.Tasks.Task.Yield();
+            if (!Application.isPlaying)
+                return;
+        }
+        float rate = 0;
+        if (ps){
+            foreach(ParticleSystem ps in ps.GetComponentsInChildren<ParticleSystem>()){
+                rate = ps.emission.rateOverDistance.constant;
+                var em = ps.emission;
+                var r = em.rateOverDistance;
+                r.constant = 0;
+                em.rateOverDistance = r;
+            }
+        }
+        await System.Threading.Tasks.Task.Delay(1000);
+        if (ps){
+            ps.SetActive(false);
+            foreach(ParticleSystem ps in ps.GetComponentsInChildren<ParticleSystem>()){
+                var em = ps.emission;
+                var r = em.rateOverDistance;
+                r.constant = rate;
+                em.rateOverDistance = r;
+            }
         }
     }
 }
