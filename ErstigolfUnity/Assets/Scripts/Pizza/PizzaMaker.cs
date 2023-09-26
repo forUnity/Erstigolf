@@ -8,39 +8,38 @@ public class PizzaMaker : MonoBehaviour
     [SerializeField] private Transform spawn;
     [SerializeField] private PizzaThrower thrower;
 
-    private bool[] currentIngredients;
-
-    private ButtonsInput inputs;
-    private void Awake() {
-        currentIngredients = new bool[PizzaType.ingredientCount];
-        inputs = new ButtonsInput();
-        inputs.Pizza.Ing1.performed += x => ToggleIngredient(0);
-        inputs.Pizza.Ing2.performed += x => ToggleIngredient(1);
-        inputs.Pizza.Ing3.performed += x => ToggleIngredient(2);
-        inputs.Pizza.Ing4.performed += x => ToggleIngredient(3);
-        inputs.Pizza.Ing5.performed += x => ToggleIngredient(4);
-        inputs.Pizza.Ing6.performed += x => ToggleIngredient(5);
-        inputs.Car.Yellow.performed += x => LoadPizza();
+    // Invoked when a line of data is received from the serial device.
+    void OnMessageArrived(string msg)
+    {
+        if (int.TryParse(msg, out int bits)){
+            bool[] ingredients = new bool[PizzaType.ingredientCount];
+            for (int i = 0; i < PizzaType.ingredientCount; i++){
+                ingredients[i] = bits % 2 == 1;
+                bits /= 2;
+            }
+            LoadPizza(ingredients);
+        }
+        else { 
+            Debug.Log("Message arrived: " + msg);
+        }
     }
 
-    private void OnEnable() {
-        inputs.Enable();
+    // Invoked when a connect/disconnect event occurs. The parameter 'success'
+    // will be 'true' upon connection, and 'false' upon disconnection or
+    // failure to connect.
+    void OnConnectionEvent(bool success)
+    {
+        if (success)
+            Debug.Log("Connection established");
+        else
+            Debug.Log("Connection attempt failed or disconnection detected");
     }
 
-    private void OnDisable() {
-        inputs.Disable();
-    }
-
-    private void ToggleIngredient(int index){
-        currentIngredients[index] = !currentIngredients[index];
-    }
-    
-    private void LoadPizza()
+    private void LoadPizza(bool[] ingredients)
     {
         GameObject p = Instantiate(pizzaPrefab, spawn.position, spawn.rotation, spawn);
         thrower.LoadPizza(p);
-        p.GetComponent<Pizza>().ingredients = currentIngredients;
-        currentIngredients = new bool[PizzaType.ingredientCount];
+        p.GetComponent<Pizza>().ingredients = ingredients;
     }
 
     private void OnDrawGizmos() {
