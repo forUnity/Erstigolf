@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class PizzaTarget : MonoBehaviour
 {
-    private int reqCount;
+    private int _reqCount; 
+    private int reqCount
+    {
+        get => _reqCount;
+        set
+        {
+            _reqCount = value;
+            updateGraphics(reqCount);
+        }
+    }
     PizzaType requiredPizza = null;
 
     public void RequirePizza(PizzaType type, int count)
@@ -24,9 +33,10 @@ public class PizzaTarget : MonoBehaviour
             if (timeRemain <= 0){
                 PizzaDeliveryManager.instance.TimeOut(this);
                 requiredPizza = null;
+                reqCount = 0;
             }
         }
-        RequirePizzaIndicator(requiredPizza != null);
+        //RequirePizzaIndicator(requiredPizza != null);
         UiManager.instance.UpdateOrders(this, requiredPizza, reqCount);
     }
 
@@ -62,10 +72,43 @@ public class PizzaTarget : MonoBehaviour
     }
 
     #region Gfx
-    [SerializeField] private GameObject tempGfx;
-    private void RequirePizzaIndicator(bool show)
+    [SerializeField] private GameObject waitingPersonPrefab;
+    [SerializeField] private float waitingPeopleRadius;
+    private List<GameObject> currentWaitingPeopleGfxs = new List<GameObject>();
+    private void updateGraphics(int peopleWaitingCount)
     {
-        tempGfx.SetActive(show);
+        requirePizzaIndicator(peopleWaitingCount > 0);
+
+        if(currentWaitingPeopleGfxs.Count > peopleWaitingCount)
+        {       
+            for (int i = 0; i < currentWaitingPeopleGfxs.Count- peopleWaitingCount; i++)
+            {
+                Destroy(currentWaitingPeopleGfxs[0]);
+                currentWaitingPeopleGfxs.RemoveAt(0);
+            }
+
+        } else if(currentWaitingPeopleGfxs.Count < peopleWaitingCount)
+        {
+            for (int i = 0; i < peopleWaitingCount - currentWaitingPeopleGfxs.Count; i++)
+            {
+                addWaitingPeopleGfx();
+            }
+        }
+    }
+    private void addWaitingPeopleGfx()
+    {
+        if (waitingPersonPrefab == null) return;
+
+        var person = Instantiate(waitingPersonPrefab, transform);
+        Vector2 rdm = Random.insideUnitCircle * waitingPeopleRadius;
+        person.transform.localPosition = new Vector3(rdm.x, 0f, rdm.y);
+        person.transform.rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+        currentWaitingPeopleGfxs.Add(person);
+    }
+    [SerializeField] private GameObject requirePizzaIndicatorGfx;//TODO: only visible on Map View
+    private void requirePizzaIndicator(bool show)
+    {
+        requirePizzaIndicatorGfx.SetActive(show);
     }
     #endregion
 }

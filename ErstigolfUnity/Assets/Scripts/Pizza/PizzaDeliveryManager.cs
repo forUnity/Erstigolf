@@ -48,12 +48,18 @@ public class PizzaDeliveryManager : MonoBehaviour
     private void AddPizza(int count)
     {
         lastCooldownTime = Time.time;
-        currentOrderCount++;
-        int target = Random.Range(0, availableTargets.Count);
-        int type = Random.Range(0, pizzaTypes.Length);
-        availableTargets[target].RequirePizza(pizzaTypes[type], count);
-        availableTargets.RemoveAt(target);
-        sound.Play();
+        if(availableTargets.Count > 0)
+        {       
+            currentOrderCount++;
+
+            int target = Random.Range(0, availableTargets.Count);
+            int type = Random.Range(0, pizzaTypes.Length);
+
+            availableTargets[target].RequirePizza(pizzaTypes[type], count);
+            availableTargets.RemoveAt(target);
+
+            sound.Play();
+        }
     }
 
     public void DeliveredPizza(int points)
