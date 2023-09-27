@@ -223,7 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPatience: 100
   Name: SWA Lehrstuhl
-  tempGfx: {fileID: 214916578}
+  waitingPersonPrefab: {fileID: 0}
+  waitingPeopleRadius: 0
+  requirePizzaIndicatorGfx: {fileID: 0}
 --- !u!1 &63872048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,7 +2534,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPatience: 100
   Name: Ulf/Haus A
-  tempGfx: {fileID: 1796573110}
+  waitingPersonPrefab: {fileID: 0}
+  waitingPeopleRadius: 0
+  requirePizzaIndicatorGfx: {fileID: 0}
 --- !u!4 &512852226
 Transform:
   m_ObjectHideFlags: 0
@@ -2677,14 +2681,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 507713559882155830, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
-      propertyPath: shootSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 682741475531538048, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
-      propertyPath: near clip plane
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 782845928288000461, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2728,34 +2724,6 @@ PrefabInstance:
     - target: {fileID: 782845928288000461, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505926647417838164, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505926647417838164, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.714
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505926647417838164, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505926647417838164, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7933534
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505926647417838164, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.60876137
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505926647417838164, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -75
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505926647417838164, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6803748061216203864, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
       propertyPath: m_Name
@@ -4310,7 +4278,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPatience: 100
   Name: "Hauptgeb\xE4ude"
-  tempGfx: {fileID: 805173677}
+  waitingPersonPrefab: {fileID: 0}
+  waitingPeopleRadius: 0
+  requirePizzaIndicatorGfx: {fileID: 0}
 --- !u!4 &805851917
 Transform:
   m_ObjectHideFlags: 0
@@ -5180,7 +5150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPatience: 100
   Name: Haus L
-  tempGfx: {fileID: 1947353176}
+  waitingPersonPrefab: {fileID: 0}
+  waitingPeopleRadius: 0
+  requirePizzaIndicatorGfx: {fileID: 0}
 --- !u!1 &982849137
 GameObject:
   m_ObjectHideFlags: 0
@@ -8573,7 +8545,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPatience: 100
   Name: Haus K
-  tempGfx: {fileID: 571430463}
+  waitingPersonPrefab: {fileID: 0}
+  waitingPeopleRadius: 0
+  requirePizzaIndicatorGfx: {fileID: 0}
 --- !u!1 &1779340650
 GameObject:
   m_ObjectHideFlags: 0
@@ -9316,7 +9290,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPatience: 100
   Name: Haus G
-  tempGfx: {fileID: 1347465235}
+  waitingPersonPrefab: {fileID: 0}
+  waitingPeopleRadius: 0
+  requirePizzaIndicatorGfx: {fileID: 0}
 --- !u!1 &1897324875
 GameObject:
   m_ObjectHideFlags: 0
@@ -10764,7 +10740,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPatience: 100
   Name: 154B
-  tempGfx: {fileID: 1442733887}
+  waitingPersonPrefab: {fileID: 0}
+  waitingPeopleRadius: 0
+  requirePizzaIndicatorGfx: {fileID: 0}
 --- !u!1 &2109827720
 GameObject:
   m_ObjectHideFlags: 0
@@ -10868,7 +10846,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPatience: 100
   Name: Haus F
-  tempGfx: {fileID: 2109827720}
+  waitingPersonPrefab: {fileID: 0}
+  waitingPeopleRadius: 0
+  requirePizzaIndicatorGfx: {fileID: 0}
 --- !u!1 &2144188144
 GameObject:
   m_ObjectHideFlags: 0
