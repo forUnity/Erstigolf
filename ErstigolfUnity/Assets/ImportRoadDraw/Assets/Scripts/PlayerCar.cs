@@ -64,8 +64,8 @@ public class PlayerCar : MonoBehaviour
     public void FixedUpdate()
     {
         UpdateUnderground();
-
-        if (transform.up.y < 0){
+ 
+        if (transform.up.y < 0.3f){
             upsidedownDuration += Time.deltaTime;
         }
         else {
