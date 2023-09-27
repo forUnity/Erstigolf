@@ -101,6 +101,9 @@ public class PizzaThrower : MonoBehaviour
         rb.velocity = pizza.forward * shootSpeed;
         rb.angularVelocity = Vector3.zero;
         Rigidbody carRB = rotor.parent.GetComponentInParent<Rigidbody>();
-        if (carRB) rb.velocity += carRB.velocity;
+        if (carRB){
+            rb.velocity += carRB.velocity;
+            carRB.AddForceAtPosition(-rb.velocity * rb.mass, shootTransform.position, ForceMode.Impulse);
+        } 
     }
 }
