@@ -9,7 +9,8 @@ public class CarInput : MonoBehaviour
     [HideInInspector] public bool right;
     public int steer => (left ? -1 : 0) + (right ? 1 : 0);
 
-    private void Awake() {
+    private void Awake()
+    {
         inputs = new ButtonsInput();
         inputs.Car.Black_Press.performed += x => right = true;
         inputs.Car.Black_Release.performed += x => right = false;
@@ -17,11 +18,13 @@ public class CarInput : MonoBehaviour
         inputs.Car.Red_Release.performed += x => left = false;
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         inputs.Enable();
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         inputs.Disable();
     }
 }
