@@ -52,6 +52,10 @@ public class TeleportSystem : MonoBehaviour
     public float travelTime;
     public Image cooldownBar;
     public int currentArea;
+    [Space]
+    [SerializeField] private GolfkartSpeed golfkartSpeed;
+    [SerializeField] private float speedToFly = 0f;
+    //[SerializeField] private TMPro.TextMeshProUGUI 
 
     private float nextTP;
 
@@ -68,7 +72,13 @@ public class TeleportSystem : MonoBehaviour
 
     private void Update() {
         nextTP -= Time.deltaTime;
-        cooldownBar.fillAmount = 1-(nextTP/cooldown);
+        if(speedToFly == 0f)
+        {
+            cooldownBar.fillAmount = 1-(nextTP/cooldown);
+        } else
+        {
+            cooldownBar.fillAmount = golfkartSpeed.GetAvgSpeedOverTimeRecord() / speedToFly;
+        }
         cooldownBar.color = cooldownBar.fillAmount >= 1 ? Color.green : Color.red;
     }
 
@@ -80,18 +90,20 @@ public class TeleportSystem : MonoBehaviour
         inputs.Disable();
     }
 
+    private bool canTeleport => nextTP <= 0 && (golfkartSpeed ? golfkartSpeed.GetAvgSpeedOverTimeRecord() >= speedToFly : true);
     private void TryUp(){
-        if (nextTP > 0)
+        if (!canTeleport)
         {   
-            AlertSystem.Message("Fliegen nicht bereit");
+            AlertSystem.Message(nextTP > 0 ? "Flying Not Ready" : "Too Slow For Takeoff");
             return;
         }
         TeleportIncr();
     }
 
     private void TryDown(){
-        if (nextTP > 0){
-            AlertSystem.Message("Fliegen nicht bereit");
+        if (!canTeleport)
+        {
+            AlertSystem.Message(nextTP > 0 ? "Flying Not Ready" : "Too Slow For Takeoff");
             return;
         }
         TeleportDecr();
