@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class PizzaThrower : MonoBehaviour
 {
-    [SerializeField] private float scalePeriod = 1;
-    [SerializeField] private float minScale = 1;
-    [SerializeField] private float maxScale = 10;
-    [SerializeField] private float maxAngle = 60;
-    [SerializeField] private float shootSpeed = 20;
+    [SerializeField] private Camera turretCam;
+    [SerializeField] private float wideFOV;
+    [SerializeField] private float narrowFOV;
+    [SerializeField] private float zoomSpeed;
+    [SerializeField] private Vector2 wideSensitivity;
+    [SerializeField] private Vector2 narrowSensitivity;
+    [SerializeField] private float shootSpeed = 200;
 
-    [SerializeField] private Transform scaler;
     [SerializeField] private Transform rotor;
     [SerializeField] private Transform shootTransform;
 
-    private AimState currentState;
+    private Vector2 currentLook;
 
     private ButtonsInput inputs;
+    private Vector2 aim;
+    private bool narrowAim;
     private void Awake() {
         inputs = new ButtonsInput();
         inputs.Car.Green.performed += x => OnEnter();
+        inputs.Car.Aim.performed += x => aim = x.ReadValue<Vector2>();
+        inputs.Car.Yellow.performed += x => narrowAim = true;
+        inputs.Car.Yellow_Release.performed += x => narrowAim = false;
     }
 
     private void OnEnable() {
@@ -38,38 +44,27 @@ public class PizzaThrower : MonoBehaviour
 
     private void SetArrow()
     {
-        MeshRenderer r = rotor.GetComponentInChildren<MeshRenderer>();
-        if (r) r.enabled = currentState != AimState.idle && currentState != AimState.ready;
+        Vector2 sensitivity = wideSensitivity;
+        float fov = wideFOV;
+        if (narrowAim){
+            sensitivity = narrowSensitivity;
+            fov = narrowFOV;
+        }
+        currentLook += aim * sensitivity * Time.deltaTime;
+        if (turretCam)
+            turretCam.fieldOfView = Mathf.Lerp(fov, turretCam.fieldOfView, Mathf.Pow(0.5f, Time.deltaTime * zoomSpeed));
+        currentLook.y = Mathf.Clamp(currentLook.y, -90f, 90f);
 
-        float amp = Mathf.Sin(Time.time * 2 * Mathf.PI / scalePeriod);
-        if (currentState == AimState.leftRight)
-        {
-            rotor.localRotation = Quaternion.Euler(0, maxAngle * amp, 0);
-        }
-        if (currentState == AimState.upDown)
-        {
-            scaler.localScale = new Vector3(1, 1, Mathf.Lerp(minScale, maxScale, (amp + 1) / 2));
-        }
+        rotor.localRotation = Quaternion.Euler(-currentLook.y, currentLook.x, 0f);
     }
 
     private void OnEnter()
     {
-        switch (currentState) 
-        {
-        case AimState.idle:
+        if (!Loaded){
             AlertSystem.Message("Keine Pizza Geladen");
-            break;
-        case AimState.ready:
-            currentState = AimState.leftRight;
-            scaler.localScale = new Vector3(1,1,Mathf.Max(1, maxScale));
-            rotor.localRotation = Quaternion.identity;
-            break;
-        case AimState.leftRight:
-            currentState = AimState.upDown;
-            break;
-        case AimState.upDown:
+        }
+        else {
             LaunchPizza();
-            break;
         }
     }
 
@@ -83,7 +78,6 @@ public class PizzaThrower : MonoBehaviour
         if (p.TryGetComponent(out Collider c)) c.enabled = false;
         if (p.TryGetComponent(out Rigidbody rb)) rb.isKinematic = true;
         pizzas.Enqueue(p.transform);
-        currentState = AimState.ready;
     }
 
     private void LaunchPizza() 
@@ -104,18 +98,9 @@ public class PizzaThrower : MonoBehaviour
         }
         c.enabled = true;
         rb.isKinematic = false;
-        rb.velocity = pizza.forward * shootSpeed * scaler.localScale.z;
+        rb.velocity = pizza.forward * shootSpeed;
         rb.angularVelocity = Vector3.zero;
         Rigidbody carRB = rotor.parent.GetComponentInParent<Rigidbody>();
         if (carRB) rb.velocity += carRB.velocity;
-        currentState = Loaded ? AimState.ready : AimState.idle;
-    }
-
-    private enum AimState
-    {
-        idle, 
-        ready,
-        upDown,
-        leftRight,
     }
 }

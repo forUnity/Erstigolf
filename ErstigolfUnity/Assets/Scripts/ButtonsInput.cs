@@ -134,6 +134,15 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""5aaf4771-2f8d-4a4e-9f34-9dcceabbadbf"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -260,6 +269,17 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""37d55fe4-5730-46a9-a5a5-0c6ce1031de7"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Yellow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""d8b53e3a-4039-46af-843c-cde8626b9b1d"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": ""Press"",
@@ -345,6 +365,39 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""action"": ""Yellow_Release"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""87e16788-7bef-4f43-ba32-6a9d5a45f8d9"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Yellow_Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e84b093d-4f0a-4128-b74e-5ba292d71816"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ea0abd57-2f10-488f-9f47-fc887c769eb1"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -365,6 +418,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         m_Car_White_Release = m_Car.FindAction("White_Release", throwIfNotFound: true);
         m_Car_Yellow = m_Car.FindAction("Yellow", throwIfNotFound: true);
         m_Car_Yellow_Release = m_Car.FindAction("Yellow_Release", throwIfNotFound: true);
+        m_Car_Aim = m_Car.FindAction("Aim", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -438,6 +492,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Car_White_Release;
     private readonly InputAction m_Car_Yellow;
     private readonly InputAction m_Car_Yellow_Release;
+    private readonly InputAction m_Car_Aim;
     public struct CarActions
     {
         private @ButtonsInput m_Wrapper;
@@ -454,6 +509,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         public InputAction @White_Release => m_Wrapper.m_Car_White_Release;
         public InputAction @Yellow => m_Wrapper.m_Car_Yellow;
         public InputAction @Yellow_Release => m_Wrapper.m_Car_Yellow_Release;
+        public InputAction @Aim => m_Wrapper.m_Car_Aim;
         public InputActionMap Get() { return m_Wrapper.m_Car; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -499,6 +555,9 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
             @Yellow_Release.started += instance.OnYellow_Release;
             @Yellow_Release.performed += instance.OnYellow_Release;
             @Yellow_Release.canceled += instance.OnYellow_Release;
+            @Aim.started += instance.OnAim;
+            @Aim.performed += instance.OnAim;
+            @Aim.canceled += instance.OnAim;
         }
 
         private void UnregisterCallbacks(ICarActions instance)
@@ -539,6 +598,9 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
             @Yellow_Release.started -= instance.OnYellow_Release;
             @Yellow_Release.performed -= instance.OnYellow_Release;
             @Yellow_Release.canceled -= instance.OnYellow_Release;
+            @Aim.started -= instance.OnAim;
+            @Aim.performed -= instance.OnAim;
+            @Aim.canceled -= instance.OnAim;
         }
 
         public void RemoveCallbacks(ICarActions instance)
@@ -570,5 +632,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         void OnWhite_Release(InputAction.CallbackContext context);
         void OnYellow(InputAction.CallbackContext context);
         void OnYellow_Release(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
     }
 }
