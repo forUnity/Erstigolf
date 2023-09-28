@@ -38,6 +38,7 @@ public class PizzaTarget : MonoBehaviour
     private void Start()
     {
         ApplyRadius();
+        reqCount = 0;
     }
     [ContextMenu("Apply Radius")]
     public void ApplyRadius()
