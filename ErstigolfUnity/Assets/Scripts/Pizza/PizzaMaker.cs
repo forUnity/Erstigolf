@@ -38,8 +38,10 @@ public class PizzaMaker : MonoBehaviour
     private void LoadPizza(bool[] ingredients)
     {
         GameObject p = Instantiate(pizzaPrefab, spawn.position, spawn.rotation, spawn);
-        thrower.LoadPizza(p);
+        p.transform.localScale = Vector3.zero;
+        thrower.AddPizzaAmmo(p);
         p.GetComponent<Pizza>().ingredients = ingredients;
+        p.GetComponent<Pizza>().flyParticles.SetActive(false);
     }
 
     private void OnDrawGizmos() {

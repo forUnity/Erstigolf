@@ -11,6 +11,7 @@ public class PizzaThrower : MonoBehaviour
     [SerializeField] private Vector2 wideSensitivity;
     [SerializeField] private Vector2 narrowSensitivity;
     [SerializeField] private float shootSpeed = 200;
+    [SerializeField] private float loadTime = 1f;
 
     [SerializeField] private Transform rotor;
     [SerializeField] private Transform shootTransform;
@@ -60,29 +61,61 @@ public class PizzaThrower : MonoBehaviour
 
     private void OnEnter()
     {
-        if (!Loaded){
-            AlertSystem.Message("Keine Pizza Geladen");
-        }
-        else {
+        if (Loaded)
+        {
             LaunchPizza();
+        }
+        else
+        {
+            LoadPizza();
         }
     }
 
     Queue<Transform> pizzas = new Queue<Transform>();
+    Transform loadedPizza;
     Transform nextPizza => pizzas.TryDequeue(out Transform result) ? result : null;
     
-    public bool Loaded => pizzas.TryPeek(out Transform x);
+    private bool HasAmmo => pizzas.TryPeek(out Transform x);
+    private bool Loaded => loadedPizza;
+    private bool loading;
 
-    public void LoadPizza(GameObject p) 
+    public void AddPizzaAmmo(GameObject p) 
     {
         if (p.TryGetComponent(out Collider c)) c.enabled = false;
         if (p.TryGetComponent(out Rigidbody rb)) rb.isKinematic = true;
         pizzas.Enqueue(p.transform);
     }
 
+    private async void LoadPizza(){
+        if (Loaded || loading)
+            return;
+        if (!HasAmmo){
+            AlertSystem.Message("Keine Munition");
+            return;
+        }
+        loading = true;
+
+        Transform nextPizza = pizzas.Dequeue();
+
+        Transform p = nextPizza.parent;
+        float loadStartTime = Time.time;
+        while (loadStartTime + loadTime > Time.time){
+            float t = (Time.time - loadStartTime)/loadTime;
+            nextPizza.position = Vector3.Lerp(p.position, shootTransform.position, t*t);
+            await System.Threading.Tasks.Task.Yield();
+        }
+        nextPizza.position = shootTransform.position;
+        nextPizza.parent = shootTransform;
+        loadedPizza = nextPizza;
+
+        loading = false;
+    }
+
     private void LaunchPizza() 
     {
-        Transform pizza = nextPizza;
+        Transform pizza = loadedPizza;
+        pizza.GetComponent<Pizza>().flyParticles.SetActive(true);
+        loadedPizza = null;
         pizza.position = shootTransform.position;
         pizza.rotation = shootTransform.rotation;
 
@@ -104,6 +137,7 @@ public class PizzaThrower : MonoBehaviour
         if (carRB){
             rb.velocity += carRB.velocity;
             carRB.AddForceAtPosition(-rb.velocity * rb.mass, shootTransform.position, ForceMode.Impulse);
-        } 
+        }
+        pizza.parent = null;
     }
 }

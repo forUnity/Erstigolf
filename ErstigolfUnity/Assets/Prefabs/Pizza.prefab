@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients: 
+  flyParticles: {fileID: 5552412170191773808}
   deliverParticles: {fileID: 5926025070282960092, guid: 9cca84ff37781964b9d910bb1d56be1c, type: 3}
 --- !u!54 &2369567097061819909
 Rigidbody:
@@ -59,7 +60,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4973443650436729901}
   serializedVersion: 4
-  m_Mass: 100
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -230,5 +231,10 @@ PrefabInstance:
 --- !u!4 &2946927096653627628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4023631468744084544, guid: 1f0bfe0f4045a0044b35c6a7c658515b, type: 3}
+  m_PrefabInstance: {fileID: 2248238581532347564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5552412170191773808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5926025070282960092, guid: 1f0bfe0f4045a0044b35c6a7c658515b, type: 3}
   m_PrefabInstance: {fileID: 2248238581532347564}
   m_PrefabAsset: {fileID: 0}
