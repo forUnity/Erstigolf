@@ -54,7 +54,7 @@ public class TeleportSystem : MonoBehaviour
     public int currentArea;
     [Space]
     [SerializeField] private GolfkartSpeed golfkartSpeed;
-    [SerializeField] private float speedToFly = 0f;
+    [SerializeField] public float speedToFly = 0f;
     //[SerializeField] private TMPro.TextMeshProUGUI 
 
     private float nextTP;
