@@ -10466,7 +10466,7 @@ WheelCollider:
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
-    targetPosition: 0.5
+    targetPosition: 0.6
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
   m_Mass: 20
@@ -10538,7 +10538,7 @@ WheelCollider:
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
-    targetPosition: 0.5
+    targetPosition: 0.6
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
   m_Mass: 20
@@ -10610,7 +10610,7 @@ WheelCollider:
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
-    targetPosition: 0.5
+    targetPosition: 0.6
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
   m_Mass: 20
@@ -10682,7 +10682,7 @@ WheelCollider:
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
-    targetPosition: 0.5
+    targetPosition: 0.6
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
   m_Mass: 20
@@ -16211,7 +16211,7 @@ Transform:
   - {fileID: 7537076923066050032}
   - {fileID: 7537076923063306620}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7317124422891506978
 GameObject:
@@ -16494,16 +16494,16 @@ MonoBehaviour:
     steering: 0
   groundFrictions:
   - name: Road
-    forwardFriction: 1
-    sidewaysFriction: 1
-    drag: 0.02
+    forwardFriction: 2
+    sidewaysFriction: 2
+    drag: 0.1
   - name: Grass
-    forwardFriction: 6
-    sidewaysFriction: 6
-    drag: 0.8
+    forwardFriction: 4
+    sidewaysFriction: 4
+    drag: 0.4
   maxMotorTorque: 1300
-  brakeTorque: 10400
-  maxSteeringAngle: 10
+  brakeTorque: 13400
+  maxSteeringAngle: 20
   centerOfMass: {fileID: 4216708617918130017}
   health: 0.5
   healingSpeed: 0.1
@@ -16569,7 +16569,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537076923066050039}
-  m_LocalRotation: {x: 0.20343508, y: 0.000000014589555, z: -0.0000000030314191, w: 0.9790884}
+  m_LocalRotation: {x: 0.20343508, y: 0.0000000145895545, z: -0.000000003031419, w: 0.9790884}
   m_LocalPosition: {x: 0, y: 12.952071, z: -13.320366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
