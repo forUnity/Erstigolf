@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 17323dd8a5a32994c8903295b069ed05
   - enabled: 1
-    path: Assets/Scenes/PrototypingScene Delivery.unity
-    guid: 71b922d9d047705448db02a33bacc9a8
+    path: Assets/Scenes/Playtest01.unity
+    guid: cd68f5a6c06a08349874544986b21163
   - enabled: 1
     path: Assets/Scenes/ScoreBoard.unity
     guid: 00f57158d84d5c44b8305019ec28213e
