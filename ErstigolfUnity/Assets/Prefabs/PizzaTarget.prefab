@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1746546108117013682}
   - component: {fileID: 3012661349945030724}
   - component: {fileID: 354341231391980812}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '!'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 4696148185349486502}
   - component: {fileID: 3102194981981627113}
   - component: {fileID: 5798988380353112395}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '! (1)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 4370327718611004270}
   - component: {fileID: 8189030361435593279}
   - component: {fileID: 8989449759582532928}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7762411693375483055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 4418070490765516801}
   - component: {fileID: 3181453018779558507}
   - component: {fileID: 2378727307214955819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DamageZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 1229714965945751173}
   - component: {fileID: 621448988992482552}
   - component: {fileID: 1402850745263038459}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 1559034147585998049}
   - component: {fileID: 4257277049906296141}
   - component: {fileID: 3561042634997743393}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PizzaTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -711,7 +711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2093151465415573258}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
