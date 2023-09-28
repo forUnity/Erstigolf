@@ -475,7 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPatience: 100
   Name: "Hauptgeb\xE4ude"
-  waitingPersonPrefab: {fileID: 0}
+  waitingPersonPrefab: {fileID: 919132149155446097, guid: b89d67f0e4cd495409097ff7f8360c5b, type: 3}
   waitingPeopleRadius: 5
   requirePizzaIndicatorGfx: {fileID: 8853673406036187337}
 --- !u!65 &449963598917873862
