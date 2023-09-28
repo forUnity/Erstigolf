@@ -149,7 +149,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""cfbbb2c4-cdec-4705-b2ab-2e54183aba15"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -259,7 +259,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3656bb38-69a4-42c1-9878-ced34fa89d32"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -281,7 +281,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d8b53e3a-4039-46af-843c-cde8626b9b1d"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/r"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -358,7 +358,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7f328f98-77e2-428c-8c5a-a99d8eaac9c7"",
-                    ""path"": ""<Keyboard>/r"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",

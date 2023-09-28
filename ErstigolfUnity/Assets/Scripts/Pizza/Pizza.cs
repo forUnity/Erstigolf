@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pizza : MonoBehaviour
 {
     public bool[] ingredients;
+    public GameObject flyParticles;
     [SerializeField] private GameObject deliverParticles;
     public void Delivered ()
     {
