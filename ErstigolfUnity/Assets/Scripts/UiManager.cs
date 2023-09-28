@@ -70,6 +70,7 @@ public class UiManager : MonoBehaviour
 
     [SerializeField] float gameDuration = 600;
     [SerializeField] TextMeshProUGUI timeText;
+    [SerializeField] TextMeshProUGUI timeText2;
     float gameTimeRemain;
 
     private void HandleTime(){
@@ -78,12 +79,15 @@ public class UiManager : MonoBehaviour
             SceneManager.LoadSceneAsync(2);
         }
         timeText.text = (Mathf.CeilToInt(gameTimeRemain)).ToString();
+        timeText2.text = (Mathf.CeilToInt(gameTimeRemain)).ToString();
     }
 
     [SerializeField] private TextMeshProUGUI scoreTm;
+    [SerializeField] private TextMeshProUGUI scoreTm2;
     public void UpdateScore(int score)
     {
         scoreTm.text = score.ToString();
+        scoreTm2.text = score.ToString();
     }
 
     [SerializeField] GameObject panelPrefab;
