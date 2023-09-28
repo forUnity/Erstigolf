@@ -108,6 +108,7 @@ public class PizzaTarget : MonoBehaviour
     [SerializeField] private GameObject requirePizzaIndicatorGfx;//TODO: only visible on Map View
     private void requirePizzaIndicator(bool show)
     {
+        if(requirePizzaIndicatorGfx)
         requirePizzaIndicatorGfx.SetActive(show);
     }
     #endregion
