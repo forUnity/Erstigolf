@@ -2,19 +2,24 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: DamageZone
   m_Shader: {fileID: 4800000, guid: d97b2475e12b5c146a78083b2fdbff44, type: 3}
-  m_ShaderKeywords: 
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -74,6 +79,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _ASEOutlineWidth: 0.03
     - _BumpScale: 1
@@ -91,10 +97,10 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Gradient_Height: 15.6
+    - _Gradient_Height: 15
     - _Gradient_Offset: 0.171
-    - _Gradient_Opacity: 0.383
-    - _Gradient_Smoothness: 1
+    - _Gradient_Opacity: 0.738
+    - _Gradient_Smoothness: 1.9
     - _HitEffect: 1.17
     - _Metallic: 0
     - _Mode: 0
@@ -124,9 +130,9 @@ Material:
     - _ZWrite: 1
     - _ZoneHeight: 1.06
     - _ZoneOffset: 1
-    - _Zone_Fresnel: 4.93
-    - _Zone_Power: 1.24
-    - _Zone_Rim: 0.219
+    - _Zone_Fresnel: 6
+    - _Zone_Power: 1.06
+    - _Zone_Rim: 0.71
     - __dirty: 0
     m_Colors:
     - _ASEOutlineColor: {r: 0, g: 0.2551723, b: 1, a: 0}
@@ -144,3 +150,4 @@ Material:
     - _WaterShallowColor: {r: 0, g: 0, b: 0, a: 0}
     - _White: {r: 1, g: 1, b: 1, a: 0}
     - _Zone_Color: {r: 0, g: 0.5862069, b: 1, a: 1}
+  m_BuildTextureStacks: []

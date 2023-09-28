@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class PizzaTarget : MonoBehaviour
 {
+    public string Name = "LehrstuhlX";
+    [SerializeField] private float timeToCompleteORderInS = 100;
+    [Tooltip("Can be Applied with ContextMenu. Height needs to be changed in Zone Shader, Gfx and Collider")]
+    [SerializeField] private float targetRadius = 20f;
+    [SerializeField] private CapsuleCollider capsuleCollider;
+    [SerializeField] private GameObject requirePizzaIndicatorGfx;//TODO: only visible on Map View?
+
+    [SerializeField] private GameObject waitingPersonPrefab;
+    private List<GameObject> currentWaitingPeopleGfxs = new List<GameObject>();
+
     private int _reqCount; 
     private int reqCount
     {
@@ -15,17 +25,29 @@ public class PizzaTarget : MonoBehaviour
         }
     }
     PizzaType requiredPizza = null;
-
     public void RequirePizza(PizzaType type, int count)
     {
         requiredPizza = type;
-        timeRemain = maxPatience;
+        timeRemain = timeToCompleteORderInS;
         reqCount = count;
     }
 
-    [SerializeField] float maxPatience = 100;
     float timeRemain;
-    public float scoreRatio => timeRemain/maxPatience;
+    public float scoreRatio => timeRemain/timeToCompleteORderInS;
+
+    private void Start()
+    {
+        ApplyRadius();
+    }
+    [ContextMenu("Apply Radius")]
+    public void ApplyRadius()
+    {
+        if(capsuleCollider)
+        {
+            capsuleCollider.radius = targetRadius;
+        }
+        requirePizzaIndicatorGfx.transform.localScale = new Vector3(targetRadius, capsuleCollider ? capsuleCollider.height : targetRadius, targetRadius);
+    }
 
     private void Update() {
         if (requiredPizza){
@@ -40,7 +62,6 @@ public class PizzaTarget : MonoBehaviour
         UiManager.instance.UpdateOrders(this, requiredPizza, reqCount);
     }
 
-    public string Name = "LehrstuhlX";
 
     private void OnTriggerEnter(Collider other)
     {
@@ -72,9 +93,6 @@ public class PizzaTarget : MonoBehaviour
     }
 
     #region Gfx
-    [SerializeField] private GameObject waitingPersonPrefab;
-    [SerializeField] private float waitingPeopleRadius;
-    private List<GameObject> currentWaitingPeopleGfxs = new List<GameObject>();
     private void updateGraphics(int peopleWaitingCount)
     {
         requirePizzaIndicator(peopleWaitingCount > 0);
@@ -100,12 +118,11 @@ public class PizzaTarget : MonoBehaviour
         if (waitingPersonPrefab == null) return;
 
         var person = Instantiate(waitingPersonPrefab, transform);
-        Vector2 rdm = Random.insideUnitCircle * waitingPeopleRadius;
+        Vector2 rdm = Random.insideUnitCircle * targetRadius;
         person.transform.localPosition = new Vector3(rdm.x, 0f, rdm.y);
         person.transform.rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
         currentWaitingPeopleGfxs.Add(person);
     }
-    [SerializeField] private GameObject requirePizzaIndicatorGfx;//TODO: only visible on Map View
     private void requirePizzaIndicator(bool show)
     {
         if(requirePizzaIndicatorGfx)
