@@ -18,7 +18,7 @@ public class MainMenuNav : MonoBehaviour
         Debug.Log("quit");
     }
 
-    bool secScreenActive;
+    static bool secScreenActive;
     private void Awake() {
         if (!secScreenActive){
             secScreenActive = true;
