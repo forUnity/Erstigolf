@@ -17,4 +17,12 @@ public class MainMenuNav : MonoBehaviour
         Application.Quit();
         Debug.Log("quit");
     }
+
+    bool secScreenActive;
+    private void Awake() {
+        if (!secScreenActive){
+            secScreenActive = true;
+            Display.displays[1].Activate();
+        }
+    }
 }
