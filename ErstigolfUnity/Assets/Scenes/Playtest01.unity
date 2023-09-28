@@ -2830,6 +2830,14 @@ PrefabInstance:
       value: CarPlayerHolder 1
       objectReference: {fileID: 0}
     - target: {fileID: 7537076923066050032, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.320374
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537076923066050032, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.20343514
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537076923066050032, guid: 54c29dc1496f2bc48809322e3311c6cf, type: 3}
       propertyPath: m_LocalRotation.y
       value: -8.51032e-16
       objectReference: {fileID: 0}
@@ -5969,6 +5977,7 @@ MonoBehaviour:
   - {fileID: 1760357385}
   - {fileID: 2102849522}
   - {fileID: 956218797}
+  - {fileID: 1708119097}
   - {fileID: 2127970905}
   - {fileID: 512852225}
   - {fileID: 33064013}
@@ -5976,21 +5985,14 @@ MonoBehaviour:
   - {fileID: 1808924790}
   - {fileID: 1685548476}
   - {fileID: 1552755527}
-  - {fileID: 1708119097}
   - {fileID: 738193160}
   pizzaTypes:
   - {fileID: 11400000, guid: f6fbfa0152699674cb29045ff8cb9653, type: 2}
   - {fileID: 11400000, guid: 00232dd7e3fcf784bb9719d9791935cb, type: 2}
   - {fileID: 11400000, guid: e9f78f6d33d6073459648e45ce75f8ce, type: 2}
-  - {fileID: 11400000, guid: af180f1ae12fb0145ac23addca732757, type: 2}
-  - {fileID: 11400000, guid: fc096ebc12b6ac44bafb419be1d0ae4a, type: 2}
   - {fileID: 11400000, guid: 2c7fffb981e35c84cac8a69cc576e471, type: 2}
-  - {fileID: 11400000, guid: 319ce3fdade5a8b41acb2101d02c75b0, type: 2}
-  - {fileID: 11400000, guid: 1163107521a6ff0489aed065c3433956, type: 2}
-  - {fileID: 11400000, guid: 8143f3faa7018704aa8d6fa80517cb68, type: 2}
   - {fileID: 11400000, guid: 2ae5b8f24ee2ea541b99d276a27f7601, type: 2}
   - {fileID: 11400000, guid: 7cc9029019fa71f45bf422678ae688b6, type: 2}
-  - {fileID: 11400000, guid: 6783b22e81d0d684292bb9e29f5206e5, type: 2}
   sound: {fileID: 1109302471}
   maxConcurrentDeliveryCount: 3
   emptyOrderTime: 3
