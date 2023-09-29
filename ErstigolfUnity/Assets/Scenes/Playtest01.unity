@@ -17048,6 +17048,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Road
       objectReference: {fileID: 0}
+    - target: {fileID: 3244070778402165102, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d79d57b85450e65488a19d1a62d68f52, type: 2}
     - target: {fileID: 3503622922438440021, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -17080,6 +17084,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Road
       objectReference: {fileID: 0}
+    - target: {fileID: 5854824869514475228, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d79d57b85450e65488a19d1a62d68f52, type: 2}
     - target: {fileID: 5997813477823267455, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -17116,6 +17124,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8b674c8323ec1634f88d21affa24caaf, type: 2}
+    - target: {fileID: 7084509664863935902, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 736500267d1f68c47996b2dbbbffd568, type: 2}
     - target: {fileID: 7084509664863935902, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
@@ -37806,8 +37818,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2818572288
-  m_fontColor: {r: 0, g: 0, b: 0, a: 0.65882355}
+    rgba: 2835349503
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.65882355}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -42864,25 +42876,29 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8134876547032910283, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
+      propertyPath: portName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483321, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.320366
+      value: -13.320374
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20343508
+      value: 0.20343514
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000145895545
+      value: -1.702064e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000003031419
+      value: 2.786575e-16
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483323, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: field of view

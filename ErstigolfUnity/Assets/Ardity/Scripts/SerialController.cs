@@ -26,7 +26,7 @@ using System.Threading;
 public class SerialController : MonoBehaviour
 {
     [Tooltip("Port name with which the SerialPort object will be created.")]
-    public string portName = "COM3";
+    public string portName = "";
 
     [Tooltip("Baud rate that the serial device is using to transmit data.")]
     public int baudRate = 9600;
@@ -63,6 +63,11 @@ public class SerialController : MonoBehaviour
     // ------------------------------------------------------------------------
     void OnEnable()
     {
+        if (PlayerPrefs.HasKey("SerialPort") && portName == "")
+        {
+            portName = PlayerPrefs.GetString("SerialPort");
+        }      
+
         serialThread = new SerialThreadLines(portName, 
                                              baudRate, 
                                              reconnectionDelay,
