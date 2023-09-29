@@ -61,6 +61,8 @@ public class PizzaDeliveryManager : MonoBehaviour
             {
                 AddScriptedOrder(pizzaOrdersScripted[doneTo]);
                 doneTo++;
+                if(doneTo == pizzaOrdersScripted.Count)
+                    lastCooldownTime = Time.time;
             }
         } else
         {
