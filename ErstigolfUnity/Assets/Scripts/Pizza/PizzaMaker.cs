@@ -8,6 +8,15 @@ public class PizzaMaker : MonoBehaviour
     [SerializeField] private Transform spawn;
     [SerializeField] private PizzaThrower thrower;
 
+#if UNITY_EDITOR
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            LoadPizza(new bool[PizzaType.ingredientCount]);
+        }        
+    }
+#endif
     // Invoked when a line of data is received from the serial device.
     void OnMessageArrived(string msg)
     {
@@ -24,6 +33,7 @@ public class PizzaMaker : MonoBehaviour
         }
     }
 
+    
     // Invoked when a connect/disconnect event occurs. The parameter 'success'
     // will be 'true' upon connection, and 'false' upon disconnection or
     // failure to connect.
