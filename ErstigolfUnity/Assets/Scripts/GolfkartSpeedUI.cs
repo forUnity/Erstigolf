@@ -15,6 +15,7 @@ public class GolfkartSpeedUI : MonoBehaviour
     [SerializeField] private int MaxDisplaySpeed;
     [SerializeField] private float MaxNeedleRotationOffset;
     [SerializeField] private float lerpSpeed = 1f;
+    //[SerializeField] private TextMeshProUGUI flightReadyTM;
 
     float startNeedleRotation;
     private void Start()

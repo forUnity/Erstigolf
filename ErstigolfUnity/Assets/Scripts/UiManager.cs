@@ -78,8 +78,8 @@ public class UiManager : MonoBehaviour
         if (gameTimeRemain <= 0){
             SceneManager.LoadSceneAsync(2);
         }
-        timeText.text = (Mathf.CeilToInt(gameTimeRemain)).ToString();
-        timeText2.text = (Mathf.CeilToInt(gameTimeRemain)).ToString();
+        timeText.text = (Mathf.CeilToInt(gameTimeRemain)).ToString() + "s";
+        timeText2.text = (Mathf.CeilToInt(gameTimeRemain)).ToString() + "s";
     }
 
     [SerializeField] private TextMeshProUGUI scoreTm;

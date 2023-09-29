@@ -7,7 +7,7 @@ public class AlertSystem : MonoBehaviour
 {
     [SerializeField] GameObject alertBanner;
     [SerializeField] AudioSource sound;
-    [SerializeField] Text displayText;
+    [SerializeField] TMPro.TextMeshProUGUI displayText;
     [SerializeField] float displayTime = 3f;
     private static AlertSystem instance;
 

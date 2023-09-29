@@ -49,6 +49,11 @@ public class PizzaTarget : MonoBehaviour
         }
         requirePizzaIndicatorGfx.transform.localScale = new Vector3(targetRadius, capsuleCollider ? capsuleCollider.height : targetRadius, targetRadius);
     }
+    [ContextMenu("Apply Name")]
+    public void ApplyNameEditor()
+    {
+        gameObject.name = Name;
+    }
 
     private void Update() {
         if (requiredPizza){

@@ -55,6 +55,7 @@ public class TeleportSystem : MonoBehaviour
     [Space]
     [SerializeField] private GolfkartSpeed golfkartSpeed;
     [SerializeField] public float speedToFly = 0f;
+    [SerializeField] private GameObject ReadyIndicator;
     //[SerializeField] private TMPro.TextMeshProUGUI 
 
     private float nextTP;
@@ -80,6 +81,8 @@ public class TeleportSystem : MonoBehaviour
             cooldownBar.fillAmount = golfkartSpeed.GetAvgSpeedOverTimeRecord() / speedToFly;
         }
         cooldownBar.color = cooldownBar.fillAmount >= 1 ? Color.green : Color.red;
+
+        ReadyIndicator?.SetActive(canTeleport);
     }
 
     private void OnEnable() {

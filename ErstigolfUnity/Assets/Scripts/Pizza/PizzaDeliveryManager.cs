@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PizzaDeliveryManager : MonoBehaviour
 {
@@ -25,22 +26,49 @@ public class PizzaDeliveryManager : MonoBehaviour
     [SerializeField] float orderCooldownTime = 3f;
     float lastCooldownTime = 0;
 
-    // only deliver one pizza per location to avoid overstressing of pizzamaker
+    // only deliver one pizza type per location to avoid overstressing of pizzamaker
     List<PizzaTarget> availableTargets;
+
+    [Space]
+    [Header("Scripted Orders")]
+    [SerializeField] private List<PizzaOrderEvent> pizzaOrdersScripted;
+    private int doneTo = 0;
+    
+    [System.Serializable]
+    public class PizzaOrderEvent
+    {
+        public int AppearenceTime = 0;
+
+        public PizzaTarget orderLocation;
+        public PizzaType pizzaType;
+        public int Count;
+    }
 
     private void Start() {
         availableTargets = new List<PizzaTarget>(pizzaTargets);
         score = 0;
+
+        pizzaOrdersScripted.OrderBy(a => a.AppearenceTime);
     }
 
     private void Update()
     {
-        if (currentOrderCount == 0){
-            lastCooldownTime = Mathf.Min(Time.time -orderCooldownTime + emptyOrderTime, lastCooldownTime);
-        }
-        if(currentOrderCount < maxConcurrentDeliveryCount && lastCooldownTime + orderCooldownTime < Time.time)
+        if(pizzaOrdersScripted.Count > doneTo)
         {
-            AddPizza(Random.Range(2, 6));
+            if(Time.time > pizzaOrdersScripted[doneTo].AppearenceTime)
+            {
+                AddScriptedOrder(pizzaOrdersScripted[doneTo]);
+                doneTo++;
+            }
+        } else
+        {
+            if (currentOrderCount == 0){
+                lastCooldownTime = Mathf.Min(Time.time -orderCooldownTime + emptyOrderTime, lastCooldownTime);
+            }
+            if(currentOrderCount < maxConcurrentDeliveryCount && lastCooldownTime + orderCooldownTime < Time.time)
+            {
+                AddPizza(Random.Range(2, 6));
+            }
         }
     }
 
@@ -61,6 +89,10 @@ public class PizzaDeliveryManager : MonoBehaviour
             sound.Play();
         }
     }
+    private void AddScriptedOrder(PizzaOrderEvent pizzaOrder)
+    {
+        pizzaOrder.orderLocation.RequirePizza(pizzaOrder.pizzaType, pizzaOrder.Count);
+    }
 
     public void DeliveredPizza(int points)
     {
@@ -79,7 +111,7 @@ public class PizzaDeliveryManager : MonoBehaviour
 
     public void TimeOut(PizzaTarget target){
         OnTargetDeactivate(target);
-        AlertSystem.Message("Zu langsam für " + target.Name);
+        AlertSystem.Message("Too slow: " + target.Name + " cancelled their order");
     }
 
     public int score {get; private set;}

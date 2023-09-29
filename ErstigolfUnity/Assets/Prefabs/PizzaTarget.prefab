@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: "Hauptgeb\xE4ude"
-  timeToCompleteORderInS: 100
+  timeToCompleteORderInS: 150
   targetRadius: 6
   capsuleCollider: {fileID: 3561042634997743393}
   requirePizzaIndicatorGfx: {fileID: 7522273178976140593}
