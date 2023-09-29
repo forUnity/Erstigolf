@@ -1,5 +1,6 @@
 Black => right
-Red => left
-Yellow => Toggle Aim
+Yellow => left
+Red	=> Toggle Aim
 Green => Reload / Fire
-
+White => Teleport
+BLue => Teleport
