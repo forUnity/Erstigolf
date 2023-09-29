@@ -86,8 +86,8 @@ public class UiManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreTm2;
     public void UpdateScore(int score)
     {
-        scoreTm.text = score.ToString();
-        scoreTm2.text = score.ToString();
+        scoreTm.text = score.ToString() + "Hc";
+        scoreTm2.text = score.ToString() + "Hc";
     }
 
     [SerializeField] GameObject panelPrefab;

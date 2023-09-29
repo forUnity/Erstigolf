@@ -10,18 +10,25 @@ public class AlertSystem : MonoBehaviour
     [SerializeField] TMPro.TextMeshProUGUI displayText;
     [SerializeField] float displayTime = 3f;
     private static AlertSystem instance;
-
+    [SerializeField] private AlertSystem forwardToAlertSystem;
+    public bool shouldBeInstance = true;
     private Queue<string> msgs = new Queue<string>();
 
     private float timeRemain;
 
     private void Awake() {
-        instance = this;
+        if(shouldBeInstance && instance == null)
+        {
+            instance = this;
+        }
     }
 
     private void Update() {
         if (timeRemain <= 0f){
             if (msgs.TryDequeue(out string msg)){
+                if(forwardToAlertSystem)
+                    forwardToAlertSystem.msgs.Enqueue(msg);
+
                 displayText.text = msg;
                 timeRemain = displayTime;
                 alertBanner.SetActive(true);
