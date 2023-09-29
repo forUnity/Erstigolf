@@ -1,0 +1,5 @@
+Black => right
+Red => left
+Yellow => Toggle Aim
+Green => Reload / Fire
+
