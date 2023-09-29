@@ -41463,7 +41463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118072188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1331, y: 0, z: -456}
+  m_LocalPosition: {x: 1331, y: 0.5, z: -456}
   m_LocalScale: {x: 50, y: 1, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42179,25 +42179,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarPlayerHolder 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6340162950260654891, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
+      propertyPath: m_Damping
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340162950260654891, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
+      propertyPath: m_Strategy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340162950260654891, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
+      propertyPath: m_SmoothingTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340162950260654891, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
+      propertyPath: m_MinimumOcclusionTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8134876547032910283, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: portName
       value: COM3
       objectReference: {fileID: 0}
+    - target: {fileID: 8302133638877483321, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.320366
+      value: -13.320374
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20343508
+      value: 0.20343514
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000145895545
+      value: -8.51032e-16
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000003031419
+      value: 3.6137337e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302133638877483323, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
+      propertyPath: field of view
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483323, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_CullingMask.m_Bits
