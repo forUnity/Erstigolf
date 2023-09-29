@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16607,6 +16607,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1321481376}
     m_Modifications:
+    - target: {fileID: -8717542183883562161, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -16663,6 +16667,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8414985153167657270, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: -8264387106999188536, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: -8065940375815830208, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
@@ -16671,6 +16683,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f3775c58d8458144d9b77b0ad29f4773, type: 2}
+    - target: {fileID: -7881749552422826704, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: -7852213937937865271, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: -7800507637602813685, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: -6844930439689561504, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16711,6 +16735,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 7c3b2794c390c6d459fd130cc992adf9, type: 2}
+    - target: {fileID: -5686880068928420770, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: -5624827263103065221, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16719,6 +16747,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -1828449446267038352, guid: 7def1071406e41a49a8c1b05f233be6d, type: 3}
+    - target: {fileID: -5206509609199452892, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: -5176037769452940251, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16731,18 +16763,54 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7c3b2794c390c6d459fd130cc992adf9, type: 2}
+    - target: {fileID: -4420391042734893208, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: -3708155173486150488, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: -3035101939719975992, guid: 738df58fc9e8ed345b6c1f9e494ffeac, type: 3}
+    - target: {fileID: -3545052584902152605, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: -3489601342372466966, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: -3029049307200055646, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: -2593473144150150921, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: -2334822001692937612, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f3775c58d8458144d9b77b0ad29f4773, type: 2}
+    - target: {fileID: -2248336697085561760, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: -1782198337210700388, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: -1342916885440897944, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: -1300206181412236099, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2fc615079e2967b4db7e5088f313a7a0, type: 2}
+    - target: {fileID: -1000051413348913067, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: -899931337158060103, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16783,6 +16851,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c2f4755898d07e14ba9234994d725c2a, type: 2}
+    - target: {fileID: 371956613992761734, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: 647711144842586282, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16799,6 +16871,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 999948848277290040, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100807673222753522, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965182520213017637, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: 2351143439379674410, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16807,10 +16891,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f363ec62e16772340be805f3da1e3fdb, type: 2}
+    - target: {fileID: 2393148415867990638, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513313434476463864, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: 2694717959716584109, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62c01cd363116e4418505d6d72764b0d, type: 2}
+    - target: {fileID: 2751586991103113850, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: 2805320420707094237, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16819,6 +16915,38 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 2fc615079e2967b4db7e5088f313a7a0, type: 2}
+    - target: {fileID: 3109541702675485243, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155727770324577922, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214267717298578199, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226506733352051539, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533389684645816278, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026247345425953914, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372335510075485437, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620893393992785803, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: 5997813477823267455, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16827,6 +16955,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2fc615079e2967b4db7e5088f313a7a0, type: 2}
+    - target: {fileID: 6490409834763457136, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 6510077948647412121, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065832490034147723, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405155545095426398, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805852267234300661, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -2443361584719232872, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
@@ -16859,13 +17007,34 @@ PrefabInstance:
     - {fileID: 5061939003751596522, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
     - {fileID: -4018261591340621078, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1100807673222753522, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 793087744}
   m_SourcePrefab: {fileID: 100100000, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
 --- !u!4 &793087742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
   m_PrefabInstance: {fileID: 793087741}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &793087743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1100807673222753522, guid: b8525a917379ec74a9f1a5a08d8880c1, type: 3}
+  m_PrefabInstance: {fileID: 793087741}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &793087744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793087743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5156121af5905af439f6b8097074199e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: Road
 --- !u!1 &793616129
 GameObject:
   m_ObjectHideFlags: 0
@@ -42010,21 +42179,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarPlayerHolder 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8134876547032910283, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
+      propertyPath: portName
+      value: COM3
+      objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.320374
+      value: -13.320366
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20343514
+      value: 0.20343508
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -8.51032e-16
+      value: 0.0000000145895545
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.6137337e-16
+      value: -0.000000003031419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302133638877483323, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

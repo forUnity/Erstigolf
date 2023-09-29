@@ -33,6 +33,8 @@ public class PizzaDeliveryManager : MonoBehaviour
     [Header("Scripted Orders")]
     [SerializeField] private List<PizzaOrderEvent> pizzaOrdersScripted;
     private int doneTo = 0;
+
+    private float StartTime = 0f;
     
     [System.Serializable]
     public class PizzaOrderEvent
@@ -47,7 +49,7 @@ public class PizzaDeliveryManager : MonoBehaviour
     private void Start() {
         availableTargets = new List<PizzaTarget>(pizzaTargets);
         score = 0;
-
+        StartTime = Time.time;
         pizzaOrdersScripted.OrderBy(a => a.AppearenceTime);
     }
 
@@ -55,7 +57,7 @@ public class PizzaDeliveryManager : MonoBehaviour
     {
         if(pizzaOrdersScripted.Count > doneTo)
         {
-            if(Time.time > pizzaOrdersScripted[doneTo].AppearenceTime)
+            if(Time.time > pizzaOrdersScripted[doneTo].AppearenceTime + StartTime)
             {
                 AddScriptedOrder(pizzaOrdersScripted[doneTo]);
                 doneTo++;
