@@ -93,7 +93,12 @@ public class PizzaDeliveryManager : MonoBehaviour
     }
     private void AddScriptedOrder(PizzaOrderEvent pizzaOrder)
     {
+        if(!availableTargets.Contains(pizzaOrder.orderLocation))
+        {
+            pizzaOrder.AppearenceTime += 30;
+        }
         pizzaOrder.orderLocation.RequirePizza(pizzaOrder.pizzaType, pizzaOrder.Count);
+        availableTargets.Remove(pizzaOrder.orderLocation);
     }
 
     public void DeliveredPizza(int points)

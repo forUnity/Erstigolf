@@ -10732,12 +10732,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3755779645033872253}
-  m_LocalRotation: {x: 0, y: 0.7660445, z: 0.6427876, w: 0}
-  m_LocalPosition: {x: 0, y: -0.03, z: 0.552}
-  m_LocalScale: {x: 0.007714639, y: 0.009808268, z: 0.07505279}
+  m_LocalRotation: {x: -0.08715239, y: -0, z: -0, w: -0.996195}
+  m_LocalPosition: {x: 0, y: 3.283043, z: -0.038894653}
+  m_LocalScale: {x: 0.010000001, y: 0.012713832, z: 0.09728614}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1396323755178692239}
+  m_Father: {fileID: 782845928288000461}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -80, y: 180, z: 0}
 --- !u!20 &682741475531538048
@@ -15950,6 +15950,10 @@ MonoBehaviour:
   loadTime: 1
   rotor: {fileID: 5466947012458112817}
   shootTransform: {fileID: 8561976004937735092}
+  reloadIndicatorLight: {fileID: 0}
+  noAmmoColor: {r: 0, g: 0, b: 0, a: 0}
+  unloadedColor: {r: 0, g: 0, b: 0, a: 0}
+  loadedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6091128631432933865
 GameObject:
   m_ObjectHideFlags: 0
@@ -16208,6 +16212,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2505926647417838164}
   - {fileID: 7537076923066050032}
   - {fileID: 7537076923063306620}
   m_Father: {fileID: 0}
@@ -16569,7 +16574,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537076923066050039}
-  m_LocalRotation: {x: 0.20343508, y: 0.0000000145895545, z: -0.000000003031419, w: 0.9790884}
+  m_LocalRotation: {x: 0.20343508, y: 0.000000014589555, z: -0.0000000030314191, w: 0.9790884}
   m_LocalPosition: {x: 0, y: 12.952071, z: -13.320366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16819,6 +16824,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729aad4491e915a41bda2b8325cf757a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FocusTracksTarget: 0
+  m_FocusTracking: 0
+  m_FocusTarget: {fileID: 0}
+  m_FocusOffset: 0
+  m_Profile: {fileID: 0}
 --- !u!114 &5499670940790388705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21743,7 +21753,6 @@ Transform:
   - {fileID: 692120406910657914}
   - {fileID: 7410920066148497591}
   - {fileID: 8561976004937735092}
-  - {fileID: 2505926647417838164}
   m_Father: {fileID: 5466947012458112817}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

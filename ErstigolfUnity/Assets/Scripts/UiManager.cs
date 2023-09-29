@@ -17,6 +17,7 @@ public class UiManager : MonoBehaviour
         gameTimeRemain = gameDuration;
     }
 
+    [SerializeField] List<Image> clockFills;
     [SerializeField] Transform OrderHolderT;
     [SerializeField] GameObject OrderUIPrefab;
     [SerializeField] Sprite[] icons;
@@ -25,6 +26,7 @@ public class UiManager : MonoBehaviour
     private void Update() {
         foreach(PizzaTarget t in OrderersToCount.Keys){
             OrderersToCount[t].SetTime(t.scoreRatio);
+   
         }
         HandleTime();
     }
@@ -80,6 +82,11 @@ public class UiManager : MonoBehaviour
         }
         timeText.text = (Mathf.CeilToInt(gameTimeRemain)).ToString() + "s";
         timeText2.text = (Mathf.CeilToInt(gameTimeRemain)).ToString() + "s";
+
+        foreach (var item in clockFills)
+        {
+            item.fillAmount = gameTimeRemain / gameDuration;
+        }
     }
 
     [SerializeField] private TextMeshProUGUI scoreTm;

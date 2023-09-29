@@ -16,6 +16,14 @@ public class PizzaThrower : MonoBehaviour
     [SerializeField] private Transform rotor;
     [SerializeField] private Transform shootTransform;
 
+    [Space]
+    [SerializeField]
+    private Light reloadIndicatorLight;
+    [SerializeField] Color noAmmoColor;
+    [SerializeField] Color unloadedColor;
+    [SerializeField] Color loadedColor;
+
+
     private Vector2 currentLook;
 
     private ButtonsInput inputs;
@@ -41,6 +49,18 @@ public class PizzaThrower : MonoBehaviour
     {
         SetArrow();
         UiManager.instance.UpdateLoadedPizza(pizzas.ToArray());
+
+        if(HasAmmo)
+        {
+            reloadIndicatorLight.color = unloadedColor;
+        } else
+        {
+            reloadIndicatorLight.color = noAmmoColor;
+        }
+        if(Loaded)
+        {
+            reloadIndicatorLight.color = loadedColor;
+        }
     }
 
     private void SetArrow()
@@ -109,6 +129,7 @@ public class PizzaThrower : MonoBehaviour
         loadedPizza = nextPizza;
 
         loading = false;
+
     }
 
     private void LaunchPizza() 
@@ -139,5 +160,6 @@ public class PizzaThrower : MonoBehaviour
             carRB.AddForceAtPosition(-rb.velocity * rb.mass, shootTransform.position, ForceMode.Impulse);
         }
         pizza.parent = null;
+
     }
 }
