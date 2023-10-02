@@ -57,6 +57,7 @@ public class TeleportSystem : MonoBehaviour
     [SerializeField] public float speedToFly = 0f;
     [SerializeField] private GameObject ReadyIndicator;
     //[SerializeField] private TMPro.TextMeshProUGUI 
+    [SerializeField] private CarAudioManager carAudioManger;
 
     private float nextTP;
 
@@ -155,6 +156,7 @@ public class TeleportSystem : MonoBehaviour
         if (ps){
             ps.SetActive(true);
         }
+        carAudioManger.ToggleFlying(true);
         Vector3 start = teleportTarget.position;
         Vector3 dir = target - start;
         dir.y = 0f;
@@ -204,5 +206,8 @@ public class TeleportSystem : MonoBehaviour
                 em.rateOverDistance = r;
             }
         }
+
+        
+        carAudioManger.ToggleFlying(false);
     }
 }

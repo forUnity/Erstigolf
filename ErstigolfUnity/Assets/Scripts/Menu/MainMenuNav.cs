@@ -22,6 +22,10 @@ public class MainMenuNav : MonoBehaviour
     private void Awake() {
         if (!secScreenActive){
             secScreenActive = true;
+            if( Display.displays.Length < 2)
+            {
+                Debug.LogError("Connect Second Display!!!");
+            }
             Display.displays[1].Activate();
         }
     }

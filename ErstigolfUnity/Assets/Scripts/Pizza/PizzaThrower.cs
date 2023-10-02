@@ -76,6 +76,9 @@ public class PizzaThrower : MonoBehaviour
             turretCam.fieldOfView = Mathf.Lerp(fov, turretCam.fieldOfView, Mathf.Pow(0.5f, Time.deltaTime * zoomSpeed));
         currentLook.y = Mathf.Clamp(currentLook.y, -90f, 90f);
 
+        CarAudioManager.instance?.ToggleRotation(aim.x != 0, true);
+        CarAudioManager.instance?.ToggleRotation(aim.y != 0, false);
+
         rotor.localRotation = Quaternion.Euler(-currentLook.y, currentLook.x, 0f);
     }
 
@@ -104,6 +107,8 @@ public class PizzaThrower : MonoBehaviour
         if (p.TryGetComponent(out Collider c)) c.enabled = false;
         if (p.TryGetComponent(out Rigidbody rb)) rb.isKinematic = true;
         pizzas.Enqueue(p.transform);
+        
+        CarAudioManager.instance?.CompletePizza();
     }
 
     private async void LoadPizza(){
@@ -114,6 +119,8 @@ public class PizzaThrower : MonoBehaviour
             return;
         }
         loading = true;
+
+        CarAudioManager.instance?.LoadPizza();
 
         Transform nextPizza = pizzas.Dequeue();
 
@@ -134,6 +141,8 @@ public class PizzaThrower : MonoBehaviour
 
     private void LaunchPizza() 
     {
+        CarAudioManager.instance?.FireRailgun();
+
         Transform pizza = loadedPizza;
         pizza.GetComponent<Pizza>().flyParticles.SetActive(true);
         loadedPizza = null;
