@@ -18,7 +18,10 @@ public class PizzaDeliveryManager : MonoBehaviour
 
     [SerializeField] PizzaTarget[] pizzaTargets;
     [SerializeField] PizzaType[] pizzaTypes;
-    [SerializeField] AudioSource sound;
+    [SerializeField] AudioSource newOrderSound;
+    [SerializeField] AudioSource orderSuccessfullSound;
+    [SerializeField] AudioSource orderFailedSound;
+
     [SerializeField] int maxConcurrentDeliveryCount;
     [Tooltip("The time for a new order, when there is no current order")]
     [SerializeField] float emptyOrderTime;
@@ -90,7 +93,7 @@ public class PizzaDeliveryManager : MonoBehaviour
             availableTargets[target].RequirePizza(pizzaTypes[type], count);
             availableTargets.RemoveAt(target);
 
-            sound.Play();
+            newOrderSound.Play();
         }
     }
     private void AddScriptedOrder(PizzaOrderEvent pizzaOrder)
@@ -106,6 +109,7 @@ public class PizzaDeliveryManager : MonoBehaviour
     public void DeliveredPizza(int points)
     {
         IncreaseScore(points);
+        orderSuccessfullSound.Play();
     }
 
     public void DeliveredFinalPizza(PizzaTarget target){
@@ -121,6 +125,7 @@ public class PizzaDeliveryManager : MonoBehaviour
     public void TimeOut(PizzaTarget target){
         OnTargetDeactivate(target);
         AlertSystem.Message("Too slow: " + target.Name + " cancelled their order");
+        orderFailedSound.Play();
     }
 
     public int score {get; private set;}

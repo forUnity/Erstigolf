@@ -28,6 +28,7 @@ public class CarAudioManager : MonoBehaviour
 
     [Space]
     [SerializeField] private AudioSource soundBarrierSource;
+    [SerializeField] private ParticleSystem soundBarrierParticleSystem;
     [SerializeField] GolfkartSpeed golfkartSpeed;
     // Start is called before the first frame update
     void Start()
@@ -48,8 +49,9 @@ public class CarAudioManager : MonoBehaviour
             if(!hasBrokenSoundBarrier)
             {
                 hasBrokenSoundBarrier = true;
-                Debug.Log("VBOOOOm");
                 soundBarrierSource.Play();
+                soundBarrierParticleSystem?.Play();
+
             }
         } else 
         {
