@@ -19,9 +19,19 @@ public class UiManager : MonoBehaviour
 
     [SerializeField] List<Image> clockFills;
     [SerializeField] Transform OrderHolderT;
+    [SerializeField] Transform OrderHolderTBack;
+    [SerializeField] private bool SplitOrderInfo = true;
     [SerializeField] GameObject OrderUIPrefab;
+    [SerializeField] GameObject OrderUIPrefabFront;
+    [SerializeField] GameObject OrderUIPrefabBack;
     [SerializeField] Sprite[] icons;
     private Dictionary<PizzaTarget, UiOrder> OrderersToCount;
+
+
+    private void Start()
+    {
+        OrderHolderTBack.gameObject.SetActive(SplitOrderInfo);
+    }
 
     private void Update() {
         foreach(PizzaTarget t in OrderersToCount.Keys){
@@ -48,8 +58,13 @@ public class UiManager : MonoBehaviour
         else
         {
             if (type == null) return;
-            UiOrder uiElement = Instantiate(OrderUIPrefab, OrderHolderT).GetComponent<UiOrder>();
+            UiOrder uiElement = Instantiate(SplitOrderInfo ? OrderUIPrefabFront : OrderUIPrefab, OrderHolderT).GetComponent<UiOrder>();
             uiElement.gameObject.SetActive(true);
+
+            UiOrder uiElementBack = Instantiate(OrderUIPrefabBack, OrderHolderTBack).GetComponent<UiOrder>();
+            uiElementBack.gameObject.SetActive(true);
+            uiElement.SetCopy(uiElementBack);
+
             OrderersToCount.Add(orderer, uiElement);
             UpdateOrders(orderer, type, count);
         }
@@ -71,6 +86,11 @@ public class UiManager : MonoBehaviour
     }
 
     [SerializeField] float gameDuration = 600;
+    [SerializeField] TextMeshProUGUI endCountdownText;
+    [SerializeField] TextMeshProUGUI endCountdownTextGunner;
+
+    [SerializeField] AudioSource endGameSound;
+    [SerializeField] private float showEndCountdownTime = 30f;
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] TextMeshProUGUI timeText2;
     float gameTimeRemain;
@@ -80,6 +100,20 @@ public class UiManager : MonoBehaviour
         if (gameTimeRemain <= 0){
             SceneManager.LoadSceneAsync(2);
         }
+        if(gameTimeRemain <= showEndCountdownTime)
+        {
+            endCountdownText.text = ((int)gameTimeRemain).ToString();
+            endCountdownTextGunner.text = endCountdownText.text;
+        } else
+        {
+            endCountdownText.text = "";
+            endCountdownTextGunner.text = endCountdownText.text;
+        }
+        if(gameTimeRemain <= endGameSound.clip.length && !endGameSound.isPlaying)
+        {
+            endGameSound.Play();
+        }
+
         timeText.text = (Mathf.CeilToInt(gameTimeRemain)).ToString() + "s";
         timeText2.text = (Mathf.CeilToInt(gameTimeRemain)).ToString() + "s";
 

@@ -165,8 +165,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 13x
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb9b6199a1a5e7445ad7097a1ba1186f, type: 2}
-  m_sharedMaterial: {fileID: -8368297562925315278, guid: eb9b6199a1a5e7445ad7097a1ba1186f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9119a5b584a4ca34f8eb3c68892b4e7b, type: 2}
+  m_sharedMaterial: {fileID: -7566129300384944648, guid: 9119a5b584a4ca34f8eb3c68892b4e7b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -464,8 +464,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: four cheese
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb9b6199a1a5e7445ad7097a1ba1186f, type: 2}
-  m_sharedMaterial: {fileID: -8368297562925315278, guid: eb9b6199a1a5e7445ad7097a1ba1186f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9119a5b584a4ca34f8eb3c68892b4e7b, type: 2}
+  m_sharedMaterial: {fileID: -7566129300384944648, guid: 9119a5b584a4ca34f8eb3c68892b4e7b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1260,8 +1260,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Haupgeb\xE4ude- Haupteingang"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb9b6199a1a5e7445ad7097a1ba1186f, type: 2}
-  m_sharedMaterial: {fileID: -8368297562925315278, guid: eb9b6199a1a5e7445ad7097a1ba1186f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9119a5b584a4ca34f8eb3c68892b4e7b, type: 2}
+  m_sharedMaterial: {fileID: -7566129300384944648, guid: 9119a5b584a4ca34f8eb3c68892b4e7b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

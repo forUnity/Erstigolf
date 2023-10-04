@@ -4,13 +4,14 @@ TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
   fontSize: 16
-  forceTextureCase: -2
+  forceTextureCase: 0
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
   - Order Pizza
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 27a6b47764f797941ba82baae289a960, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

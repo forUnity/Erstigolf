@@ -1,6 +1,13 @@
-Black => right
-Yellow => left
+Black => right - U
+Yellow => left - Q
 Red	=> Toggle Aim
-Green => Reload / Fire
-White => Teleport
-BLue => Teleport
+Green => Reload / Fire - A
+White => Teleport - T
+BLue => Teleport - P
+
+Green E - 
+White P
+Blue T
+Yellow A 
+Black Q - left
+Red U - right

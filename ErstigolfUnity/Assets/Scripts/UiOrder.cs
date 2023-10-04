@@ -14,14 +14,30 @@ public class UiOrder : MonoBehaviour
     [SerializeField] Slider patienceBar;
     [SerializeField] Gradient patienceGradient;
     [SerializeField] Image[] icons;
+
+    private UiOrder copy;
+    public void SetCopy(UiOrder _copy)
+    {
+        copy = _copy;
+    }
+
     public void UpdateInfo(string name, string pizza, int count, Sprite[] ics)
     {
+        if(nameText)
         nameText.text = name;
+        if(pizzaText)
         pizzaText.text = pizza;
+        if(countText)
         countText.text = count + "x";
+
         for (int i = 0; i < ics.Length; i++){
             icons[i].sprite = ics[i];
             icons[i].enabled = ics[i] != null;
+        }
+        
+        if(copy)
+        {
+            copy.UpdateInfo(name, pizza, count, ics);
         }
     }
 
@@ -30,5 +46,8 @@ public class UiOrder : MonoBehaviour
         barImage.color = color;
         barBackground.color = Color.Lerp(color, Color.white, 0.5f);
         patienceBar.value = val;
+
+        if (copy)
+            copy.SetTime(val);
     }
 }
