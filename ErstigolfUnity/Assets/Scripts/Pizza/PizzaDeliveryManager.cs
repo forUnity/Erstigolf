@@ -104,6 +104,8 @@ public class PizzaDeliveryManager : MonoBehaviour
         }
         pizzaOrder.orderLocation.RequirePizza(pizzaOrder.pizzaType, pizzaOrder.Count);
         availableTargets.Remove(pizzaOrder.orderLocation);
+
+        newOrderSound.Play();
     }
 
     public void DeliveredPizza(int points)
