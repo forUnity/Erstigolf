@@ -21,6 +21,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] Transform OrderHolderT;
     [SerializeField] Transform OrderHolderTBack;
     [SerializeField] private bool SplitOrderInfo = true;
+    [SerializeField] private string SplitOrderPrefsKey = "SplitOrderUI";
     [SerializeField] GameObject OrderUIPrefab;
     [SerializeField] GameObject OrderUIPrefabFront;
     [SerializeField] GameObject OrderUIPrefabBack;
@@ -30,6 +31,10 @@ public class UiManager : MonoBehaviour
 
     private void Start()
     {
+        if(PlayerPrefs.HasKey(SplitOrderPrefsKey))
+        {
+            SplitOrderInfo = PlayerPrefs.GetInt("SplitOrderUI") == 1;
+        }
         OrderHolderTBack.gameObject.SetActive(SplitOrderInfo);
     }
 

@@ -1,4 +1,4 @@
-Black => right - U
+Black => right - E
 Yellow => left - Q
 Red	=> Toggle Aim
 Green => Reload / Fire - A
@@ -9,5 +9,5 @@ Green E -
 White P
 Blue T
 Yellow A 
-Black Q - left
+Black Qw - left
 Red U - right

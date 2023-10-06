@@ -8,6 +8,9 @@ public class PizzaThrower : MonoBehaviour
     [SerializeField] private float wideFOV;
     [SerializeField] private float narrowFOV;
     [SerializeField] private float zoomSpeed;
+    [Space]
+    [SerializeField] private bool turretGlobalRotation;
+    [SerializeField] private string turretGlobalRotationKey = "TurretGlobalRotation";
     [SerializeField] private Vector2 wideSensitivity;
     [SerializeField] private Vector2 narrowSensitivity;
     [SerializeField] private float shootSpeed = 200;
@@ -45,6 +48,14 @@ public class PizzaThrower : MonoBehaviour
         inputs.Disable();
     }
 
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey(turretGlobalRotationKey))
+        {
+            turretGlobalRotation = PlayerPrefs.GetInt(turretGlobalRotationKey) == 1;
+        }
+    }
+
     private void Update()
     {
         SetArrow();
@@ -79,7 +90,14 @@ public class PizzaThrower : MonoBehaviour
         CarAudioManager.instance?.ToggleRotation(aim.x != 0, true);
         CarAudioManager.instance?.ToggleRotation(aim.y != 0, false);
 
-        rotor.localRotation = Quaternion.Euler(-currentLook.y, currentLook.x, 0f);
+        if(!turretGlobalRotation)
+        {
+            rotor.localRotation = Quaternion.Euler(-currentLook.y, currentLook.x, 0f);
+        }
+        else
+        {
+            rotor.rotation = Quaternion.Euler(-currentLook.y, currentLook.x, 0f);
+        }
     }
 
     private void OnEnter()
