@@ -9,6 +9,7 @@ public class AlertSystem : MonoBehaviour
     [SerializeField] AudioSource sound;
     [SerializeField] TMPro.TextMeshProUGUI displayText;
     [SerializeField] float displayTime = 3f;
+    [SerializeField] int maxMsgCount = 3;
     private static AlertSystem instance;
     [SerializeField] private AlertSystem forwardToAlertSystem;
     public bool shouldBeInstance = true;
@@ -32,7 +33,8 @@ public class AlertSystem : MonoBehaviour
                 displayText.text = msg;
                 timeRemain = displayTime;
                 alertBanner.SetActive(true);
-                sound.Play();
+                if (shouldBeInstance)
+                    sound.Play();
             }
             else {
                 alertBanner.SetActive(false);
@@ -44,6 +46,8 @@ public class AlertSystem : MonoBehaviour
     }
 
     public static void Message(string msg){
+        while (instance.msgs.Count >= instance.maxMsgCount)
+            instance.msgs.Dequeue();
         instance.msgs.Enqueue(msg);
     }
 }
