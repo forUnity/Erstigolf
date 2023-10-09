@@ -14,6 +14,9 @@ public class UiManager : MonoBehaviour
             instance = this;
         else 
             Destroy(gameObject);
+
+        if (PlayerPrefs.HasKey(GameDurationKey))
+            gameDuration = PlayerPrefs.GetInt(GameDurationKey);
         gameTimeRemain = gameDuration;
     }
 
@@ -91,6 +94,7 @@ public class UiManager : MonoBehaviour
     }
 
     [SerializeField] float gameDuration = 600;
+    [SerializeField] private string GameDurationKey = "GameDuration";
     [SerializeField] TextMeshProUGUI endCountdownText;
     [SerializeField] TextMeshProUGUI endCountdownTextGunner;
 
