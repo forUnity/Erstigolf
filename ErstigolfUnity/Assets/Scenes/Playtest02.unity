@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7619173, g: 0.7857206, b: 0.73050946, a: 1}
+  m_IndirectSpecularColor: {r: 0.7619173, g: 0.78572065, b: 0.73050946, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25282,6 +25282,7 @@ MonoBehaviour:
   sound: {fileID: 1020421102}
   displayText: {fileID: 1895430524}
   displayTime: 2
+  maxMsgCount: 3
   forwardToAlertSystem: {fileID: 1332322945}
   shouldBeInstance: 1
 --- !u!82 &1020421102
@@ -27260,6 +27261,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00232dd7e3fcf784bb9719d9791935cb, type: 2}
   - {fileID: 11400000, guid: e9f78f6d33d6073459648e45ce75f8ce, type: 2}
   - {fileID: 11400000, guid: 2c7fffb981e35c84cac8a69cc576e471, type: 2}
+  - {fileID: 11400000, guid: c3d54e8267271854587ca43928cf997a, type: 2}
   - {fileID: 11400000, guid: 2ae5b8f24ee2ea541b99d276a27f7601, type: 2}
   - {fileID: 11400000, guid: 7cc9029019fa71f45bf422678ae688b6, type: 2}
   newOrderSound: {fileID: 1109302471}
@@ -27287,7 +27289,7 @@ MonoBehaviour:
     Count: 4
   - AppearenceTime: 80
     orderLocation: {fileID: 1685548476}
-    pizzaType: {fileID: 11400000, guid: 00232dd7e3fcf784bb9719d9791935cb, type: 2}
+    pizzaType: {fileID: 11400000, guid: c3d54e8267271854587ca43928cf997a, type: 2}
     Count: 6
   - AppearenceTime: 85
     orderLocation: {fileID: 988145524}
@@ -27307,7 +27309,7 @@ MonoBehaviour:
     Count: 1
   - AppearenceTime: 160
     orderLocation: {fileID: 63708324}
-    pizzaType: {fileID: 11400000, guid: 7cc9029019fa71f45bf422678ae688b6, type: 2}
+    pizzaType: {fileID: 11400000, guid: c3d54e8267271854587ca43928cf997a, type: 2}
     Count: 2
   - AppearenceTime: 250
     orderLocation: {fileID: 1760357385}
@@ -33572,6 +33574,7 @@ MonoBehaviour:
   sound: {fileID: 1020421102}
   displayText: {fileID: 1276650624}
   displayTime: 2
+  maxMsgCount: 3
   forwardToAlertSystem: {fileID: 0}
   shouldBeInstance: 0
 --- !u!4 &1338868194 stripped
@@ -51378,15 +51381,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000005722046
+      value: -0.0000014305115
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.952071
+      value: 12.952073
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.320372
+      value: -13.320374
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51394,15 +51397,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20343503
+      value: 0.20343502
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000059604645
+      value: 0.00000044703484
       objectReference: {fileID: 0}
     - target: {fileID: 8302133638877483322, guid: 4bc54dee392d99943b0d543548bff1a1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000000074505806
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

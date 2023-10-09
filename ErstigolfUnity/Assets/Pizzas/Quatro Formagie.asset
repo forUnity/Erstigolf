@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0de5ae0b28c7af43b4e4476bc52e01b, type: 3}
-  m_Name: Curry
+  m_Name: Quatro Formagie
   m_EditorClassIdentifier: 
-  ingredients: 010100010101
+  ingredients: 010000000000
