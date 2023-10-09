@@ -3,23 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class MainMenuSettings : MonoBehaviour
-{
-    [SerializeField] private TMP_InputField comPortField;
+public class MainMenuSettings : MonoBehaviour {
+    [SerializeField] private string Key = "SerialPort";
+    [SerializeField] private string Default = "COM3";
+    public enum PrefType
+    {
+        String,
+        Integer
+    }
+    [SerializeField] private PrefType prefType;
+    [SerializeField] private TMP_InputField textField;
 
     private void Start()
     {
-        if(PlayerPrefs.HasKey("SerialPort"))
+        if(PlayerPrefs.HasKey(Key))
         {
-            comPortField.text = PlayerPrefs.GetString("SerialPort");
+            textField.text = prefType == PrefType.String ? PlayerPrefs.GetString(Key) : PlayerPrefs.GetInt(Key).ToString();
         } else
         {
-            comPortField.text = "COM3";
+            textField.text = Default;
         }
 
-        comPortField.onEndEdit.AddListener(s => PlayerPrefs.SetString("SerialPort", s));
+        textField.onEndEdit.AddListener(s => { if (prefType == PrefType.String) { PlayerPrefs.SetString(Key, s); } else { PlayerPrefs.SetInt(Key, int.Parse(s)); } });
     }
-
-
 }
 
