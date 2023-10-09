@@ -150,6 +150,7 @@ public class TeleportSystem : MonoBehaviour
                 campus = i;
             }
         }
+        Debug.Log("Found cm: " + campus);
         return campus;
     }
     private void TeleportTo(int newArea)
@@ -160,10 +161,9 @@ public class TeleportSystem : MonoBehaviour
         int t = findCurrentArea();
         if(t>=0)
         {
-            currentArea = findCurrentArea();
+            currentArea = t;
+            from = teleportAreas[t];
         }
-
-
 
         TeleportRect to = teleportAreas[newArea];
         float xFac = from.GetXFac(teleportTarget.position.x); 
