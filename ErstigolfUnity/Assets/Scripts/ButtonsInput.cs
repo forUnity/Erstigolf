@@ -171,7 +171,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1887089f-c32b-43f8-a544-6a2dee1cd9b4"",
-                    ""path"": ""<Keyboard>/u"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -215,7 +215,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""dc04cf4e-4502-42de-8b7a-ec394033eda5"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -259,7 +259,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3656bb38-69a4-42c1-9878-ced34fa89d32"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/u"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -303,7 +303,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""068fad42-ff05-4d1f-b842-ec8d7602026a"",
-                    ""path"": ""<Keyboard>/i"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -336,7 +336,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""34cbe871-e828-4442-b4f1-2ad85be07e45"",
-                    ""path"": ""<Keyboard>/s"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -358,7 +358,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7f328f98-77e2-428c-8c5a-a99d8eaac9c7"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/i"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
