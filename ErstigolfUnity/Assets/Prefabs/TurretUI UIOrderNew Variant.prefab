@@ -138,7 +138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4926264672300988746, guid: 7749aac6615ac68498f7aad71c16342a, type: 3}
       propertyPath: m_Name
-      value: UIOrderNew Variant
+      value: TurretUI UIOrderNew Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6360055259670091607, guid: 7749aac6615ac68498f7aad71c16342a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -259,6 +259,10 @@ PrefabInstance:
     - target: {fileID: 6746763133538120801, guid: 7749aac6615ac68498f7aad71c16342a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -19.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563832410642991301, guid: 7749aac6615ac68498f7aad71c16342a, type: 3}
+      propertyPath: m_Color.a
+      value: 0.57254905
       objectReference: {fileID: 0}
     - target: {fileID: 7854553938975073279, guid: 7749aac6615ac68498f7aad71c16342a, type: 3}
       propertyPath: m_AnchorMax.x

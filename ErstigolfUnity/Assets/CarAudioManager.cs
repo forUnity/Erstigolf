@@ -119,10 +119,12 @@ public class CarAudioManager : MonoBehaviour
         var s = (isX ? rotationXSource : rotationYSource);
         if(on)
         {
-            s.Play();
+            if(!s.isPlaying)
+                s.Play();
         } else
         {
-            s.Stop();
+            if(s.isPlaying)
+             s.Stop();
         }
     }
     #endregion

@@ -50,4 +50,13 @@ public class UiOrder : MonoBehaviour
         if (copy)
             copy.SetTime(val);
     }
+
+
+    private void OnDestroy()
+    {
+        if(copy)
+        {
+            Destroy(copy.gameObject);
+        }
+    }
 }

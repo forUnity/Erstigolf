@@ -138,11 +138,33 @@ public class TeleportSystem : MonoBehaviour
         Debug.Log("done");
     }
 
+    [SerializeField] private Collider[] campusColliders;
+    private int findCurrentArea()
+    {
+        int campus = -1;
+        Vector3 playerPos = teleportTarget.position;
+        for (int i = 0; i < campusColliders.Length; i++)
+        {
+            if(campusColliders[i].bounds.Contains(playerPos))
+            {
+                campus = i;
+            }
+        }
+        return campus;
+    }
     private void TeleportTo(int newArea)
     {
         nextTP = cooldown;
 
         TeleportRect from = teleportAreas[currentArea];
+        int t = findCurrentArea();
+        if(t>=0)
+        {
+            currentArea = findCurrentArea();
+        }
+
+
+
         TeleportRect to = teleportAreas[newArea];
         float xFac = from.GetXFac(teleportTarget.position.x); 
         float yFac = from.GetYFac(teleportTarget.position.z);
