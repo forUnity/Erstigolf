@@ -6,7 +6,7 @@ public class AimCamDampFollow : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private float LerpBase = 4;
-    private void Update()
+    private void LateUpdate()
     {
         float lerpTime = Mathf.Pow(LerpBase, -Time.deltaTime);
         transform.position = target.position;
