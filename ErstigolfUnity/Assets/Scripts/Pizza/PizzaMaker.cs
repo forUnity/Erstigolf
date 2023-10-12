@@ -45,7 +45,7 @@ public class PizzaMaker : MonoBehaviour
             Debug.Log("Connection attempt failed or disconnection detected");
     }
 
-    private void LoadPizza(bool[] ingredients)
+    public void LoadPizza(bool[] ingredients)
     {
         GameObject p = Instantiate(pizzaPrefab, spawn.position, spawn.rotation, spawn);
         p.transform.localScale = Vector3.zero;

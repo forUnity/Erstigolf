@@ -63,6 +63,10 @@ public class SerialController : MonoBehaviour
     // ------------------------------------------------------------------------
     void OnEnable()
     {
+        if (PlayerPrefs.HasKey("VirtualPizzaMaker") && PlayerPrefs.GetInt("VirtualPizzaMaker") == 1){
+            enabled = false;
+            return;
+        }
         if (PlayerPrefs.HasKey("SerialPort") && portName == "")
         {
             portName = PlayerPrefs.GetString("SerialPort");

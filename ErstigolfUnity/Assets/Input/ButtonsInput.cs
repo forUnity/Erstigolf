@@ -400,6 +400,426 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Solo"",
+            ""id"": ""67585c90-e75b-488c-ac94-93b2d215ba42"",
+            ""actions"": [
+                {
+                    ""name"": ""Ing1"",
+                    ""type"": ""Button"",
+                    ""id"": ""a795f375-9d15-4aa8-8d5a-dd59e74376c9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing2"",
+                    ""type"": ""Button"",
+                    ""id"": ""cf47102f-7b03-4e2a-9305-442b04c134ee"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing3"",
+                    ""type"": ""Button"",
+                    ""id"": ""782f6363-569e-4e7d-a0db-3b101a9f58c1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing4"",
+                    ""type"": ""Button"",
+                    ""id"": ""60885dd3-efc5-42f3-be22-81028ca60bb8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing5"",
+                    ""type"": ""Button"",
+                    ""id"": ""e443fe40-1a14-472d-98f0-0433101a1c4c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing6"",
+                    ""type"": ""Button"",
+                    ""id"": ""41525b6d-84c6-4376-96c9-908d0d7a3866"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Bake"",
+                    ""type"": ""Button"",
+                    ""id"": ""53d95578-2dfe-45a0-bbe3-fe4d3feaab9f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""a8f1d7f7-2ec0-4815-978a-12c7580398e9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""Button"",
+                    ""id"": ""62976e4b-4ec0-4eaa-a1f6-018851d643e7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""270313d2-6ce4-4dae-9818-17a1f5ec1b5a"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FlyUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""65e2b16c-0b84-457b-a411-25a393863b94"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FlyDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""d140fba3-c62b-49f3-a4da-ad30b442d947"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Steer"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""a408fe93-a5a5-4d6e-ab5a-00f50363f163"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Brake"",
+                    ""type"": ""Button"",
+                    ""id"": ""8b79029d-8421-48ef-bce9-2a67cccf7fd3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""03a24bfe-9eef-43c2-9538-80c17a1c74f1"",
+                    ""path"": ""<Keyboard>/numpad4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bc3e4cf0-71ea-4d8f-a310-c0184e5d2a45"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ddaaf45d-e0e0-44a5-9516-4190c91bfc91"",
+                    ""path"": ""<Keyboard>/numpad5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7991e525-df8e-4d44-b172-afb742a650a9"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0aab5671-d6ae-43ba-a9a2-51ecadf88a98"",
+                    ""path"": ""<Keyboard>/numpad6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b853f1b7-a405-4dde-99cf-3fccc93d229a"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af37c030-3c2b-41a5-83ef-2f06e8887e1d"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64853990-c8d0-42c6-b9b0-726b2009fb14"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""467c972e-5bcf-4c76-ac9c-191a9f1d7f31"",
+                    ""path"": ""<Keyboard>/numpad2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cb5b83f5-4d5d-4393-80fc-6b5556a534db"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c116c784-0001-49da-864d-24cdca2b5e8b"",
+                    ""path"": ""<Keyboard>/numpad3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a25c7b42-2d00-416d-9d01-9673e766ad28"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ed8b3ef-132f-4be0-a9f4-eb3c2de6ccb8"",
+                    ""path"": ""<Keyboard>/numpadEnter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f5276825-2734-42b9-813d-b79e40de5700"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""80cab7a2-10f0-425b-a215-e3ac209fcf74"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""28a93f5b-78ff-4201-afe8-8e939fef46df"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04c03796-62c0-4c95-b3eb-e59735d7e2bd"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d43a5c20-11b8-4c68-952c-7ec67f7114e5"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": ""ScaleVector2(x=0.3,y=0.3)"",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dddef050-98af-4e3f-b41f-314c856aaf3c"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlyUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cbdca225-6a24-448e-8a54-90a7091d18d4"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlyDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Arrow"",
+                    ""id"": ""2196368e-97ef-4099-9a02-98ca0ec4171b"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""7400dded-4bdb-4b4d-bf51-b837b324e92f"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""6e5f45a1-61e4-487c-be45-8b66ca01d90d"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Arrows"",
+                    ""id"": ""28ba5a56-62eb-48c9-b29e-0d74dd39611f"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""e7c6ffd2-ccea-4d0f-bf11-67b989b9dea8"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""118952b4-12e2-460f-b723-a9a14ddffb68"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -419,6 +839,22 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         m_Car_Yellow = m_Car.FindAction("Yellow", throwIfNotFound: true);
         m_Car_Yellow_Release = m_Car.FindAction("Yellow_Release", throwIfNotFound: true);
         m_Car_Aim = m_Car.FindAction("Aim", throwIfNotFound: true);
+        // Solo
+        m_Solo = asset.FindActionMap("Solo", throwIfNotFound: true);
+        m_Solo_Ing1 = m_Solo.FindAction("Ing1", throwIfNotFound: true);
+        m_Solo_Ing2 = m_Solo.FindAction("Ing2", throwIfNotFound: true);
+        m_Solo_Ing3 = m_Solo.FindAction("Ing3", throwIfNotFound: true);
+        m_Solo_Ing4 = m_Solo.FindAction("Ing4", throwIfNotFound: true);
+        m_Solo_Ing5 = m_Solo.FindAction("Ing5", throwIfNotFound: true);
+        m_Solo_Ing6 = m_Solo.FindAction("Ing6", throwIfNotFound: true);
+        m_Solo_Bake = m_Solo.FindAction("Bake", throwIfNotFound: true);
+        m_Solo_Shoot = m_Solo.FindAction("Shoot", throwIfNotFound: true);
+        m_Solo_Zoom = m_Solo.FindAction("Zoom", throwIfNotFound: true);
+        m_Solo_Aim = m_Solo.FindAction("Aim", throwIfNotFound: true);
+        m_Solo_FlyUp = m_Solo.FindAction("FlyUp", throwIfNotFound: true);
+        m_Solo_FlyDown = m_Solo.FindAction("FlyDown", throwIfNotFound: true);
+        m_Solo_Steer = m_Solo.FindAction("Steer", throwIfNotFound: true);
+        m_Solo_Brake = m_Solo.FindAction("Brake", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -618,6 +1054,156 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         }
     }
     public CarActions @Car => new CarActions(this);
+
+    // Solo
+    private readonly InputActionMap m_Solo;
+    private List<ISoloActions> m_SoloActionsCallbackInterfaces = new List<ISoloActions>();
+    private readonly InputAction m_Solo_Ing1;
+    private readonly InputAction m_Solo_Ing2;
+    private readonly InputAction m_Solo_Ing3;
+    private readonly InputAction m_Solo_Ing4;
+    private readonly InputAction m_Solo_Ing5;
+    private readonly InputAction m_Solo_Ing6;
+    private readonly InputAction m_Solo_Bake;
+    private readonly InputAction m_Solo_Shoot;
+    private readonly InputAction m_Solo_Zoom;
+    private readonly InputAction m_Solo_Aim;
+    private readonly InputAction m_Solo_FlyUp;
+    private readonly InputAction m_Solo_FlyDown;
+    private readonly InputAction m_Solo_Steer;
+    private readonly InputAction m_Solo_Brake;
+    public struct SoloActions
+    {
+        private @ButtonsInput m_Wrapper;
+        public SoloActions(@ButtonsInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Ing1 => m_Wrapper.m_Solo_Ing1;
+        public InputAction @Ing2 => m_Wrapper.m_Solo_Ing2;
+        public InputAction @Ing3 => m_Wrapper.m_Solo_Ing3;
+        public InputAction @Ing4 => m_Wrapper.m_Solo_Ing4;
+        public InputAction @Ing5 => m_Wrapper.m_Solo_Ing5;
+        public InputAction @Ing6 => m_Wrapper.m_Solo_Ing6;
+        public InputAction @Bake => m_Wrapper.m_Solo_Bake;
+        public InputAction @Shoot => m_Wrapper.m_Solo_Shoot;
+        public InputAction @Zoom => m_Wrapper.m_Solo_Zoom;
+        public InputAction @Aim => m_Wrapper.m_Solo_Aim;
+        public InputAction @FlyUp => m_Wrapper.m_Solo_FlyUp;
+        public InputAction @FlyDown => m_Wrapper.m_Solo_FlyDown;
+        public InputAction @Steer => m_Wrapper.m_Solo_Steer;
+        public InputAction @Brake => m_Wrapper.m_Solo_Brake;
+        public InputActionMap Get() { return m_Wrapper.m_Solo; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SoloActions set) { return set.Get(); }
+        public void AddCallbacks(ISoloActions instance)
+        {
+            if (instance == null || m_Wrapper.m_SoloActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_SoloActionsCallbackInterfaces.Add(instance);
+            @Ing1.started += instance.OnIng1;
+            @Ing1.performed += instance.OnIng1;
+            @Ing1.canceled += instance.OnIng1;
+            @Ing2.started += instance.OnIng2;
+            @Ing2.performed += instance.OnIng2;
+            @Ing2.canceled += instance.OnIng2;
+            @Ing3.started += instance.OnIng3;
+            @Ing3.performed += instance.OnIng3;
+            @Ing3.canceled += instance.OnIng3;
+            @Ing4.started += instance.OnIng4;
+            @Ing4.performed += instance.OnIng4;
+            @Ing4.canceled += instance.OnIng4;
+            @Ing5.started += instance.OnIng5;
+            @Ing5.performed += instance.OnIng5;
+            @Ing5.canceled += instance.OnIng5;
+            @Ing6.started += instance.OnIng6;
+            @Ing6.performed += instance.OnIng6;
+            @Ing6.canceled += instance.OnIng6;
+            @Bake.started += instance.OnBake;
+            @Bake.performed += instance.OnBake;
+            @Bake.canceled += instance.OnBake;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
+            @Zoom.started += instance.OnZoom;
+            @Zoom.performed += instance.OnZoom;
+            @Zoom.canceled += instance.OnZoom;
+            @Aim.started += instance.OnAim;
+            @Aim.performed += instance.OnAim;
+            @Aim.canceled += instance.OnAim;
+            @FlyUp.started += instance.OnFlyUp;
+            @FlyUp.performed += instance.OnFlyUp;
+            @FlyUp.canceled += instance.OnFlyUp;
+            @FlyDown.started += instance.OnFlyDown;
+            @FlyDown.performed += instance.OnFlyDown;
+            @FlyDown.canceled += instance.OnFlyDown;
+            @Steer.started += instance.OnSteer;
+            @Steer.performed += instance.OnSteer;
+            @Steer.canceled += instance.OnSteer;
+            @Brake.started += instance.OnBrake;
+            @Brake.performed += instance.OnBrake;
+            @Brake.canceled += instance.OnBrake;
+        }
+
+        private void UnregisterCallbacks(ISoloActions instance)
+        {
+            @Ing1.started -= instance.OnIng1;
+            @Ing1.performed -= instance.OnIng1;
+            @Ing1.canceled -= instance.OnIng1;
+            @Ing2.started -= instance.OnIng2;
+            @Ing2.performed -= instance.OnIng2;
+            @Ing2.canceled -= instance.OnIng2;
+            @Ing3.started -= instance.OnIng3;
+            @Ing3.performed -= instance.OnIng3;
+            @Ing3.canceled -= instance.OnIng3;
+            @Ing4.started -= instance.OnIng4;
+            @Ing4.performed -= instance.OnIng4;
+            @Ing4.canceled -= instance.OnIng4;
+            @Ing5.started -= instance.OnIng5;
+            @Ing5.performed -= instance.OnIng5;
+            @Ing5.canceled -= instance.OnIng5;
+            @Ing6.started -= instance.OnIng6;
+            @Ing6.performed -= instance.OnIng6;
+            @Ing6.canceled -= instance.OnIng6;
+            @Bake.started -= instance.OnBake;
+            @Bake.performed -= instance.OnBake;
+            @Bake.canceled -= instance.OnBake;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
+            @Zoom.started -= instance.OnZoom;
+            @Zoom.performed -= instance.OnZoom;
+            @Zoom.canceled -= instance.OnZoom;
+            @Aim.started -= instance.OnAim;
+            @Aim.performed -= instance.OnAim;
+            @Aim.canceled -= instance.OnAim;
+            @FlyUp.started -= instance.OnFlyUp;
+            @FlyUp.performed -= instance.OnFlyUp;
+            @FlyUp.canceled -= instance.OnFlyUp;
+            @FlyDown.started -= instance.OnFlyDown;
+            @FlyDown.performed -= instance.OnFlyDown;
+            @FlyDown.canceled -= instance.OnFlyDown;
+            @Steer.started -= instance.OnSteer;
+            @Steer.performed -= instance.OnSteer;
+            @Steer.canceled -= instance.OnSteer;
+            @Brake.started -= instance.OnBrake;
+            @Brake.performed -= instance.OnBrake;
+            @Brake.canceled -= instance.OnBrake;
+        }
+
+        public void RemoveCallbacks(ISoloActions instance)
+        {
+            if (m_Wrapper.m_SoloActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ISoloActions instance)
+        {
+            foreach (var item in m_Wrapper.m_SoloActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_SoloActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public SoloActions @Solo => new SoloActions(this);
     public interface ICarActions
     {
         void OnRed_Press(InputAction.CallbackContext context);
@@ -633,5 +1219,22 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         void OnYellow(InputAction.CallbackContext context);
         void OnYellow_Release(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
+    }
+    public interface ISoloActions
+    {
+        void OnIng1(InputAction.CallbackContext context);
+        void OnIng2(InputAction.CallbackContext context);
+        void OnIng3(InputAction.CallbackContext context);
+        void OnIng4(InputAction.CallbackContext context);
+        void OnIng5(InputAction.CallbackContext context);
+        void OnIng6(InputAction.CallbackContext context);
+        void OnBake(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnZoom(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
+        void OnFlyUp(InputAction.CallbackContext context);
+        void OnFlyDown(InputAction.CallbackContext context);
+        void OnSteer(InputAction.CallbackContext context);
+        void OnBrake(InputAction.CallbackContext context);
     }
 }

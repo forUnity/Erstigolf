@@ -26,7 +26,9 @@ public class MainMenuNav : MonoBehaviour
             {
                 Debug.LogError("Connect Second Display!!!");
             }
-            Display.displays[1].Activate();
+            else {
+                Display.displays[1].Activate();
+            }
         }
     }
 }

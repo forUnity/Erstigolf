@@ -24,7 +24,15 @@ public class MainMenuSettings : MonoBehaviour {
             textField.text = Default;
         }
 
-        textField.onEndEdit.AddListener(s => { if (prefType == PrefType.String) { PlayerPrefs.SetString(Key, s); } else { PlayerPrefs.SetInt(Key, int.Parse(s)); } });
+        textField.onEndEdit.AddListener(OnChange);
+    }
+
+    private void OnChange(string value){
+         if (prefType == PrefType.String) { 
+            PlayerPrefs.SetString(Key, value); 
+        } else { 
+            PlayerPrefs.SetInt(Key, int.Parse(value)); 
+        }
     }
 }
 
