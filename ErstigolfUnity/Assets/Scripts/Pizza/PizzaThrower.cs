@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PizzaThrower : MonoBehaviour
 {
+    [SerializeField] private Rect soloRect; 
     [SerializeField] private Camera turretCam;
     [SerializeField] private float wideFOV;
     [SerializeField] private float narrowFOV;
@@ -34,10 +35,21 @@ public class PizzaThrower : MonoBehaviour
     private bool narrowAim;
     private void Awake() {
         inputs = new ButtonsInput();
-        inputs.Car.Green.performed += x => OnEnter();
-        inputs.Car.Aim.performed += x => aim = x.ReadValue<Vector2>();
-        inputs.Car.Yellow.performed += x => narrowAim = true;
-        inputs.Car.Yellow_Release.performed += x => narrowAim = false;
+        
+        if (PlayerPrefs.HasKey("SoloMode") && PlayerPrefs.GetInt("SoloMode") == 1){
+            inputs.Solo.Shoot.performed += x => OnEnter();
+            inputs.Solo.Aim.performed += x => aim = x.ReadValue<Vector2>();
+            inputs.Solo.Zoom.performed += x => narrowAim = x.ReadValueAsButton();
+            Cursor.lockState = CursorLockMode.Locked;
+            turretCam.rect = soloRect;
+            turretCam.targetDisplay = 0;
+        }
+        else {
+            inputs.Car.Green.performed += x => OnEnter();
+            inputs.Car.Aim.performed += x => aim = x.ReadValue<Vector2>();
+            inputs.Car.Yellow.performed += x => narrowAim = true;
+            inputs.Car.Yellow_Release.performed += x => narrowAim = false;
+        }
     }
 
     private void OnEnable() {
@@ -46,6 +58,7 @@ public class PizzaThrower : MonoBehaviour
 
     private void OnDisable() {
         inputs.Disable();
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void Start()

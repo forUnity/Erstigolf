@@ -15940,10 +15940,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 154659437f5133548ac7e7306434c8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soloRect:
+    serializedVersion: 2
+    x: 0
+    y: 0.25
+    width: 0.25
+    height: 0.45
   turretCam: {fileID: 682741475531538048}
   wideFOV: 25
   narrowFOV: 10
   zoomSpeed: 5
+  turretGlobalRotation: 0
+  turretGlobalRotationKey: TurretGlobalRotation
   wideSensitivity: {x: 90, y: 90}
   narrowSensitivity: {x: 36, y: 36}
   shootSpeed: 100

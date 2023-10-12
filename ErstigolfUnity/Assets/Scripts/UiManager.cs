@@ -38,6 +38,8 @@ public class UiManager : MonoBehaviour
         {
             SplitOrderInfo = PlayerPrefs.GetInt("SplitOrderUI") == 1;
         }
+        if (PlayerPrefs.HasKey("SoloMode") && PlayerPrefs.GetInt("SoloMode") == 1)
+            SplitOrderInfo = false;
         OrderHolderTBack.gameObject.SetActive(SplitOrderInfo);
     }
 

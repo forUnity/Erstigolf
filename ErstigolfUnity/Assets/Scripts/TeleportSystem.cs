@@ -64,8 +64,15 @@ public class TeleportSystem : MonoBehaviour
     private ButtonsInput inputs;
     private void Awake() {
         inputs = new ButtonsInput();
-        inputs.Car.Blue.performed += x => TryUp();
-        inputs.Car.White.performed += x => TryDown();
+        
+        if (PlayerPrefs.HasKey("SoloMode") && PlayerPrefs.GetInt("SoloMode") == 1){
+            inputs.Solo.FlyUp.performed += x => TryUp();
+            inputs.Solo.FlyDown.performed += x => TryDown();
+        }
+        else {
+            inputs.Car.Blue.performed += x => TryUp();
+            inputs.Car.White.performed += x => TryDown();
+        }
 
         if (ps){
             ps.SetActive(false);

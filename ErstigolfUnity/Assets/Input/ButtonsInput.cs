@@ -479,7 +479,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Zoom"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""62976e4b-4ec0-4eaa-a1f6-018851d643e7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -524,7 +524,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Brake"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""8b79029d-8421-48ef-bce9-2a67cccf7fd3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
