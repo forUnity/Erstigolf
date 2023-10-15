@@ -923,7 +923,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""id"": ""2feebdc2-64e2-4fdd-a1cb-e432bb2ac673"",
                     ""path"": ""<Gamepad>/leftStick/x"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone"",
                     ""groups"": """",
                     ""action"": ""Steer"",
                     ""isComposite"": false,
