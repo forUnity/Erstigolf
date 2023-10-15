@@ -62,10 +62,7 @@ public class PizzaDeliveryManager : MonoBehaviour
         {
             if(Time.time > pizzaOrdersScripted[doneTo].AppearenceTime + StartTime)
             {
-                AddScriptedOrder(pizzaOrdersScripted[doneTo]);
-                doneTo++;
-                if(doneTo == pizzaOrdersScripted.Count)
-                    lastCooldownTime = Time.time;
+                AddNextScriptedOrder();
             }
         } else
         {
@@ -74,36 +71,43 @@ public class PizzaDeliveryManager : MonoBehaviour
             }
             if(currentOrderCount < maxConcurrentDeliveryCount && lastCooldownTime + orderCooldownTime < Time.time)
             {
-                AddPizza(Random.Range(2, 6));
+                AddRandomOrder();
             }
         }
     }
 
     int currentOrderCount = 0;
-    private void AddPizza(int count)
+    private void AddRandomOrder()
     {
+        int count = Random.Range(2, 6);
         lastCooldownTime = Time.time;
         if(availableTargets.Count > 0)
-        {       
-            currentOrderCount++;
-
+        {
             int target = Random.Range(0, availableTargets.Count);
             int type = Random.Range(0, pizzaTypes.Length);
 
-            availableTargets[target].RequirePizza(pizzaTypes[type], count);
-            availableTargets.RemoveAt(target);
-
-            newOrderSound.Play();
+            AddOrder(pizzaTypes[type], count, availableTargets[target]);
         }
     }
-    private void AddScriptedOrder(PizzaOrderEvent pizzaOrder)
+
+    private void AddNextScriptedOrder()
     {
+        PizzaOrderEvent pizzaOrder = pizzaOrdersScripted[doneTo++];
         if(!availableTargets.Contains(pizzaOrder.orderLocation))
         {
-            pizzaOrder.AppearenceTime += 30;
+            Debug.LogWarning("Overlapping orders in script!");
+            return;
         }
-        pizzaOrder.orderLocation.RequirePizza(pizzaOrder.pizzaType, pizzaOrder.Count);
-        availableTargets.Remove(pizzaOrder.orderLocation);
+        AddOrder(pizzaOrder.pizzaType, pizzaOrder.Count, pizzaOrder.orderLocation);
+    }
+
+    private void AddOrder(PizzaType type, int count, PizzaTarget target){
+        lastCooldownTime = Time.time;
+
+        target.RequirePizza(type, count);
+
+        currentOrderCount++;
+        availableTargets.Remove(target);
 
         newOrderSound.Play();
     }
