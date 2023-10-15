@@ -49,10 +49,19 @@ public class PizzaDeliveryManager : MonoBehaviour
         public int Count;
     }
 
+    private System.Random rng;
+
     private void Start() {
         availableTargets = new List<PizzaTarget>(pizzaTargets);
         score = 0;
         StartTime = Time.time;
+        if (PlayerPrefs.HasKey("Seed")){
+            int seed = PlayerPrefs.GetInt("Seed");
+            if (seed != 0){
+                pizzaOrdersScripted = new List<PizzaOrderEvent>();
+                rng = new System.Random(seed);
+            }
+        }
         pizzaOrdersScripted.OrderBy(a => a.AppearenceTime);
     }
 
@@ -79,12 +88,12 @@ public class PizzaDeliveryManager : MonoBehaviour
     int currentOrderCount = 0;
     private void AddRandomOrder()
     {
-        int count = Random.Range(2, 6);
+        int count = rng.Next(2, 6);
         lastCooldownTime = Time.time;
         if(availableTargets.Count > 0)
         {
-            int target = Random.Range(0, availableTargets.Count);
-            int type = Random.Range(0, pizzaTypes.Length);
+            int target = rng.Next(0, availableTargets.Count);
+            int type = rng.Next(0, pizzaTypes.Length);
 
             AddOrder(pizzaTypes[type], count, availableTargets[target]);
         }
