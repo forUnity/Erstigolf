@@ -78,6 +78,10 @@ public class TeleportSystem : MonoBehaviour
             ps.SetActive(false);
         }
     }
+    
+    private void Start() {
+        PauseMenu.toggleEvent += x => {if (x) inputs.Disable(); else inputs.Enable();};
+    }
 
     private void Update() {
         nextTP -= Time.deltaTime;

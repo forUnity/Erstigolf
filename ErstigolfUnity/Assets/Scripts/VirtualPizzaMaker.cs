@@ -26,15 +26,19 @@ public class VirtualPizzaMaker : MonoBehaviour
         }
 
         inputs = new ButtonsInput();
-        inputs.Solo.Ing1.performed += x => ingredientBuffer[0] = !ingredientBuffer[0];
-        inputs.Solo.Ing2.performed += x => ingredientBuffer[1] = !ingredientBuffer[1];
-        inputs.Solo.Ing3.performed += x => ingredientBuffer[2] = !ingredientBuffer[2];
-        inputs.Solo.Ing4.performed += x => ingredientBuffer[3] = !ingredientBuffer[3];
-        inputs.Solo.Ing5.performed += x => ingredientBuffer[4] = !ingredientBuffer[4];
-        inputs.Solo.Ing6.performed += x => ingredientBuffer[5] = !ingredientBuffer[5];
-        inputs.Solo.Bake.performed += x => OnEnter();
+        inputs.VirtualPizzaMaker.Ing1.performed += x => ingredientBuffer[0] = !ingredientBuffer[0];
+        inputs.VirtualPizzaMaker.Ing2.performed += x => ingredientBuffer[1] = !ingredientBuffer[1];
+        inputs.VirtualPizzaMaker.Ing3.performed += x => ingredientBuffer[2] = !ingredientBuffer[2];
+        inputs.VirtualPizzaMaker.Ing4.performed += x => ingredientBuffer[3] = !ingredientBuffer[3];
+        inputs.VirtualPizzaMaker.Ing5.performed += x => ingredientBuffer[4] = !ingredientBuffer[4];
+        inputs.VirtualPizzaMaker.Ing6.performed += x => ingredientBuffer[5] = !ingredientBuffer[5];
+        inputs.VirtualPizzaMaker.Bake.performed += x => OnEnter();
 
         lastBake = -bakeDelay;
+    }
+
+    private void Start() {
+        PauseMenu.toggleEvent += x => {if (x) inputs.Disable(); else inputs.Enable();};
     }
 
     private void OnEnter(){

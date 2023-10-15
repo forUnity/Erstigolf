@@ -67,6 +67,7 @@ public class PizzaThrower : MonoBehaviour
         {
             turretGlobalRotation = PlayerPrefs.GetInt(turretGlobalRotationKey) == 1;
         }
+        PauseMenu.toggleEvent += x => {if (x) inputs.Disable(); else inputs.Enable();};
     }
 
     private void Update()

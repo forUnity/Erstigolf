@@ -406,69 +406,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
             ""id"": ""67585c90-e75b-488c-ac94-93b2d215ba42"",
             ""actions"": [
                 {
-                    ""name"": ""Ing1"",
-                    ""type"": ""Button"",
-                    ""id"": ""a795f375-9d15-4aa8-8d5a-dd59e74376c9"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing2"",
-                    ""type"": ""Button"",
-                    ""id"": ""cf47102f-7b03-4e2a-9305-442b04c134ee"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing3"",
-                    ""type"": ""Button"",
-                    ""id"": ""782f6363-569e-4e7d-a0db-3b101a9f58c1"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing4"",
-                    ""type"": ""Button"",
-                    ""id"": ""60885dd3-efc5-42f3-be22-81028ca60bb8"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing5"",
-                    ""type"": ""Button"",
-                    ""id"": ""e443fe40-1a14-472d-98f0-0433101a1c4c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Ing6"",
-                    ""type"": ""Button"",
-                    ""id"": ""41525b6d-84c6-4376-96c9-908d0d7a3866"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Bake"",
-                    ""type"": ""Button"",
-                    ""id"": ""53d95578-2dfe-45a0-bbe3-fe4d3feaab9f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Shoot"",
                     ""type"": ""Button"",
                     ""id"": ""a8f1d7f7-2ec0-4815-978a-12c7580398e9"",
@@ -533,237 +470,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""03a24bfe-9eef-43c2-9538-80c17a1c74f1"",
-                    ""path"": ""<Keyboard>/numpad4"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bc3e4cf0-71ea-4d8f-a310-c0184e5d2a45"",
-                    ""path"": ""<Keyboard>/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""996d95bb-0acf-452c-a8f1-3c1c5af08ea4"",
-                    ""path"": ""<Gamepad>/dpad/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ddaaf45d-e0e0-44a5-9516-4190c91bfc91"",
-                    ""path"": ""<Keyboard>/numpad5"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7991e525-df8e-4d44-b172-afb742a650a9"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bef9f250-b4e4-4ecc-84a1-b4b0304ca26b"",
-                    ""path"": ""<Gamepad>/dpad/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0aab5671-d6ae-43ba-a9a2-51ecadf88a98"",
-                    ""path"": ""<Keyboard>/numpad6"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b853f1b7-a405-4dde-99cf-3fccc93d229a"",
-                    ""path"": ""<Keyboard>/v"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""69291034-c301-4f61-928a-1e6fa82dfa62"",
-                    ""path"": ""<Gamepad>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""af37c030-3c2b-41a5-83ef-2f06e8887e1d"",
-                    ""path"": ""<Keyboard>/numpad1"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""64853990-c8d0-42c6-b9b0-726b2009fb14"",
-                    ""path"": ""<Keyboard>/b"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3f7dcd20-024c-4db2-878e-a1531dc6bf68"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""467c972e-5bcf-4c76-ac9c-191a9f1d7f31"",
-                    ""path"": ""<Keyboard>/numpad2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing5"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cb5b83f5-4d5d-4393-80fc-6b5556a534db"",
-                    ""path"": ""<Keyboard>/n"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing5"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""78fc5546-491d-49a8-905d-090f8a45d5a3"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing5"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c116c784-0001-49da-864d-24cdca2b5e8b"",
-                    ""path"": ""<Keyboard>/numpad3"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing6"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a25c7b42-2d00-416d-9d01-9673e766ad28"",
-                    ""path"": ""<Keyboard>/m"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing6"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""92f102ac-be2e-4074-8ff0-5dd1ebb1ac52"",
-                    ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ing6"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2ed8b3ef-132f-4be0-a9f4-eb3c2de6ccb8"",
-                    ""path"": ""<Keyboard>/numpadEnter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Bake"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f5276825-2734-42b9-813d-b79e40de5700"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Bake"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""54ee80bb-a5f8-4490-aff8-f492d692ad09"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Bake"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""80cab7a2-10f0-425b-a215-e3ac209fcf74"",
@@ -974,6 +680,347 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""VirtualPizzaMaker"",
+            ""id"": ""3026e89f-f742-43f7-ade1-6dd88f410f6c"",
+            ""actions"": [
+                {
+                    ""name"": ""Bake"",
+                    ""type"": ""Button"",
+                    ""id"": ""60336873-b097-4326-bfa8-c7f03a427230"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing6"",
+                    ""type"": ""Button"",
+                    ""id"": ""de88040b-7901-471a-8233-aff0e094d5ca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing5"",
+                    ""type"": ""Button"",
+                    ""id"": ""3eb7042d-a8a6-40b5-8353-e2008a25e5b7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing4"",
+                    ""type"": ""Button"",
+                    ""id"": ""8cacf26b-0354-4ab4-915a-fe0cc6ad9e03"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing3"",
+                    ""type"": ""Button"",
+                    ""id"": ""1a774313-9711-4c83-9041-c48762cce5d5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing2"",
+                    ""type"": ""Button"",
+                    ""id"": ""a6aaeab8-f738-4407-b1aa-c446357a0202"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ing1"",
+                    ""type"": ""Button"",
+                    ""id"": ""70e571a2-6099-42ae-a5e2-5b195facd407"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""40dc493d-14ae-462f-85c6-2f480d5b24f0"",
+                    ""path"": ""<Keyboard>/numpad4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a8f2fe46-a381-4a71-a923-ab1de600b4b4"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""faf4f232-e501-47ec-bca4-3ad0dcf51679"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8f547b6b-0200-42ca-8bbc-6b21a22dc559"",
+                    ""path"": ""<Keyboard>/numpad5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""00d43395-51bc-4218-8b05-db8db416b23b"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8cb5d252-1177-4724-bdc5-77c803868953"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""049ce82d-730d-43a5-853f-eebd839a3209"",
+                    ""path"": ""<Keyboard>/numpad6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""330f7c15-c7ed-451e-a29d-fadb94b638e0"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f4811ec0-9182-42ab-82ca-739eff093749"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cb8f220d-7b68-4714-ace6-30911fcefac0"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""258d0e97-dc69-4d75-903b-af316707d6af"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3bb8cf3c-5ac2-49eb-a63a-a1ce24fd8553"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""636f2aa8-df4c-40fa-8fce-fe4b3adfd9ae"",
+                    ""path"": ""<Keyboard>/numpad2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bae41765-dcb0-43da-ad0d-20393da65d08"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a745715-1147-4901-b3da-b0774700a533"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1302eec2-1eb2-49bb-ae73-d9a403156cde"",
+                    ""path"": ""<Keyboard>/numpad3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4a1e52ff-0a84-48e9-9025-b091acf41357"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d6ac92af-f8ab-42eb-8ecc-bc6a85ae51ed"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ing6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ee210f2-5dff-4585-b24f-c178ec2b2da7"",
+                    ""path"": ""<Keyboard>/numpadEnter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c2586d6e-dccb-4ece-b21a-8b1ccc85dabb"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2a2b8b3-b5f1-4412-b486-3413e4cb0ac9"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Menu"",
+            ""id"": ""1e70cdb6-a91a-4b2d-8183-e714816292f7"",
+            ""actions"": [
+                {
+                    ""name"": ""TogglePause"",
+                    ""type"": ""Button"",
+                    ""id"": ""afcddc08-9a41-48d5-9ef2-3a653b08d86e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""56f736bb-35a0-48a8-8ddd-87e7a966830e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""960511c1-4d62-4128-a1b3-bc4d2b20cc1d"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -995,13 +1042,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         m_Car_Aim = m_Car.FindAction("Aim", throwIfNotFound: true);
         // Solo
         m_Solo = asset.FindActionMap("Solo", throwIfNotFound: true);
-        m_Solo_Ing1 = m_Solo.FindAction("Ing1", throwIfNotFound: true);
-        m_Solo_Ing2 = m_Solo.FindAction("Ing2", throwIfNotFound: true);
-        m_Solo_Ing3 = m_Solo.FindAction("Ing3", throwIfNotFound: true);
-        m_Solo_Ing4 = m_Solo.FindAction("Ing4", throwIfNotFound: true);
-        m_Solo_Ing5 = m_Solo.FindAction("Ing5", throwIfNotFound: true);
-        m_Solo_Ing6 = m_Solo.FindAction("Ing6", throwIfNotFound: true);
-        m_Solo_Bake = m_Solo.FindAction("Bake", throwIfNotFound: true);
         m_Solo_Shoot = m_Solo.FindAction("Shoot", throwIfNotFound: true);
         m_Solo_Zoom = m_Solo.FindAction("Zoom", throwIfNotFound: true);
         m_Solo_Aim = m_Solo.FindAction("Aim", throwIfNotFound: true);
@@ -1009,6 +1049,18 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         m_Solo_FlyDown = m_Solo.FindAction("FlyDown", throwIfNotFound: true);
         m_Solo_Steer = m_Solo.FindAction("Steer", throwIfNotFound: true);
         m_Solo_Brake = m_Solo.FindAction("Brake", throwIfNotFound: true);
+        // VirtualPizzaMaker
+        m_VirtualPizzaMaker = asset.FindActionMap("VirtualPizzaMaker", throwIfNotFound: true);
+        m_VirtualPizzaMaker_Bake = m_VirtualPizzaMaker.FindAction("Bake", throwIfNotFound: true);
+        m_VirtualPizzaMaker_Ing6 = m_VirtualPizzaMaker.FindAction("Ing6", throwIfNotFound: true);
+        m_VirtualPizzaMaker_Ing5 = m_VirtualPizzaMaker.FindAction("Ing5", throwIfNotFound: true);
+        m_VirtualPizzaMaker_Ing4 = m_VirtualPizzaMaker.FindAction("Ing4", throwIfNotFound: true);
+        m_VirtualPizzaMaker_Ing3 = m_VirtualPizzaMaker.FindAction("Ing3", throwIfNotFound: true);
+        m_VirtualPizzaMaker_Ing2 = m_VirtualPizzaMaker.FindAction("Ing2", throwIfNotFound: true);
+        m_VirtualPizzaMaker_Ing1 = m_VirtualPizzaMaker.FindAction("Ing1", throwIfNotFound: true);
+        // Menu
+        m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
+        m_Menu_TogglePause = m_Menu.FindAction("TogglePause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1212,13 +1264,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
     // Solo
     private readonly InputActionMap m_Solo;
     private List<ISoloActions> m_SoloActionsCallbackInterfaces = new List<ISoloActions>();
-    private readonly InputAction m_Solo_Ing1;
-    private readonly InputAction m_Solo_Ing2;
-    private readonly InputAction m_Solo_Ing3;
-    private readonly InputAction m_Solo_Ing4;
-    private readonly InputAction m_Solo_Ing5;
-    private readonly InputAction m_Solo_Ing6;
-    private readonly InputAction m_Solo_Bake;
     private readonly InputAction m_Solo_Shoot;
     private readonly InputAction m_Solo_Zoom;
     private readonly InputAction m_Solo_Aim;
@@ -1230,13 +1275,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
     {
         private @ButtonsInput m_Wrapper;
         public SoloActions(@ButtonsInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Ing1 => m_Wrapper.m_Solo_Ing1;
-        public InputAction @Ing2 => m_Wrapper.m_Solo_Ing2;
-        public InputAction @Ing3 => m_Wrapper.m_Solo_Ing3;
-        public InputAction @Ing4 => m_Wrapper.m_Solo_Ing4;
-        public InputAction @Ing5 => m_Wrapper.m_Solo_Ing5;
-        public InputAction @Ing6 => m_Wrapper.m_Solo_Ing6;
-        public InputAction @Bake => m_Wrapper.m_Solo_Bake;
         public InputAction @Shoot => m_Wrapper.m_Solo_Shoot;
         public InputAction @Zoom => m_Wrapper.m_Solo_Zoom;
         public InputAction @Aim => m_Wrapper.m_Solo_Aim;
@@ -1253,27 +1291,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_SoloActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_SoloActionsCallbackInterfaces.Add(instance);
-            @Ing1.started += instance.OnIng1;
-            @Ing1.performed += instance.OnIng1;
-            @Ing1.canceled += instance.OnIng1;
-            @Ing2.started += instance.OnIng2;
-            @Ing2.performed += instance.OnIng2;
-            @Ing2.canceled += instance.OnIng2;
-            @Ing3.started += instance.OnIng3;
-            @Ing3.performed += instance.OnIng3;
-            @Ing3.canceled += instance.OnIng3;
-            @Ing4.started += instance.OnIng4;
-            @Ing4.performed += instance.OnIng4;
-            @Ing4.canceled += instance.OnIng4;
-            @Ing5.started += instance.OnIng5;
-            @Ing5.performed += instance.OnIng5;
-            @Ing5.canceled += instance.OnIng5;
-            @Ing6.started += instance.OnIng6;
-            @Ing6.performed += instance.OnIng6;
-            @Ing6.canceled += instance.OnIng6;
-            @Bake.started += instance.OnBake;
-            @Bake.performed += instance.OnBake;
-            @Bake.canceled += instance.OnBake;
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
@@ -1299,27 +1316,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(ISoloActions instance)
         {
-            @Ing1.started -= instance.OnIng1;
-            @Ing1.performed -= instance.OnIng1;
-            @Ing1.canceled -= instance.OnIng1;
-            @Ing2.started -= instance.OnIng2;
-            @Ing2.performed -= instance.OnIng2;
-            @Ing2.canceled -= instance.OnIng2;
-            @Ing3.started -= instance.OnIng3;
-            @Ing3.performed -= instance.OnIng3;
-            @Ing3.canceled -= instance.OnIng3;
-            @Ing4.started -= instance.OnIng4;
-            @Ing4.performed -= instance.OnIng4;
-            @Ing4.canceled -= instance.OnIng4;
-            @Ing5.started -= instance.OnIng5;
-            @Ing5.performed -= instance.OnIng5;
-            @Ing5.canceled -= instance.OnIng5;
-            @Ing6.started -= instance.OnIng6;
-            @Ing6.performed -= instance.OnIng6;
-            @Ing6.canceled -= instance.OnIng6;
-            @Bake.started -= instance.OnBake;
-            @Bake.performed -= instance.OnBake;
-            @Bake.canceled -= instance.OnBake;
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
@@ -1358,6 +1354,146 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         }
     }
     public SoloActions @Solo => new SoloActions(this);
+
+    // VirtualPizzaMaker
+    private readonly InputActionMap m_VirtualPizzaMaker;
+    private List<IVirtualPizzaMakerActions> m_VirtualPizzaMakerActionsCallbackInterfaces = new List<IVirtualPizzaMakerActions>();
+    private readonly InputAction m_VirtualPizzaMaker_Bake;
+    private readonly InputAction m_VirtualPizzaMaker_Ing6;
+    private readonly InputAction m_VirtualPizzaMaker_Ing5;
+    private readonly InputAction m_VirtualPizzaMaker_Ing4;
+    private readonly InputAction m_VirtualPizzaMaker_Ing3;
+    private readonly InputAction m_VirtualPizzaMaker_Ing2;
+    private readonly InputAction m_VirtualPizzaMaker_Ing1;
+    public struct VirtualPizzaMakerActions
+    {
+        private @ButtonsInput m_Wrapper;
+        public VirtualPizzaMakerActions(@ButtonsInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Bake => m_Wrapper.m_VirtualPizzaMaker_Bake;
+        public InputAction @Ing6 => m_Wrapper.m_VirtualPizzaMaker_Ing6;
+        public InputAction @Ing5 => m_Wrapper.m_VirtualPizzaMaker_Ing5;
+        public InputAction @Ing4 => m_Wrapper.m_VirtualPizzaMaker_Ing4;
+        public InputAction @Ing3 => m_Wrapper.m_VirtualPizzaMaker_Ing3;
+        public InputAction @Ing2 => m_Wrapper.m_VirtualPizzaMaker_Ing2;
+        public InputAction @Ing1 => m_Wrapper.m_VirtualPizzaMaker_Ing1;
+        public InputActionMap Get() { return m_Wrapper.m_VirtualPizzaMaker; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(VirtualPizzaMakerActions set) { return set.Get(); }
+        public void AddCallbacks(IVirtualPizzaMakerActions instance)
+        {
+            if (instance == null || m_Wrapper.m_VirtualPizzaMakerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_VirtualPizzaMakerActionsCallbackInterfaces.Add(instance);
+            @Bake.started += instance.OnBake;
+            @Bake.performed += instance.OnBake;
+            @Bake.canceled += instance.OnBake;
+            @Ing6.started += instance.OnIng6;
+            @Ing6.performed += instance.OnIng6;
+            @Ing6.canceled += instance.OnIng6;
+            @Ing5.started += instance.OnIng5;
+            @Ing5.performed += instance.OnIng5;
+            @Ing5.canceled += instance.OnIng5;
+            @Ing4.started += instance.OnIng4;
+            @Ing4.performed += instance.OnIng4;
+            @Ing4.canceled += instance.OnIng4;
+            @Ing3.started += instance.OnIng3;
+            @Ing3.performed += instance.OnIng3;
+            @Ing3.canceled += instance.OnIng3;
+            @Ing2.started += instance.OnIng2;
+            @Ing2.performed += instance.OnIng2;
+            @Ing2.canceled += instance.OnIng2;
+            @Ing1.started += instance.OnIng1;
+            @Ing1.performed += instance.OnIng1;
+            @Ing1.canceled += instance.OnIng1;
+        }
+
+        private void UnregisterCallbacks(IVirtualPizzaMakerActions instance)
+        {
+            @Bake.started -= instance.OnBake;
+            @Bake.performed -= instance.OnBake;
+            @Bake.canceled -= instance.OnBake;
+            @Ing6.started -= instance.OnIng6;
+            @Ing6.performed -= instance.OnIng6;
+            @Ing6.canceled -= instance.OnIng6;
+            @Ing5.started -= instance.OnIng5;
+            @Ing5.performed -= instance.OnIng5;
+            @Ing5.canceled -= instance.OnIng5;
+            @Ing4.started -= instance.OnIng4;
+            @Ing4.performed -= instance.OnIng4;
+            @Ing4.canceled -= instance.OnIng4;
+            @Ing3.started -= instance.OnIng3;
+            @Ing3.performed -= instance.OnIng3;
+            @Ing3.canceled -= instance.OnIng3;
+            @Ing2.started -= instance.OnIng2;
+            @Ing2.performed -= instance.OnIng2;
+            @Ing2.canceled -= instance.OnIng2;
+            @Ing1.started -= instance.OnIng1;
+            @Ing1.performed -= instance.OnIng1;
+            @Ing1.canceled -= instance.OnIng1;
+        }
+
+        public void RemoveCallbacks(IVirtualPizzaMakerActions instance)
+        {
+            if (m_Wrapper.m_VirtualPizzaMakerActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IVirtualPizzaMakerActions instance)
+        {
+            foreach (var item in m_Wrapper.m_VirtualPizzaMakerActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_VirtualPizzaMakerActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public VirtualPizzaMakerActions @VirtualPizzaMaker => new VirtualPizzaMakerActions(this);
+
+    // Menu
+    private readonly InputActionMap m_Menu;
+    private List<IMenuActions> m_MenuActionsCallbackInterfaces = new List<IMenuActions>();
+    private readonly InputAction m_Menu_TogglePause;
+    public struct MenuActions
+    {
+        private @ButtonsInput m_Wrapper;
+        public MenuActions(@ButtonsInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @TogglePause => m_Wrapper.m_Menu_TogglePause;
+        public InputActionMap Get() { return m_Wrapper.m_Menu; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
+        public void AddCallbacks(IMenuActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MenuActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MenuActionsCallbackInterfaces.Add(instance);
+            @TogglePause.started += instance.OnTogglePause;
+            @TogglePause.performed += instance.OnTogglePause;
+            @TogglePause.canceled += instance.OnTogglePause;
+        }
+
+        private void UnregisterCallbacks(IMenuActions instance)
+        {
+            @TogglePause.started -= instance.OnTogglePause;
+            @TogglePause.performed -= instance.OnTogglePause;
+            @TogglePause.canceled -= instance.OnTogglePause;
+        }
+
+        public void RemoveCallbacks(IMenuActions instance)
+        {
+            if (m_Wrapper.m_MenuActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMenuActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MenuActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MenuActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MenuActions @Menu => new MenuActions(this);
     public interface ICarActions
     {
         void OnRed_Press(InputAction.CallbackContext context);
@@ -1376,13 +1512,6 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
     }
     public interface ISoloActions
     {
-        void OnIng1(InputAction.CallbackContext context);
-        void OnIng2(InputAction.CallbackContext context);
-        void OnIng3(InputAction.CallbackContext context);
-        void OnIng4(InputAction.CallbackContext context);
-        void OnIng5(InputAction.CallbackContext context);
-        void OnIng6(InputAction.CallbackContext context);
-        void OnBake(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
@@ -1390,5 +1519,19 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
         void OnFlyDown(InputAction.CallbackContext context);
         void OnSteer(InputAction.CallbackContext context);
         void OnBrake(InputAction.CallbackContext context);
+    }
+    public interface IVirtualPizzaMakerActions
+    {
+        void OnBake(InputAction.CallbackContext context);
+        void OnIng6(InputAction.CallbackContext context);
+        void OnIng5(InputAction.CallbackContext context);
+        void OnIng4(InputAction.CallbackContext context);
+        void OnIng3(InputAction.CallbackContext context);
+        void OnIng2(InputAction.CallbackContext context);
+        void OnIng1(InputAction.CallbackContext context);
+    }
+    public interface IMenuActions
+    {
+        void OnTogglePause(InputAction.CallbackContext context);
     }
 }

@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuNav : MonoBehaviour
 {
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Return)) Play();
-    }
-
     public void Play(){
         SceneManager.LoadSceneAsync(1);
     }
@@ -20,6 +16,7 @@ public class MainMenuNav : MonoBehaviour
 
     static bool secScreenActive;
     private void Awake() {
+        Cursor.lockState = CursorLockMode.None;
         if (!secScreenActive){
             secScreenActive = true;
             if( Display.displays.Length < 2)

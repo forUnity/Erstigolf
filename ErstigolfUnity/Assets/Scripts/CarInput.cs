@@ -26,6 +26,10 @@ public class CarInput : MonoBehaviour
         }
     }
 
+    private void Start() {
+        PauseMenu.toggleEvent += x => {if (x) inputs.Disable(); else inputs.Enable();};
+    }
+
     private void OnEnable()
     {
         inputs.Enable();
