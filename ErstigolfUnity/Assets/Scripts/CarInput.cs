@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class CarInput : MonoBehaviour
 {
+    [HideInInspector] public bool brake;
+    public int steer => brake ? 0 : ((left ? -1 : 0) + (right ? 1 : 0));
+
     private ButtonsInput inputs;
-    [HideInInspector] public bool left;
-    [HideInInspector] public bool right;
-    public int steer => (left ? -1 : 0) + (right ? 1 : 0);
+    private bool left;
+    private bool right;
 
     private void Awake()
     {
         inputs = new ButtonsInput();
         if (PlayerPrefs.HasKey("SoloMode") && PlayerPrefs.GetInt("SoloMode") == 1){
             inputs.Solo.Steer.performed += x => { float v = x.ReadValue<float>(); left = v < 0; right = v > 0;};
-            inputs.Solo.Brake.performed += x => { if (x.ReadValueAsButton()){ left = true; right = true;}};
+            inputs.Solo.Brake.performed += x => brake = x.ReadValueAsButton();
         }
         else {
             inputs.Car.Black_Press.performed += x => right = true;

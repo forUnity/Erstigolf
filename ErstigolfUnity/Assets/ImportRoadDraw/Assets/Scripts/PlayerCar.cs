@@ -89,7 +89,7 @@ public class PlayerCar : MonoBehaviour
         {
             steering = steeringWheel.steeringWheelAxis * maxSteeringAngle;
         }
-        if (carInput.left && carInput.right){
+        if (carInput.brake){
             if (axleInfos[0].leftWheel.rpm > 0){
                 motor = -brakeTorque;
             }
