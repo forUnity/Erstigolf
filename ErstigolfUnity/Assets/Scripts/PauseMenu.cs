@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
 
     private void OnDisable() {
         toggleEvent = x => {};
-        ChangeMenu(false);
+        Cursor.lockState = CursorLockMode.None;
         inputs.Disable();
     }
     
