@@ -11,10 +11,13 @@ public class CarInput : MonoBehaviour
     private bool left;
     private bool right;
 
+    private bool solo;
+
     private void Awake()
     {
         inputs = new ButtonsInput();
         if (PlayerPrefs.HasKey("SoloMode") && PlayerPrefs.GetInt("SoloMode") == 1){
+            solo = true;
             inputs.Solo.Steer.performed += x => { float v = x.ReadValue<float>(); left = v < 0; right = v > 0;};
             inputs.Solo.Brake.performed += x => brake = x.ReadValueAsButton();
         }
@@ -28,6 +31,12 @@ public class CarInput : MonoBehaviour
 
     private void Start() {
         PauseMenu.toggleEvent += x => {if (x) inputs.Disable(); else inputs.Enable();};
+    }
+
+    private void Update() {
+        if (!solo){
+            brake = left && right;
+        }
     }
 
     private void OnEnable()
