@@ -55,13 +55,14 @@ public class PizzaDeliveryManager : MonoBehaviour
         availableTargets = new List<PizzaTarget>(pizzaTargets);
         score = 0;
         StartTime = Time.time;
+        int seed = 0;
         if (PlayerPrefs.HasKey("Seed")){
-            int seed = PlayerPrefs.GetInt("Seed");
+            seed = PlayerPrefs.GetInt("Seed");
             if (seed != 0){
                 pizzaOrdersScripted = new List<PizzaOrderEvent>();
-                rng = new System.Random(seed);
             }
         }
+        rng = new System.Random(seed);
         pizzaOrdersScripted.OrderBy(a => a.AppearenceTime);
     }
 
@@ -75,10 +76,10 @@ public class PizzaDeliveryManager : MonoBehaviour
             }
         } else
         {
-            if (currentOrderCount == 0){
+            if (CurrentOrderCount == 0){
                 lastCooldownTime = Mathf.Min(Time.time -orderCooldownTime + emptyOrderTime, lastCooldownTime);
             }
-            if(currentOrderCount < maxConcurrentDeliveryCount && lastCooldownTime + orderCooldownTime < Time.time)
+            if(CurrentOrderCount < maxConcurrentDeliveryCount && lastCooldownTime + orderCooldownTime < Time.time)
             {
                 AddRandomOrder();
             }
@@ -86,6 +87,8 @@ public class PizzaDeliveryManager : MonoBehaviour
     }
 
     int currentOrderCount = 0;
+    public int CurrentOrderCount { get => currentOrderCount; set {currentOrderCount = Mathf.Max(value, 0);} }
+    
     private void AddRandomOrder()
     {
         int count = rng.Next(2, 6);
@@ -115,7 +118,7 @@ public class PizzaDeliveryManager : MonoBehaviour
 
         target.RequirePizza(type, count);
 
-        currentOrderCount++;
+        CurrentOrderCount++;
         availableTargets.Remove(target);
 
         newOrderSound.Play();
@@ -134,7 +137,7 @@ public class PizzaDeliveryManager : MonoBehaviour
     private void OnTargetDeactivate(PizzaTarget target){
         
         availableTargets.Add(target);
-        currentOrderCount--;
+        CurrentOrderCount--;
     }
 
     public void TimeOut(PizzaTarget target){
