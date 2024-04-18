@@ -16,7 +16,7 @@ public class PizzaDeliveryManager : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] PizzaTarget[] pizzaTargets;
+    public PizzaTarget[] pizzaTargets;
     [SerializeField] PizzaType[] pizzaTypes;
     [SerializeField] AudioSource newOrderSound;
     [SerializeField] AudioSource orderSuccessfullSound;
