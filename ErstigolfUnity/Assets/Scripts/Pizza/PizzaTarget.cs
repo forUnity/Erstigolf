@@ -62,6 +62,8 @@ public class PizzaTarget : MonoBehaviour
                 PizzaDeliveryManager.instance.TimeOut(this);
                 requiredPizza = null;
                 reqCount = 0;
+
+                HungrySheepManager.instance?.MissedPizzaDelivery(transform.position);
             }
         }
         //RequirePizzaIndicator(requiredPizza != null);
