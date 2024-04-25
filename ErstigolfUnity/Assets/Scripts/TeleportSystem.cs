@@ -55,6 +55,7 @@ public class TeleportSystem : MonoBehaviour
     [Space]
     [SerializeField] private GolfkartSpeed golfkartSpeed;
     [SerializeField] public float speedToFly = 0f;
+    [SerializeField] public float speedTolerance = 0.95f;
     [SerializeField] private GameObject ReadyIndicator;
     //[SerializeField] private TMPro.TextMeshProUGUI 
     [SerializeField] private CarAudioManager carAudioManger;
@@ -105,7 +106,7 @@ public class TeleportSystem : MonoBehaviour
         inputs.Disable();
     }
 
-    private bool canTeleport => nextTP <= 0 && (golfkartSpeed ? golfkartSpeed.GetAvgSpeedOverTimeRecord() >= speedToFly : true);
+    private bool canTeleport => nextTP <= 0 && (golfkartSpeed ? golfkartSpeed.GetAvgSpeedOverTimeRecord() >= speedToFly * speedTolerance : true);
     private void TryUp(){
         if (!canTeleport)
         {   
