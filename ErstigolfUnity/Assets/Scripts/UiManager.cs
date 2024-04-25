@@ -113,17 +113,21 @@ public class UiManager : MonoBehaviour
         }
         if(gameTimeRemain <= showEndCountdownTime)
         {
-            endCountdownText.text = ((int)gameTimeRemain).ToString();
+            string newTimeStr =  ((int)gameTimeRemain).ToString(); 
+            if(endCountdownText.text != newTimeStr)
+                endGameSound.Play();
+                
+            endCountdownText.text = newTimeStr;
             endCountdownTextGunner.text = endCountdownText.text;
         } else
         {
             endCountdownText.text = "";
             endCountdownTextGunner.text = endCountdownText.text;
         }
-        if(gameTimeRemain <= endGameSound.clip.length && !endGameSound.isPlaying)
-        {
-            endGameSound.Play();
-        }
+        // if(gameTimeRemain <= endGameSound.clip.length && !endGameSound.isPlaying)
+        // {
+        //     endGameSound.Play();
+        // }
 
         timeText.text = (Mathf.CeilToInt(gameTimeRemain)).ToString();// + "s";
         timeText2.text = (Mathf.CeilToInt(gameTimeRemain)).ToString();// + "s";
