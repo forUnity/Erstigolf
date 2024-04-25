@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8857387722513914194}
   - component: {fileID: 4595873765600488812}
   - component: {fileID: 6625327076258669178}
-  - component: {fileID: 1512298442715857045}
+  - component: {fileID: 8487624295545835269}
   m_Layer: 0
   m_Name: HungrySheep
   m_TagString: Untagged
@@ -34,6 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3263709754657813735}
+  - {fileID: 509803387229249515}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8857387722513914194
@@ -107,7 +108,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1512298442715857045
+--- !u!114 &8487624295545835269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,11 +117,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 2423253269084347296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c76dfa150400c47ab5837a43749e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: afd48977497b1744fb93e404645e25f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverT: {fileID: 509803387229249515}
+  hoverAmplitude: 2
+  hoverSpeed: 2
+  hoverHeight: 4
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
   playerTarget: {fileID: 0}
-  speed: 10
+  minSpeed: 2.5
+  maxSpeed: 50
+--- !u!1 &6998802025449399552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509803387229249515}
+  m_Layer: 0
+  m_Name: HoverT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &509803387229249515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6998802025449399552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.154, z: 0.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1046774872486860874}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3080954484183421708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,7 +240,7 @@ PrefabInstance:
     - target: {fileID: 7912467626077425544, guid: b89d67f0e4cd495409097ff7f8360c5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -6122395176859690604, guid: a49c0b7807a2ecb4e8bc89d9a2b7ef77, type: 3}
+      objectReference: {fileID: 2100000, guid: 2f4c793d1e73c804eaa700cb42dffb3b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -226967104184988811, guid: b89d67f0e4cd495409097ff7f8360c5b, type: 3}

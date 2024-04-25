@@ -22,7 +22,8 @@ public class Leaderboard : MonoBehaviour
     {
         SubmitScore(GetComponent<ScoreMenuNav>().ScoreCache, nameInput.text);
     }
-
+    
+    public const string PlayerPrefAPIKey = "API";
     public async void SubmitScore(int score, string teamName)
     {
         var json = $"{{\"teamname\":\"{(teamName.Replace("\"", "&quot;").Replace("'", "&apos;").Replace("\\", ""))}\", \"score\":{score}}}";
@@ -30,6 +31,7 @@ public class Leaderboard : MonoBehaviour
         var data = new StringContent(json, Encoding.UTF8, "application/json");
 
         using var client = new HttpClient();
+        client.DefaultRequestHeaders.Add("Authorization:", PlayerPrefs.GetString(PlayerPrefAPIKey));
         var response = await client.PostAsync(URL, data);
     }
 

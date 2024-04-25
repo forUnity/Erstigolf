@@ -13,7 +13,10 @@ public class HungrySheepManager : MonoBehaviour
     }
 
     [SerializeField] private GameObject sheepPrefab;
+    [SerializeField] private float sheepSpawnProbability = 0.4f;
     public void MissedPizzaDelivery(Vector3 atPosition) {
+        if(sheepSpawnProbability < Random.value) return;
+        GetComponent<GhostSheepWarningUI>()?.ShowWarning();
         Instantiate(sheepPrefab, atPosition, Quaternion.identity).GetComponent<DamageDetector>().playerTarget = playerTarget;
     }
 }

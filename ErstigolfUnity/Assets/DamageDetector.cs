@@ -4,13 +4,37 @@ using UnityEngine;
 
 public class DamageDetector : MonoBehaviour
 {
+    public Transform hoverT;
+    public float hoverAmplitude = 0.1f;
+    public float hoverSpeed = 1f;
+    public float hoverHeight = 1f;
+
+    public LayerMask groundLayer;
+
+
+    //hunt player
     public Transform playerTarget;
-    public float speed = 0.1f;
-    void Update() {
-        transform.position += (playerTarget.position - transform.position).normalized * speed * Time.deltaTime;
+    public float minSpeed = 2f;
+    public float maxSpeed = 50f;
+    void LateUpdate() {
         transform.LookAt(playerTarget);
+    
+        RaycastHit hit;
+        Vector3 sheepToPlayer = playerTarget.position - transform.position;
+
+        float distanceSpeed = Mathf.Clamp(sheepToPlayer.magnitude, minSpeed, maxSpeed);
+
+        Vector3 pos = transform.position + sheepToPlayer.normalized * distanceSpeed * Time.deltaTime;
+        if(false && Physics.Raycast(hoverT.position, Vector3.down, out hit, 100f, groundLayer)) {
+            pos.y = hit.point.y + Mathf.Sin(Time.time * hoverSpeed) * hoverAmplitude + hoverHeight;
+            Debug.DrawRay(hoverT.position, Vector3.up * hit.distance, Color.red);
+        }
+        else {pos.y = playerTarget.position.y + Mathf.Sin(Time.time * hoverSpeed) * hoverAmplitude + hoverHeight;}
+    
+        transform.position = pos;
     }
 
+    //Die by collision with pizza
     void OnCollisionEnter(Collision collision)
     {
         //check if the object we collided with has a Pizza GetComponent
@@ -18,6 +42,13 @@ public class DamageDetector : MonoBehaviour
         if (pizza != null)
         {
             Destroy(gameObject);
+            return;
+        }
+
+        //check if is player
+        if(collision.rigidbody != null)
+        {
+            collision.rigidbody.velocity = Vector3.up * 10f;
         }
     }
 }
