@@ -16,6 +16,11 @@ public class DamageDetector : MonoBehaviour
     public Transform playerTarget;
     public float minSpeed = 2f;
     public float maxSpeed = 50f;
+
+    public PlayRandomSound attackSounds;
+    public PlayRandomSound idleSounds;
+    public AudioSource defeatSound;
+
     void LateUpdate() {
         transform.LookAt(playerTarget);
     
@@ -32,6 +37,8 @@ public class DamageDetector : MonoBehaviour
         else {pos.y = playerTarget.position.y + Mathf.Sin(Time.time * hoverSpeed) * hoverAmplitude + hoverHeight;}
     
         transform.position = pos;
+
+        idleSounds?.TryPlayRandomSound();
     }
 
     //Die by collision with pizza
@@ -41,6 +48,10 @@ public class DamageDetector : MonoBehaviour
         Pizza pizza = collision.gameObject.GetComponent<Pizza>();
         if (pizza != null)
         {
+            defeatSound.Play();
+            defeatSound.transform.SetParent(null);
+            Destroy(defeatSound.gameObject, defeatSound.clip.length);
+
             Destroy(gameObject);
             return;
         }
@@ -49,6 +60,7 @@ public class DamageDetector : MonoBehaviour
         if(collision.rigidbody != null)
         {
             collision.rigidbody.velocity = Vector3.up * 10f;
+            attackSounds?.TryPlayRandomSound();
         }
     }
 }
