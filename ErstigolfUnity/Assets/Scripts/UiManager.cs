@@ -125,8 +125,8 @@ public class UiManager : MonoBehaviour
             endGameSound.Play();
         }
 
-        timeText.text = (Mathf.CeilToInt(gameTimeRemain)).ToString() + "s";
-        timeText2.text = (Mathf.CeilToInt(gameTimeRemain)).ToString() + "s";
+        timeText.text = (Mathf.CeilToInt(gameTimeRemain)).ToString();// + "s";
+        timeText2.text = (Mathf.CeilToInt(gameTimeRemain)).ToString();// + "s";
 
         foreach (var item in clockFills)
         {

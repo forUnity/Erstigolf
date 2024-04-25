@@ -11,6 +11,9 @@ public class PizzaThrower : MonoBehaviour
     [SerializeField] private float zoomSpeed;
     [Space]
     [SerializeField] private bool turretGlobalRotation;
+    [SerializeField] private bool autoReload = true;
+    [SerializeField] private bool displayLoadedPizzaInQueue = true;
+
     [SerializeField] private string turretGlobalRotationKey = "TurretGlobalRotation";
     [SerializeField] private Vector2 wideSensitivity;
     [SerializeField] private Vector2 narrowSensitivity;
@@ -78,6 +81,9 @@ public class PizzaThrower : MonoBehaviour
         if(HasAmmo)
         {
             reloadIndicatorLight.color = unloadedColor;
+            if(autoReload && !Loaded && !loading) {
+                LoadPizza();
+            }
         } else
         {
             reloadIndicatorLight.color = noAmmoColor;
@@ -147,14 +153,20 @@ public class PizzaThrower : MonoBehaviour
         if (Loaded || loading)
             return;
         if (!HasAmmo){
-            AlertSystem.Message("Keine Munition");
+            if(!autoReload)
+                AlertSystem.Message("Keine Munition");
             return;
         }
         loading = true;
 
         CarAudioManager.instance?.LoadPizza();
 
-        Transform nextPizza = pizzas.Dequeue();
+        Transform nextPizza;
+        if(displayLoadedPizzaInQueue) {
+            nextPizza = pizzas.Peek();
+        } else {
+            nextPizza = pizzas.Dequeue();
+        }
 
         Transform p = nextPizza.parent;
         float loadStartTime = Time.time;
@@ -173,6 +185,10 @@ public class PizzaThrower : MonoBehaviour
 
     private void LaunchPizza() 
     {
+        if(displayLoadedPizzaInQueue) {
+            pizzas.Dequeue();
+        }
+        
         CarAudioManager.instance?.FireRailgun();
 
         Transform pizza = loadedPizza;
