@@ -60,7 +60,8 @@ public class DamageDetector : MonoBehaviour
         if(collision.rigidbody != null)
         {
             collision.rigidbody.velocity = Vector3.up * 10f;
-            attackSounds?.TryPlayRandomSound();
         }
+            attackSounds?.TryPlayRandomSound();
+        //}
     }
 }
