@@ -252,7 +252,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -278,8 +278,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   playerTarget: {fileID: 0}
-  minSpeed: 2.5
-  maxSpeed: 50
+  minSpeed: 18.5
+  maxSpeed: 60
+  boostUpVelcoity: 20
   attackSounds: {fileID: 1993482778435503173}
   idleSounds: {fileID: 7762943900068745690}
   defeatSound: {fileID: 22726753671785350}

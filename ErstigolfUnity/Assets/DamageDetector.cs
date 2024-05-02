@@ -17,6 +17,9 @@ public class DamageDetector : MonoBehaviour
     public float minSpeed = 2f;
     public float maxSpeed = 50f;
 
+
+    public float boostUpVelcoity = 30f;
+
     public PlayRandomSound attackSounds;
     public PlayRandomSound idleSounds;
     public AudioSource defeatSound;
@@ -41,11 +44,12 @@ public class DamageDetector : MonoBehaviour
         idleSounds?.TryPlayRandomSound();
     }
 
-    //Die by collision with pizza
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Triggered");
+
         //check if the object we collided with has a Pizza GetComponent
-        Pizza pizza = collision.gameObject.GetComponent<Pizza>();
+        Pizza pizza =other.GetComponent<Pizza>();
         if (pizza != null)
         {
             defeatSound.Play();
@@ -57,11 +61,12 @@ public class DamageDetector : MonoBehaviour
         }
 
         //check if is player
-        if(collision.rigidbody != null)
+        
+        if(other.GetComponentInParent<Rigidbody>() != null)
         {
-            collision.rigidbody.velocity = Vector3.up * 10f;
+            Debug.Log("Player hit");
+            other.GetComponentInParent<Rigidbody>().velocity = Vector3.up * boostUpVelcoity;
         }
-            attackSounds?.TryPlayRandomSound();
-        //}
-    }
+        attackSounds?.TryPlayRandomSound();
+    } 
 }

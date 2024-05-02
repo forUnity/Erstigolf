@@ -31,7 +31,7 @@ public class Leaderboard : MonoBehaviour
         var data = new StringContent(json, Encoding.UTF8, "application/json");
 
         using var client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Authorization:", PlayerPrefs.GetString(PlayerPrefAPIKey));
+        client.DefaultRequestHeaders.Add("Authorization", PlayerPrefs.GetString(PlayerPrefAPIKey));
         var response = await client.PostAsync(URL, data);
     }
 
