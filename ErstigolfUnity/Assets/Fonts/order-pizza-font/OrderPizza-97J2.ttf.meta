@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9ff45f20fb2046f408959b2df435552d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: 0
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Order Pizza
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 27a6b47764f797941ba82baae289a960, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
