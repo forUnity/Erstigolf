@@ -83,6 +83,7 @@ public class CarAudioManager : MonoBehaviour
     private void playImpact()
     {
         if (impactAudioSource.isPlaying) return;
+        if (golfkartSpeed.GetAvgSpeedOverTimeRecord() < 5f) return;
         //impactAudioSource.clip = impactAudioClips[Random.Range(0, impactAudioClips.Length)];
         impactAudioSource.time = startT;
         impactAudioSource.Play();
