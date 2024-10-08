@@ -22,10 +22,8 @@ public class CarInput : MonoBehaviour
             inputs.Solo.Brake.performed += x => brake = x.ReadValueAsButton();
         }
         else {
-            inputs.Car.Black_Press.performed += x => right = true;
-            inputs.Car.Black_Release.performed += x => right = false;
-            inputs.Car.Red_Press.performed += x => left = true;
-            inputs.Car.Red_Release.performed += x => left = false;
+            inputs.Car.Black_Press.performed += x => right = x.ReadValueAsButton();
+            inputs.Car.Red_Press.performed += x => left = x.ReadValueAsButton();
         }
     }
 

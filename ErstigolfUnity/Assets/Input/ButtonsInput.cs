@@ -29,7 +29,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Red_Press"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""58a75380-434a-4261-9303-1a98ad3f1f02"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -47,7 +47,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Black_Press"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""3cfec8b9-c932-4644-abdf-c194aa26768f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -149,8 +149,8 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""cfbbb2c4-cdec-4705-b2ab-2e54183aba15"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": ""Press"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Red_Press"",
@@ -171,8 +171,8 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1887089f-c32b-43f8-a544-6a2dee1cd9b4"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": ""Press"",
+                    ""path"": ""<Keyboard>/numpad0"",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Black_Press"",
@@ -193,7 +193,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""203b01a1-ab99-480a-b9e2-5996b065768b"",
-                    ""path"": ""<Keyboard>/p"",
+                    ""path"": ""<Keyboard>/numpadPlus"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -215,7 +215,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""dc04cf4e-4502-42de-8b7a-ec394033eda5"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/enter"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -237,7 +237,7 @@ public partial class @ButtonsInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ec6303a0-06f7-4ca8-9400-141ac12e5628"",
-                    ""path"": ""<Keyboard>/t"",
+                    ""path"": ""<Keyboard>/numpadMinus"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
